@@ -13,6 +13,6 @@
 + Carlotta Porcelli <carlottapor@gmail.com>
 + Andrea Dellera <andrea.delle93@gmail.com>
 + Gianluca Bortoli aka Giallo <giallogiallo93@gmail.com>
-+ Fatbardha Hoxha <oxa.fat@gmail.it>
++ Fatbardha Hoxha <oxa.fat@gmail.com>
 + Martin Brugnara <martin.brugnara@gmail.com>
 + Alex De Biasio <alexdebiasio@gmail.com>
