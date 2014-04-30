@@ -1,0 +1,47 @@
+/*HEADER*/
+header {
+	height: 50px;
+	width: 100%;
+	padding-top: 20px;
+	background-color: #D71C1C;
+}
+
+header * {
+	display: inline;
+}
+
+#logo {
+	margin-top: 0px;
+}
+
+.buttons {
+	float: right;
+}
+
+/*CENTRAL*/
+.central {
+	background-color: #32CDC3;
+	width: 100%;
+	height: 400px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#slogan {
+	margin-top: 0px;
+	padding-top: 25px;
+}
+
+/*FOOTER*/
+footer {
+	height: 50px;
+	width: 100%;
+	background-color: #25CF30;
+	text-align: center;
+}
+
+.licence {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 10px;
+}
