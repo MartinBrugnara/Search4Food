@@ -71,6 +71,11 @@ i {
 	margin-top: 20px;
 }
 
+#title {
+	margin-top: 0px;
+	padding-top: 20px;
+}
+
 /*FOOTER*/
 footer {
 	height: 50px;
