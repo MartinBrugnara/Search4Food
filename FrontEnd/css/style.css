@@ -1,6 +1,6 @@
 /*HEADER*/
 header {
-	height: 50px;
+	height: 100px;
 	width: 100%;
 	padding-top: 20px;
 	background-color: #D71C1C;
@@ -12,10 +12,22 @@ header * {
 
 #logo {
 	margin-top: 0px;
+	float: left;
+	margin-left: 15px;
 }
 
 .buttons {
 	float: right;
+	margin-top: 30px;
+}
+
+#language {
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+#login {
+	margin-right: 20px;
 }
 
 /*CENTRAL*/
@@ -25,11 +37,38 @@ header * {
 	height: 400px;
 	margin-left: 0px;
 	margin-right: 0px;
+	padding-left: 5px;
 }
 
-#slogan {
+#text {
 	margin-top: 0px;
 	padding-top: 25px;
+}
+
+.credentials {
+	display: block;
+}
+
+i { 
+	color: black; 
+	font-size: 30px;
+	vertical-align: middle;
+}
+
+#signup {
+	margin-top: 0px;
+}
+
+#link {
+	display: inline;
+}
+
+#shit {
+	display: inline;
+}
+
+.controller {
+	margin-top: 20px;
 }
 
 /*FOOTER*/
@@ -44,8 +83,4 @@ footer {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-top: 10px;
-}
-
-i { 
-	color: black; 
 }
