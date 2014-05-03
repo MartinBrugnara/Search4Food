@@ -1,4 +1,4 @@
-/*HEADER*/
+/***HEADER***/
 header {
 	height: 100px;
 	width: 100%;
@@ -30,7 +30,7 @@ header * {
 	margin-right: 20px;
 }
 
-/*CENTRAL*/
+/***CENTRAL***/
 .central {
 	background-color: #32CDC3;
 	width: 100%;
@@ -81,7 +81,7 @@ i {
 	padding-top: 20px;
 }
 
-/*FOOTER*/
+/***FOOTER***/
 footer {
 	height: 50px;
 	width: 100%;
