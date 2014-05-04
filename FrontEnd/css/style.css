@@ -83,15 +83,30 @@ i {
 /***PROFILO***/
 
 
-.personale, .dati{
-	display: table-cell;
-	width: 500px;
-	height: 400px;
-    vertical-align: middle;
-    text-align: let;
-    background: #D9FFCB;
+.personale{
+	 background-color: blue;
+	 width: 30%;
+	 float: left; 
+	 margin-left:0px; 
+	 margin-right: 10px;
+	 display:inline;	
+}
 
 }
+ .dati, .places{
+ 	 background-color: orange;
+	 float: right; 
+	 width: 70%
+	 margin-left: 10px;
+	 display:inline;	
+}
+
+.purpose, .food, .beverages, .needs{
+	float: left;
+	display: :inline;
+}
+
+
 
 /***FOOTER***/
 footer {

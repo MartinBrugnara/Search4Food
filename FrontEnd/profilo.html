@@ -2,26 +2,15 @@
 <html>
  <head>
  	<meta charset="utf-8">  
- 	<title> Profilo </title>
-	<!--<style type="text/css">-->
+ 	<title> Profile </title>
  	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="shortcut icon" href="img/LogoSigla.png">
- 	<!--	* {
- 			vertical-align: top;
- 		}
- 		div.row, section.row {
- 			display: block;
- 		}
- 		div.row > *, section.row > *{
- 			display: inline-block;
- 			box-sizing: border-box;
- 		}
- 	-->
- 	</style>
  </head>
+
+
   <header>
-    <img src="img/LogoIntero.png" id = "logo" width = "250">
+    <img src="img/LogoIntero.png" id = "logo" width = "200">
     <select id = "language"> <!--add flags icons instead of language name-->
       <option value = "it">Italiano</option>
       <option value = "en">English</option>
@@ -30,46 +19,83 @@
     <button type = "button" class = "buttons" id = "logout">Log out</button>
   </header>
 
+
  <body>
+ 	<div class = "central">
 
 			<!--DPERSONALE-->
-	<section class= "personale" style="background: gray;" >
-		<img src="img/foto.png">
-		<div id="nome">
-			Nome: Alex
-		</div>
-		<div id="cognome">
-			Cognome: Lupino
-		</div>
-		<div id="mail">
-			Mail: Lupino@unitn.it
-		</div>
+		<div class= "personale">
+			<img src="img/foto.png">
+			<div id="nome"> Nome: Alex </div>
+			<div id="cognome"> Cognome: Lupino </div>
+			<div id="mail"> Mail: Lupino@unitn.it </div>
 
-	</section>
+		</div>
 
 			<!--DATI-->
-		<section class= "dati" src="dx.htm" style="background: blue;" >
-			<section>Preferenze</section>
-			<div class= "row preferenze" style="background: green;">
+		<div class= "dati">
+			Preferenze utente
+						<!--preferenze-->
+			
+			<div class= "preferenze" style="background: green;">
+ 
 				<div class= "purpose" style="background: red;">
-					purpose
-				</div>
-				<div class= "food" style="background: yellow;">
-					cibi
-				</div>
-				<div class= "beverages" style="background: pink;">
-					bevande
-				</div>
-				<div class= "needs" style="background: white;">
-					necessità
+					purpose:
+					<li>ristorante  </li>
+					<li>pizzeria </li>
+					<li>fast-food </li>
+					<li>bar</li>
+					<li>...</li>
+					<li>...</li>
+
 				</div>
 
+
+				<div class= "food" style="background: yellow;">
+					cibi:
+					<li>pizza</li>
+					<li>torta</li>
+					<li>hamburger  </li>
+					<li>pesce</li>
+					<li>carne</li>
+					<li>...</li>
+				</div>
+
+				<div class= "beverages" style="background: pink;">
+					bevande:
+					<li>vino</li>
+					<li>birra</li>
+					<li>coca-cola  </li>
+					<li>acqua</li>
+					<li>...</li>
+					<li>...</li>
+				</div>
+
+				<div class= "needs" style="background: white;">
+					necessità:
+					<li>vegetariano</li>
+					<li>senza glutine  </li>
+					<li>vegano</li>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</div>
+
+
 			</div>
-			<div class= "place" style="background: orange;">
+
+						<!--luoghi-->
+			<div class= "places" style="background: orange;">
 				posti recenti in cui sei stato
 			</div>
-		</section>
+
+		</div>
+
+	</div>
+
 </div>
+
+
   <footer>
       <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
   </footer>
