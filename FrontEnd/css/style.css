@@ -80,6 +80,18 @@ i {
 	margin-top: 0px;
 	padding-top: 20px;
 }
+/***PROFILO***/
+
+
+.personale, .dati{
+	display: table-cell;
+	width: 500px;
+	height: 400px;
+    vertical-align: middle;
+    text-align: let;
+    background: #D9FFCB;
+
+}
 
 /***FOOTER***/
 footer {
@@ -94,3 +106,4 @@ footer {
 	margin-bottom: 0px;
 	padding-top: 10px;
 }
+
