@@ -82,7 +82,10 @@ i {
 }
 /***PROFILO***/
 
-
+#ciao, #logout {
+	float: right;
+	margin-right: 5%;
+}
 .personale{
 	 background-color: blue;
 	 width: 30%;
@@ -93,17 +96,31 @@ i {
 }
 
 }
- .dati, .places{
+ .prefernze{
  	 background-color: orange;
 	 float: right; 
 	 width: 70%
 	 margin-left: 10px;
-	 display:inline;	
+	 display: inline-block;
+
 }
+
+.places{
+	margin-top: 120px;
+
+	height: 200px;
+}
+
+.place{
+	float:left;
+	margin-top: 3%;
+	display: inline;
+}
+
 
 .purpose, .food, .beverages, .needs{
 	float: left;
-	display: :inline;
+	display: inline-block;
 }
 
 
