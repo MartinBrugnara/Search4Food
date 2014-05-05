@@ -2,7 +2,7 @@
 <html>
  <head>
  	<meta charset="utf-8">  
- 	<title> Profile </title>
+ 	<title> home </title>
  	<link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="shortcut icon" href="img/LogoSigla.png">
@@ -10,14 +10,18 @@
 
 
   <header>
-    <img src="img/LogoIntero.png" id = "logo" width = "200">
+    <img src="img/LogoIntero.png" id = "logo" width = "250">
     <select id = "language"> <!--add flags icons instead of language name-->
       <option value = "it">Italiano</option>
       <option value = "en">English</option>
      </select>
-     <div id="ciao">Ciao, Alex!</div>
-    <button type = "button" class = "buttons" id = "logout">Log out</button>
+    <input type = "text" placeholder = "Where do you want to eat?"></input>
+    <input type = "text" placeholder = "What's your special purpose?"></input>
+    <i class = "fi-magnifying-glass"></i>
+    <button type = "button" class = "buttons" id = "login">Log in</button>
+    <button type = "button" class = "buttons">Sign up</button>
   </header>
+
 
 
  <body>
@@ -25,6 +29,12 @@
     <div class ="maps">
       Mappa per vedere dove sei
       <img src="img/maps.png" width="400px">
+    </div>
+
+    <div class="luogo">
+      <div id="imgplace"><img src="img/place.png" width="150px"></div>
+      <div id="description"> Descrizione del posto</div>
+      <div id="vote">  ***(voto)</div>
     </div>
   </div>
 

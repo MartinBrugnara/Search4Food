@@ -126,7 +126,10 @@ i {
 /***HOME***/
 .maps{
 	float:right;
-	margin-left: 50%;
+}
+.luogo{
+	float:left;
+	margin-top: 10px
 }
 
 
