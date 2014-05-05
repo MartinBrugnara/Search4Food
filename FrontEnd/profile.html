@@ -17,17 +17,19 @@
      </select>
       <input type = "text" placeholder = "Where do you want to eat?"></input>
       <input type = "text" placeholder = "What's your special purpose?"></input>
-    <i class = "fi-magnifying-glass"></i>
-     <div id="ciao">Ciao, Alex!</div>
-    <button type = "button" class = "buttons" id = "logout">Log out</button>
+   		 <i class = "fi-magnifying-glass"></i>
+     	<div id="ciao">
+     		Ciao, Alex!
+     	</div>
+    	<a href="index.html" id = "linklogout"> log out </a>
   </header>
 
 
  <body>
  	<div class = "central">
 
-			<!--DPERSONALE-->
-		<div class= "personale">
+			<!--PROFILO UTENTE-->
+		<div class= "sx">
 			<div id="fotoprofile"> <img src="img/foto.png"> </div>
 			<div id="nome"> Nome: Alex </div>
 			<div id="cognome"> Cognome: Lupino </div>
@@ -35,13 +37,14 @@
 
 		</div>
 
-			<!--DATI-->
-		<div class= "dati">
-			Preferenze utente
+			<!--PREFERENZE UTENTE-->
+		<div class= "dx">
+			contenitore preferenze e luoghi
 						<!--preferenze-->
-			
-			<div class= "preferenze" style="background: green;">
- 
+			<div class= "preferences">
+
+				preferenze 
+
 				<div class= "purpose" style="background: red;">
 					purpose:
 					<li>ristorante  </li>
@@ -49,9 +52,7 @@
 					<li>fast-food </li>
 					<li>bar</li>
 					<li>...</li>
-
 				</div>
-
 
 				<div class= "food" style="background: yellow;">
 					cibi:
@@ -79,18 +80,17 @@
 					<li>...</li>
 					<li>...</li>
 				</div>
-
-
 			</div>
 
 						<!--luoghi-->
-			<div class= "places" style="background: orange;">
+			<div class= "places">
+
 				posti recenti in cui sei stato
 				<div class="place"> 
-					<div id="imgplaces"><img src="img/place.png" width="150px"></div>
-					<div id="comment"> Commento sul luogo e sul cibo</div>
-					<div id="vote">  ***(voto)</div>
-				</div>
+						<img src="img/alleghe.png" id="imgplace">
+						<div id="comment"> Commento sul luogo e sul cibo</div>
+						<div id="vote">  ***(voto)</div>
+					 </div>
 			</div>
 
 		</div>
