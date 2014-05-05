@@ -107,7 +107,7 @@ i {
 
 .places{
 	margin-top: 120px;
-
+	margin-left: 30%;
 	height: 200px;
 }
 
@@ -122,6 +122,13 @@ i {
 	float: left;
 	display: inline-block;
 }
+
+/***HOME***/
+.maps{
+	float:right;
+	margin-left: 50%;
+}
+
 
 
 
