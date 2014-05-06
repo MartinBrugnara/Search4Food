@@ -1,3 +1,4 @@
+
 /***HEADER***/
 header {
 	height: 100px;
@@ -84,94 +85,6 @@ i {
 #slogan {
 	margin-top: 0px;
 	padding-top: 20px;
-}
-/***PROFILO***/
-
-
-.sx{
-	 background-color: blue;
-	 width: 30%;
-	 float: left; 
-	 display:inline;	
-}
-
-.dx{
-	background-color: #ff00ff;
-	 width: 70%;
-	 float: right; 
-	 display:inline;	
-}
-
-
-
-
-.preferences{	
-
-	background-color: grey;
-}
-
-.places{
-	display: block;
-	background-color:orange;
-}
-
-.place{
-	
-	float: left;
-	background-color: azure;
-	display: block;
-}
-
-
-.purpose, .food, .beverages, .needs{
-	width: 25%;
-	float: left;
-	display: inline;
-}
-
-
-#imgplace{
-	height: 40%;
-	margin: 10px;
-
-}
-
-
-/***HOME***/
-.maps{
-	float:right;
-	width: 50%;
-}
-
-#imgmap {
-	width: 50%;
-}
-
-.location{
-	float: left;
-	width: 50%;
-	margin-top: 10px
-}
-
-#imgplace, #description{
-	float: left;
-	width: 50%
-	display: inline;
-}
-
-
-
-#imgplace{
-	border-radius: 10px;
-	width: 20%;
-	display: inline;
-}
-
-
-.more{
-	width: 50%;
-	float: left;
-	display: inline;
 }
 
 
