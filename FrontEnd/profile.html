@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta charset="utf-8">  
+ 	<title> Profile </title>
+ 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons/foundation-icons.css">
+    <link rel="shortcut icon" href="img/LogoSigla.png">
+ </head>
+
+  <header>
+    <img src="img/LogoIntero.png" id = "logo" width = "200">
+    <select id = "language"> <!--add flags icons instead of language name-->
+      <option value = "it">Italiano</option>
+      <option value = "en">English</option>
+     </select>
+      <input type = "text" placeholder = "Where do you want to eat?"></input>
+      <input type = "text" placeholder = "What's your special purpose?"></input>
+   		 <i class = "fi-magnifying-glass"></i>
+     	<div id="ciao">
+     		Ciao, Alex!
+     	</div>
+    	<a href="index.html" id = "linklogout"> log out </a>
+  </header>
+
+ <body>
+ 	<div class = "central">
+
+			<!--PROFILO UTENTE-->
+		<div class= "sx">
+			<div id="fotoprofile"> <img src="img/foto.png"> </div>
+			<div id="nome"> Nome: Alex </div>
+			<div id="cognome"> Cognome: Lupino </div>
+			<div id="mail"> Mail: Lupino@unitn.it </div>
+
+		</div>
+
+			<!--PREFERENZE UTENTE-->
+		<div class= "dx">
+			<div id="titledx">contenitore preferenzee luoghi </div>
+						<!--preferenze-->
+			<div class= "preferences">
+
+				<div id="titlepref">preferenze</div> 
+
+				<div class= "purpose" style="background: red;">
+					purpose:
+					<li>ristorante  </li>
+					<li>pizzeria </li>
+					<li>fast-food </li>
+					<li>bar</li>
+					<li>...</li>
+				</div>
+
+				<div class= "food" style="background: yellow;">
+					cibi:
+					<li>pizza</li>
+					<li>torta</li>
+					<li>hamburger  </li>
+					<li>pesce</li>
+					<li>...</li>
+				</div>
+
+				<div class= "beverages" style="background: pink;">
+					bevande:
+					<li>vino</li>
+					<li>birra</li>
+					<li>coca-cola  </li>
+					<li>acqua</li>
+					<li>...</li>
+				</div>
+
+				<div class= "needs" style="background: white;">
+					necessità:
+					<li>vegetariano</li>
+					<li>senza glutine  </li>
+					<li>vegano</li>
+					<li>...</li>
+					<li>...</li>
+				</div>
+			</div>
+
+						<!--luoghi-->
+			<div class= "places">
+				<div id="titleplaces"> posti recenti </div>
+				<div class="place"> 
+						<img src="img/alleghe.png" id="imgplace">
+						<div id="comment"> Commento sul luogo e sul cibo</div>
+						<div id="vote">  ***(voto)</div>
+					 </div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+  <footer>
+      <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
+  </footer>
+ 
+ </body>
+</hml> 

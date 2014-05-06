@@ -30,6 +30,11 @@ header * {
 	margin-right: 20px;
 }
 
+#ciao, #logout {
+	float: right;
+	margin-right: 5%;
+}
+
 /***CENTRAL***/
 .central {
 	background-color: #32CDC3;
@@ -81,29 +86,110 @@ i {
 	padding-top: 20px;
 }
 
+<<<<<<< HEAD
 /***PROFILO***/
 .personale {
+=======
+.sx{
+>>>>>>> 8ad4dd6884bd44c156e195f6f920ecf27548efac
 	 background-color: blue;
 	 width: 30%;
 	 float: left; 
-	 margin-left:0px; 
-	 margin-right: 10px;
 	 display:inline;	
 }
 
+<<<<<<< HEAD
 .dati, .places {
  	 background-color: orange;
+=======
+.dx{
+	background-color: #ff00ff;
+	 width: 70%;
+>>>>>>> 8ad4dd6884bd44c156e195f6f920ecf27548efac
 	 float: right; 
-	 width: 70%
-	 margin-left: 10px;
 	 display:inline;	
 }
 
+<<<<<<< HEAD
 .purpose, .food, .beverages, .needs {
-	float: left;
-	display: :inline;
+=======
+
+
+
+.preferences{	
+
+	background-color: grey;
 }
 
+.places{
+	display: block;
+	background-color:orange;
+}
+
+.place{
+	
+	float: left;
+	background-color: azure;
+	display: block;
+}
+
+
+.purpose, .food, .beverages, .needs{
+	width: 25%;
+	float: left;
+	display: inline;
+}
+
+
+#imgplace{
+	height: 40%;
+	margin: 10px;
+
+}
+
+
+/***HOME***/
+.maps{
+	float:right;
+	width: 50%;
+}
+
+#imgmap {
+	width: 50%;
+}
+
+.location{
+	float: left;
+	width: 50%;
+	margin-top: 10px
+}
+
+#imgplace, #description{
+>>>>>>> 8ad4dd6884bd44c156e195f6f920ecf27548efac
+	float: left;
+	width: 50%
+	display: inline;
+}
+
+<<<<<<< HEAD
+=======
+
+
+#imgplace{
+	border-radius: 10px;
+	width: 20%;
+	display: inline;
+}
+
+
+.more{
+	width: 50%;
+	float: left;
+	display: inline;
+}
+
+
+>>>>>>> 8ad4dd6884bd44c156e195f6f920ecf27548efac
 /***FOOTER***/
 footer {
 	height: 50px;
