@@ -80,10 +80,9 @@ i {
 	margin-top: 0px;
 	padding-top: 20px;
 }
+
 /***PROFILO***/
-
-
-.personale{
+.personale {
 	 background-color: blue;
 	 width: 30%;
 	 float: left; 
@@ -92,8 +91,7 @@ i {
 	 display:inline;	
 }
 
-}
- .dati, .places{
+.dati, .places {
  	 background-color: orange;
 	 float: right; 
 	 width: 70%
@@ -101,12 +99,10 @@ i {
 	 display:inline;	
 }
 
-.purpose, .food, .beverages, .needs{
+.purpose, .food, .beverages, .needs {
 	float: left;
 	display: :inline;
 }
-
-
 
 /***FOOTER***/
 footer {
