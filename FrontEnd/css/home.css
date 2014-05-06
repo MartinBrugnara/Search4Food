@@ -1,7 +1,10 @@
 /***HOME***/
-.maps{
+#maps{
 	float:right;
 	width: 50%;
+	height: 100%;
+  margin: 0px;
+  padding: 0px
 }
 
 #imgmap {
@@ -20,14 +23,11 @@
 	display: inline;
 }
 
-
-
 #imgplace{
 	border-radius: 10px;
 	width: 20%;
 	display: inline;
 }
-
 
 .more{
 	width: 50%;
