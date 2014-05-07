@@ -3,25 +3,33 @@
   position: relative;
 }
 
+body {
+  /* == header.height */
+  padding-top: 100px;
+}
+
 /***HEADER***/
 header {
 	height: 100px;
 	width: 100%;
 	background-color: #D71C1C;
 	position: fixed;
-	padding-top: 5px;
 	top: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.header * {
-	display: inline;
+header > * {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #logo {
-	float: left;
-	margin-top: 0px;
-	margin-left: 15px;
-  width: 200px;
+  height: 80px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 select > option {text-transform: capitalize;}
@@ -45,13 +53,17 @@ select > option {text-transform: capitalize;}
   color: #000;
 }
 
-.buttons {
-	float: right;
-	margin-top: 30px;
+div.pull-right {
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  right: 10px;
+}
+div.pull-right > button {
+  vertical-align: middle; /* chiedere a mattia come fixare! */
 }
 
 #language {
-	margin-top: 30px;
 	margin-left: 20px;
 }
 
