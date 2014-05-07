@@ -1,12 +1,43 @@
-/***PROFILO***/
+/***header***/
+#ciao, #linklogout {
+	float: right;
+	margin-right: 5%;
+	display: inline-block;
+}
 
+
+
+/***body***/
 
 .sx{
+	margin-left: 0px;
 	 background-color: blue;
 	 width: 30%;
 	 float: left; 
 	 display:inline;	
 }
+
+#fotoprofile{
+	margin: 5%;
+	border-radius: 20px;
+	display: block;
+	float: center;
+	width: 50%
+}
+
+.friends{
+	float: left;
+	display: inline-block;
+	width: 100%;
+}
+
+#fotofriend{
+	display: inline;
+	width: 15%;
+	margin-left: 10px;
+}
+
+
 
 .dx{
 	background-color: #ff00ff;
@@ -15,24 +46,10 @@
 	 display:inline;	
 }
 
-
+/**preferenze utente**/
 .preferences{	
-
 	background-color: grey;
 }
-
-.places{
-	display: block;
-	background-color:orange;
-}
-
-.place{
-	
-	float: left;
-	background-color: azure;
-	display: block;
-}
-
 
 .purpose, .food, .beverages, .needs{
 	width: 25%;
@@ -40,10 +57,29 @@
 	display: inline;
 }
 
+/***luoghi visitati***/
+
+.places{
+	display: block;
+	background-color:orange;
+}
+
+.place{
+	float: left;
+	background-color: azure;
+	display: block;
+}
 
 #imgplace{
 	width: 30%;
 	margin: 10px;
-
+	display: inline;
+	border-radius: 10px;
 }
+
+.dataplace{
+	width: 70%;
+	display: inline;
+}
+
 
