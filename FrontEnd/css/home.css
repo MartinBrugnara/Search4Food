@@ -1,0 +1,44 @@
+/***HOME***/
+#maps{
+	float:right;
+	width: 50%;
+	height: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+#imgmap {
+	width: 50%;
+}
+
+.orderby, .moredetails{
+	float: left;
+	display: inline;
+}
+
+
+.location{
+	float: left;
+	width: 50%;
+	margin-top: 10px
+}
+
+#imgplace, #description{
+	float: left;
+	width: 50%
+	display: inline;
+}
+
+#imgplace{
+	border-radius: 10px;
+	width: 20%;
+	display: inline;
+}
+
+
+.moredetail{
+
+	width: 50%;
+	float: left;
+	display: inline;
+}

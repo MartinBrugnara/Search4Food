@@ -1,0 +1,49 @@
+/***PROFILO***/
+
+
+.sx{
+	 background-color: blue;
+	 width: 30%;
+	 float: left; 
+	 display:inline;	
+}
+
+.dx{
+	background-color: #ff00ff;
+	 width: 70%;
+	 float: right; 
+	 display:inline;	
+}
+
+
+.preferences{	
+
+	background-color: grey;
+}
+
+.places{
+	display: block;
+	background-color:orange;
+}
+
+.place{
+	
+	float: left;
+	background-color: azure;
+	display: block;
+}
+
+
+.purpose, .food, .beverages, .needs{
+	width: 25%;
+	float: left;
+	display: inline;
+}
+
+
+#imgplace{
+	width: 30%;
+	margin: 10px;
+
+}
+

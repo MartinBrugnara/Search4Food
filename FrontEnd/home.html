@@ -4,8 +4,11 @@
  	<meta charset="utf-8">  
  	<title> home </title>
  	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/icons/foundation-icons.css">
-    <link rel="shortcut icon" href="img/LogoSigla.png">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/icons/foundation-icons.css">
+  <link rel="shortcut icon" href="img/LogoSigla.png">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script type="text/javascript" src="js/home.js"></script>
  </head>
 
 
@@ -27,16 +30,25 @@
  <body>
  	<div class = "central">
 
-    <div class ="maps">
-      Mappa per vedere dove sei
-      <div>
-        <img src="img/trento.png" id="imgmap">
-      </div>
-    </div>
-
+    <div id ="maps"></div>
+    
     <div class="more">
-      <button type = "button" class = "more" id = "orderby"> order by </button>
-      <button type = "button" class = "more" id= "moredetailas"> more detailas </button>
+      <!--<button type = "button" class = "more" id = "orderby"> order by </button>-->
+      <div class="orderby">   
+        <form> 
+              <select name="order">
+                 <option value="ordina" selected="selected"> ordina per </option>
+                 <option value="price"> prezzo  </option>
+                 <option value="distance"> distanza  </option>
+                 <option value="boh"> boh </option>
+              </select>
+        </form>
+      </div>   
+
+      <div class="moredetails">
+          <button type = "button" class = "more" id= "moredetail"> more detailas </button>
+      </div>
+
     </div>
 
     <div class="location">
