@@ -16,8 +16,6 @@
 }
 
 
-
-
 .preferences{	
 
 	background-color: grey;
@@ -44,7 +42,7 @@
 
 
 #imgplace{
-	height: 40%;
+	width: 30%;
 	margin: 10px;
 
 }

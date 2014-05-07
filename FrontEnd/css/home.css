@@ -11,6 +11,12 @@
 	width: 50%;
 }
 
+.orderby, .moredetails{
+	float: left;
+	display: inline;
+}
+
+
 .location{
 	float: left;
 	width: 50%;
@@ -29,7 +35,9 @@
 	display: inline;
 }
 
-.more{
+
+.moredetail{
+
 	width: 50%;
 	float: left;
 	display: inline;

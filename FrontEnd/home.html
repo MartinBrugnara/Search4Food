@@ -34,17 +34,21 @@
     
     <div class="more">
       <!--<button type = "button" class = "more" id = "orderby"> order by </button>-->
-      <form> 
-       <fieldset>
- <p>ordina per:</p>
-     <select name="oderby" >
-      <option value="price" selected="selected"> prezzo </option>
-      <option value="distance"> distanza  </option>
-       <option value="boh"> boh </option>
-     </select>
-    </fieldset>
-</form> 
-      <button type = "button" class = "more" id= "moredetailas"> more detailas </button>
+      <div class="orderby">   
+        <form> 
+              <select name="order">
+                 <option value="ordina" selected="selected"> ordina per </option>
+                 <option value="price"> prezzo  </option>
+                 <option value="distance"> distanza  </option>
+                 <option value="boh"> boh </option>
+              </select>
+        </form>
+      </div>   
+
+      <div class="moredetails">
+          <button type = "button" class = "more" id= "moredetail"> more detailas </button>
+      </div>
+
     </div>
 
     <div class="location">
