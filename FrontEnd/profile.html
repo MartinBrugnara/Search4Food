@@ -1,127 +1,163 @@
 <!DOCTYPE html>
-<html>
- <head>
- 	<meta charset="utf-8">  
- 	<title> Profile </title>
- 	<link rel="stylesheet" href="css/style.css">
- 	<link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/icons/foundation-icons.css">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">  
+    <title>Profile</title>
+
     <link rel="shortcut icon" href="img/LogoSigla.png">
- </head>
+    <link rel="stylesheet" href="css/icons/foundation-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+  </head>
+  <body>
+    <!--
+      I suggest to wrap header, section.content, footer in a div:
+      This will simplify the responsive desing management & page general layout:
+      This 3 cmps will have with 100%
+      The real with will have just to be setted to the wrapper
+      - Martin
+    -->
+    <header>
+      <img src="img/LogoIntero.png" id="logo" alt="logo">
+      <!-- TODO: add flags icons instead of language name -->
+      <select name="language" id="language"> 
+        <option value="it">Italiano</option>
+        <option value="en">English</option>
+      </select>
 
-  <header>
-    <img src="img/LogoIntero.png" id = "logo" width = "200">
-    <select id = "language"> <!--add flags icons instead of language name-->
-      <option value = "it">Italiano</option>
-      <option value = "en">English</option>
-     </select>
-      <input type = "text" placeholder = "Where do you want to eat?"></input>
-      <input type = "text" placeholder = "What's your special purpose?"></input>
-   		 <i class = "fi-magnifying-glass"></i>
-     	<div id="ciao"> 
-     		Ciao,<div id="nome"> Alex</div>!
-    	   <a href="index.html" id = "linklogout"> log out </a>
-    	</div>
-  </header>
+      <input type="text" placeholder="Where do you want to eat?">
+      <input type="text" placeholder="What's your special purpose?">
 
- <body>
- 	<div class = "central">
+      <i class="fi-magnifying-glass">&nbsp;</i>
 
-			<!--PROFILO UTENTE-->
-		<div class= "sx">
-			<img src="img/foto.png" id="fotoprofile"> 
-			<div id="nome"> Nome: Alex </div>
-			<div id="cognome"> Cognome: Lupino </div>
-			<div id="mail"> Mail: Lupino@unitn.it </div>
-			<div class="friends">
-				<p>Amici</p> <!--link ad una pagina che mi permetta di gestire le amicizie-->
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend"> 
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-				<img src="img/foto.png" id="fotofriend">
-			</div>
+      <div id="welcome"> 
+        Welcome back <span id="nickname">Alex</span>!<br>
+        <a href="logout.php" target="_self">log out</a>
+      </div>
+    </header>
 
-		</div>
+    <section class="content">
+      <!-- USER PROFILE -->
+      <div class="profile">
+        <img src="img/foto.png" id="profile_photo" alt="Profile photo"> 
+        <ol>
+          <li>Nome: Alex</li>
+          <li>Cognome: Lupino</li>
+          <li>Mail: Lupino@unitn.it</li>
+        </ol>
+        <div class="friends">
+          <h4>Amici</h4> 
+          <!-- link ad una pagina che mi permetta di gestire le amicizie -->
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+          <img src="img/foto.png" alt="lol with me!">
+        </div>
 
-			<!--PREFERENZE UTENTE-->
-		<div class= "dx">
-			<div id="titledx">contenitore preferenzee luoghi </div>
-						<!--preferenze-->
-			<div class= "preferences">
+      <!-- PLEASE, PLEASE DO NOT INSERT (ws, cr, nl, tab) or anything lese here!!! -->
+      </div><div class="preference">
 
-				<div id="titlepref">preferenze</div> 
+      <!-- USER PREFERENCES -->
+      <!-- FIXME: inline style "is allowed" only 4 DEBUG purpose -->
+        <h3>contenitore preferenzee luoghi</h3>
 
-				<div class= "purpose" style="background: red;">
-					<p>purpose:</p>
-					<li>ristorante  </li>
-					<li>pizzeria </li>
-					<li>fast-food </li>
-					<li>bar</li>
-					<li>...</li>
-				</div>
+        <!-- preferences -->
+        <section name="main_preferences">
+          <h3 style="background: grey">preferenze</h3> 
 
-				<div class= "food" style="background: yellow;">
-					<p>cibi:</p>
-					<li>pizza</li>
-					<li>torta</li>
-					<li>hamburger  </li>
-					<li>pesce</li>
-					<li>...</li>
-				</div>
+          <section name="purpose" style="background: red">
+            <h4>purpose</h4>
+            <ol>
+              <li>ristorante  </li>
+              <li>pizzeria </li>
+              <li>fast-food </li>
+              <li>bar</li>
+              <li>...</li>
+            </ol>
+          </section><section name="food" style="background: yellow;">
+            <h4>cibi</h4>
+            <ol>
+              <li>pizza</li>
+              <li>torta</li>
+              <li>hamburger</li>
+              <li>pesce</li>
+              <li>...</li>
+            </ol>
+          </section><section name="beverages" style="background: pink;">
+            <h4>bevande</h4>
+            <ol>
+              <li>vino</li>
+              <li>birra</li>
+              <li>coca-cola  </li>
+              <li>acqua</li>
+              <li>...</li>
+            </ol>
+          </section><section name="needs" style="background: white;">
+            <h4>necessita'</h4>
+            <ol>
+              <li>vegetariano</li>
+              <li>senza glutine  </li>
+              <li>vegano</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+            </ol>
+          </section>
+        </section> <!-- END main_preferences -->
 
-				<div class= "beverages" style="background: pink;">
-					<p>bevande:</p>
-					<li>vino</li>
-					<li>birra</li>
-					<li>coca-cola  </li>
-					<li>acqua</li>
-					<li>...</li>
-				</div>
+        <section name="my_reviews">
+          <h3>posti recenti</h3>
+          <!-- foreach reviewed location -->
+          <div> 
+            <h4>Pizzeria</h4>
+            <!-- suggestion: maybe let the text start aside the photo
+              and put the rating on top-right with start icons (iTunes like) 
+              -Martin
+            -->
+            <img src="img/alleghe.png" alt="unusefull alt">
+            <div class="dataplace">
+              <p class="comment">Commento sul luogo e sul cibo</p>
+              <div class="rating">***(voto)</div>
+            </div>
+          </div><div> 
+            <h4>Ristorante</h4>
+            <img src="img/alleghe.png" alt="unusefull alt">
+            <div class="dataplace">
+              <p class="comment">Commento sul luogo e sul cibo</p>
+              <div class="rating">***(voto)</div>
+            </div>
+          </div><div> 
+            <h4>Albergo</h4>
+            <img src="img/alleghe.png" alt="unusefull alt">
+            <div class="dataplace">
+              <p class="comment">Commento sul luogo e sul cibo</p>
+              <div class="rating">***(voto)</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
 
-				<div class= "needs" style="background: white;">
-					<p>necessità:</p>
-					<li>vegetariano</li>
-					<li>senza glutine  </li>
-					<li>vegano</li>
-					<li>...</li>
-					<li>...</li>
-					<li>...</li>
-					<li>...</li>
-				</div>
-			</div>
-
-						<!--luoghi-->
-			<div class= "places">
-				<div id="titleplaces"> posti recenti </div>
-				<div class="place"> 
-						<div id="nameplace">Pizzeria</div>
-						<img src="img/alleghe.png" id="imgplace">
-						<div class="dataplace">
-							<div id="comment"> Commento sul luogo e sul cibo</div>
-							<div id="vote">  ***(voto)</div>
-						</div>
-					 </div>
-			</div>
-
-		</div>
-
-	</div>
-
-</div>
-
-
-  <footer>
-      <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
-  </footer>
- 
- </body>
-</hml> 
+    <footer>
+      &copy; Copyright 2014 MIT | GoPro Team 
+    </footer>
+  </body>
+</html> 
