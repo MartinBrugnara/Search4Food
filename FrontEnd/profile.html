@@ -18,10 +18,10 @@
       <input type = "text" placeholder = "Where do you want to eat?"></input>
       <input type = "text" placeholder = "What's your special purpose?"></input>
    		 <i class = "fi-magnifying-glass"></i>
-     	<div id="ciao">
-     		Ciao, Alex!
-     	</div>
-    	<a href="index.html" id = "linklogout"> log out </a>
+     	<div id="ciao"> 
+     		Ciao,<div id="nome"> Alex</div>!
+    	   <a href="index.html" id = "linklogout"> log out </a>
+    	</div>
   </header>
 
  <body>
@@ -29,10 +29,26 @@
 
 			<!--PROFILO UTENTE-->
 		<div class= "sx">
-			<div id="fotoprofile"> <img src="img/foto.png"> </div>
+			<img src="img/foto.png" id="fotoprofile"> 
 			<div id="nome"> Nome: Alex </div>
 			<div id="cognome"> Cognome: Lupino </div>
 			<div id="mail"> Mail: Lupino@unitn.it </div>
+			<div class="friends">
+				<p>Amici</p> <!--link ad una pagina che mi permetta di gestire le amicizie-->
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend"> 
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+				<img src="img/foto.png" id="fotofriend">
+			</div>
 
 		</div>
 
@@ -45,7 +61,7 @@
 				<div id="titlepref">preferenze</div> 
 
 				<div class= "purpose" style="background: red;">
-					purpose:
+					<p>purpose:</p>
 					<li>ristorante  </li>
 					<li>pizzeria </li>
 					<li>fast-food </li>
@@ -54,7 +70,7 @@
 				</div>
 
 				<div class= "food" style="background: yellow;">
-					cibi:
+					<p>cibi:</p>
 					<li>pizza</li>
 					<li>torta</li>
 					<li>hamburger  </li>
@@ -63,7 +79,7 @@
 				</div>
 
 				<div class= "beverages" style="background: pink;">
-					bevande:
+					<p>bevande:</p>
 					<li>vino</li>
 					<li>birra</li>
 					<li>coca-cola  </li>
@@ -72,10 +88,12 @@
 				</div>
 
 				<div class= "needs" style="background: white;">
-					necessità:
+					<p>necessità:</p>
 					<li>vegetariano</li>
 					<li>senza glutine  </li>
 					<li>vegano</li>
+					<li>...</li>
+					<li>...</li>
 					<li>...</li>
 					<li>...</li>
 				</div>
@@ -85,9 +103,12 @@
 			<div class= "places">
 				<div id="titleplaces"> posti recenti </div>
 				<div class="place"> 
+						<div id="nameplace">Pizzeria</div>
 						<img src="img/alleghe.png" id="imgplace">
-						<div id="comment"> Commento sul luogo e sul cibo</div>
-						<div id="vote">  ***(voto)</div>
+						<div class="dataplace">
+							<div id="comment"> Commento sul luogo e sul cibo</div>
+							<div id="vote">  ***(voto)</div>
+						</div>
 					 </div>
 			</div>
 
