@@ -6,11 +6,26 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/icons/foundation-icons.css">
   <link rel="shortcut icon" href="img/LogoSigla.png">
+
+  <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+  </script>-->
+
  </head>
 
- <body>
+ <body id = "map-canvas">
 
-  <header>
+  <div class = "header">
     <img src="img/LogoIntero.png" id = "logo" width = "250">
     <select id = "language"> <!--add flags icons instead of language name-->
       <option value = "it">Italiano</option>
@@ -18,18 +33,18 @@
      </select>
     <button type = "button" class = "buttons" id = "login">Log in</button>
     <button type = "button" class = "buttons">Sign up</button>
-  </header>
+  </div>
 
   <div class = "central">
-    <h3 id = "slogan">Slogan</h3>
-    <input type = "text" placeholder = "Where do you want to eat?"></input>
-    <input type = "text" placeholder = "What's your special purpose?"></input>
-    <i class = "fi-magnifying-glass"></i>
+      <h2 id = "slogan">Slogan</h2>
+      <input type = "text" placeholder = "Where do you want to eat?" class = "box"></input>
+      <input type = "text" placeholder = "What's your special purpose?" class = "box"></input>
+      <a href=""><i class = "fi-magnifying-glass"></i></a>
   </div>
    
-  <footer>
+  <div class = "footer">
       <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
-  </footer>
+  </div>
 
  </body>
 </hml>
