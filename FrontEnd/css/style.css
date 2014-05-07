@@ -4,8 +4,13 @@
 }
 
 body {
+	background-color: #32CDC3;
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
   /* == header.height */
   padding-top: 100px;
+  box-sizing: border-box;
 }
 
 /***HEADER***/
@@ -84,12 +89,7 @@ div.pull-right > button {
 	padding-top: 200px;
 }
 
-body {
-	background-color: #32CDC3;
-	height: 100%; 
-	margin: 0; 
-	padding: 0;
-}
+
 
 #text {
 	margin-top: 0px;
