@@ -1,12 +1,19 @@
-/***HEADER***/
-header {
-	height: 100px;
-	width: 100%;
-	padding-top: 20px;
-	background-color: #D71C1C;
+#container {
+  z-index: 100;
+  position: relative;
 }
 
-header * {
+/***HEADER***/
+.header {
+	height: 100px;
+	width: 100%;
+	background-color: #D71C1C;
+	position: fixed;
+	padding-top: 5px;
+	top: 0;
+}
+
+.header * {
 	display: inline;
 }
 
@@ -58,13 +65,28 @@ select > option {text-transform: capitalize;}
  * */ 
 
 /***CENTRAL***/
+#map-canvas {
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  bottom: -200px; 
+  left: 0; 
+  right: 0; 
+  z-index: 0;
+}
+
 .central {
-	background-color: #32CDC3;
-	width: 100%;
+	width: 450px;
 	height: 400px;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 5px;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+
+body {
+	background-color: #32CDC3;
+	height: 100%; 
+	margin: 0; 
+	padding: 0;
 }
 
 #text {
@@ -78,7 +100,7 @@ select > option {text-transform: capitalize;}
 
 i { 
 	color: black; 
-	font-size: 30px;
+	font-size: 35px;
 	vertical-align: middle;
 }
 
@@ -108,9 +130,14 @@ i {
 	padding-top: 20px;
 }
 
+.box {
+	width: 180px;
+	height: 35px;
+	margin-right: 15px;
+}
 
 /***FOOTER***/
-footer {
+.footer {
 	height: 50px;
 	width: 100%;
 	background-color: #25CF30;
