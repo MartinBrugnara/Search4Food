@@ -1,85 +1,95 @@
-/***header***/
-#ciao, #linklogout {
-	float: right;
-	margin-right: 5%;
-	display: inline-block;
+/*
+ * I don't know if relaying so much on % width on 
+ * elemnets like #profile_photo is a good choice.
+ * boh...
+ * - Martin
+ */
+
+section.content {
+  background-color: #32CDC3;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  clear: both; /* this maybe is unusefull here */
+  display: block;
 }
 
-
-
-/***body***/
-
-.sx{
-	margin-left: 0px;
-	 background-color: blue;
-	 width: 30%;
-	 float: left; 
-	 display:inline;	
+.profile, .preference {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  clear: both; /* this maybe is unusefull here */
 }
 
-#fotoprofile{
-	margin: 5%;
+.profile {
+  width: 30%;
+  background-color: blue;
+  padding: 10px;
+}
+
+.profile ol {
+  list-style: none;
+}
+
+.preference {
+  width: 70%;
+	background-color: #ff00ff;
+}
+
+#profile_photo {
+	display: inline;
+  margin: auto;
+	width: 50%;
+  margin-left: 25%;
+  box-shadow: 1px 1px 3px #eee;
+  border: 1px solid #333;
 	border-radius: 20px;
-	display: block;
-	float: center;
-	width: 50%
 }
 
-.friends{
-	float: left;
+.friends {
 	display: inline-block;
 	width: 100%;
 }
 
-#fotofriend{
-	display: inline;
-	width: 15%;
-	margin-left: 10px;
+.friends img {
+  display: inline-block;
+  width: 15%;
+  margin-left: 10px;
 }
 
-
-
-.dx{
-	background-color: #ff00ff;
-	 width: 70%;
-	 float: right; 
-	 display:inline;	
+section[name="main_preferences"] > section  {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/**preferenze utente**/
-.preferences{	
-	background-color: grey;
+section[name="main_preferences"] h3, 
+section[name="main_preferences"] h4,
+section[name="my_reviews"] h3,
+section[name="my_reviews"] h4 {
+  text-transform: capitalize;
 }
 
-.purpose, .food, .beverages, .needs{
-	width: 25%;
-	float: left;
-	display: inline;
+section[name="my_reviews"] > div {
+  display: inline-block;
+  margin: 0;
+  width: 33%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/***luoghi visitati***/
-
-.places{
-	display: block;
-	background-color:orange;
+section[name="my_reviews"] > div:last-child {
+  width: 34%;
+  padding-left: 1%;
 }
 
-.place{
-	float: left;
-	background-color: azure;
-	display: block;
-}
-
-#imgplace{
-	width: 30%;
-	margin: 10px;
-	display: inline;
+section[name="my_reviews"] > div > img {
+	width: 35%;
+  border: 1px solid #333;
 	border-radius: 10px;
 }
-
-.dataplace{
-	width: 70%;
-	display: inline;
-}
-
-

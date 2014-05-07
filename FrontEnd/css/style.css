@@ -11,9 +11,31 @@ header * {
 }
 
 #logo {
-	margin-top: 0px;
 	float: left;
+	margin-top: 0px;
 	margin-left: 15px;
+  width: 200px;
+}
+
+select > option {text-transform: capitalize;}
+
+#welcome {
+	float: right;
+	margin-right: 15px;
+  text-align: right;
+}
+
+#nickname {
+  text-transform: capitalize;
+  font-style: italic;
+  color: #333;
+}
+
+#welcome a { /* log out */
+  text-decoration: none;
+  text-transform: capitalize;
+  font-style: italic;
+  color: #000;
 }
 
 .buttons {
@@ -30,7 +52,10 @@ header * {
 	margin-right: 20px;
 }
 
-
+/* THIS SHIT should be defined in per page stylesheet! 
+ * I suggest to rename this to content.
+ * - Martin
+ * */ 
 
 /***CENTRAL***/
 .central {
@@ -90,11 +115,5 @@ footer {
 	width: 100%;
 	background-color: #25CF30;
 	text-align: center;
+  padding-top: 10px;
 }
-
-.licence {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 10px;
-}
-
