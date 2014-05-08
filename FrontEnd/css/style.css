@@ -74,6 +74,13 @@ div.pull-right > button {
 	margin-right: 20px;
 }
 
+#fblogin {
+	width: 14%;
+	position: fixed;
+	top: 10px;
+	right: 5px;
+}
+
 /* THIS SHIT should be defined in per page stylesheet! 
  * I suggest to rename this to content.
  * - Martin
