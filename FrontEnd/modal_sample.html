@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/modal.css" />
+  </head>
+  <body>
+    <!-- there are 2 way to open a modal:
+      - (html) href="javascript:modal_open('modal_id')"
+      - (js) modal_open("modal_id");
+      Martin
+    -->
+    <a href="javascript:modal_open('my_modal')">Open</a>
+
+    <!-- change only id="" -->
+    <div class="modal" id="my_modal">
+      <section>
+        <header>
+            <!-- put here the title -->
+            Ciao bella
+            <a href="#" class="close">X</a>
+        </header>
+        <section>
+          <!-- put here modal content -->
+
+        </section>
+      </section>
+    </div> 
+
+    <script type="text/javascript" src="js/modal.js"></script>
+  </body>
+</html>

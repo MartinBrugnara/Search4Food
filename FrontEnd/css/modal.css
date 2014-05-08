@@ -1,0 +1,71 @@
+/* - Martin */
+body {
+  min-width: 600px;
+  min-height: 400px;
+  overflow: auto;
+}
+
+.modal {
+  display: none; /* default closed */
+  /* display: block; when opened */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  min-width: 650px;
+  min-height: 500px;
+  overflow: auto;
+
+  z-index: 200;
+  background-color: rgba(238, 238, 238, 0.7);
+}
+
+.modal, .modal * {
+  border-size: border-box;
+}
+
+.modal > section {
+  /* modal body */
+  z-index: 210;
+
+  max-width: 900px;
+  min-width: 600px;
+  width: 50%;
+
+  max-height: 600px;
+  min-height: 400px;
+  height: 50%;
+
+  background-color: #fff;
+
+  border: 1px solid #333;
+  border-radius: 3px;
+
+  margin: auto;
+  vertical-align: middle;
+
+  margin-top: auto; /* WUT? <3 */
+  margin-top: 50px;
+}
+
+.modal > section > header {
+  margin: 0;
+  border-radius: 3px;
+  background-color: #ccc;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 5px;
+  border-size: border-box;
+  text-align: center;
+  font-size: 18px;
+  font-color: #333;
+  font-weight: 600;
+}
+
+.modal a.close {
+  float: right;
+  top: 5px;
+  right: 5px;
+}
