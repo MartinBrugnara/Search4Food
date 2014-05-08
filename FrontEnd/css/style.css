@@ -9,13 +9,13 @@ body {
 	margin: 0; 
 	padding: 0;
   /* == header.height */
-  padding-top: 100px;
+  padding-top: 60px;
   box-sizing: border-box;
 }
 
 /***HEADER***/
 header {
-	height: 100px;
+	height: 60px;
 	width: 100%;
 	background-color: #D71C1C;
 	position: fixed;
@@ -32,9 +32,7 @@ header > * {
 }
 
 #logo {
-  height: 80px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+  height: 60px;
 }
 
 select > option {text-transform: capitalize;}
