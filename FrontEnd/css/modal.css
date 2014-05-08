@@ -5,6 +5,19 @@ body {
   overflow: auto;
 }
 
+/* reset */
+.modal, .modal * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: auto;
+  width: auto;
+  position: relative;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 .modal {
   display: none; /* default closed */
   /* display: block; when opened */
@@ -66,6 +79,5 @@ body {
 
 .modal a.close {
   float: right;
-  top: 5px;
   right: 5px;
 }
