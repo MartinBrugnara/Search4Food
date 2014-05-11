@@ -83,6 +83,18 @@ div.pull-right > button {
 	right: 5px;
 }
 
+.inputs {
+	height: 25px;
+	width: 170px;
+	margin-left: 10px;
+}
+
+i {
+	font-size: 30px;
+	margin-left: 5px;
+	color: black;
+}
+
 /***FOOTER***/
 footer{
 	height: 50px;
