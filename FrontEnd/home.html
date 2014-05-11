@@ -1,84 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">  
-<title> home </title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="css/icons/foundation-icons.css">
-<link rel="shortcut icon" href="img/LogoSigla.png">
-<link rel="stylesheet" href="css/modal.css">
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-<script type="text/javascript" src="js/home.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">  
+    <title> home </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/icons/foundation-icons.css">
+    <link rel="shortcut icon" href="img/LogoSigla.png">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+  </head>
 
+  <body>
+    <header>
+      <img src="img/LogoIntero.png" id = "logo" width = "250">
+      <select id = "language"> <!--add flags icons instead of language name-->
+        <option value = "it">Italiano</option>
+        <option value = "en">English</option>
+      </select>
+      <input type = "text" placeholder = "Where do you want to eat?"></input>
+      <input type = "text" placeholder = "What's your special purpose?"></input>
+      <i class = "fi-magnifying-glass"></i>
+      <img src="img/fbLogin.png" id="fblogin">
+    </header>
 
-<header>
-  <img src="img/LogoIntero.png" id = "logo" width = "250">
-  <select id = "language"> <!--add flags icons instead of language name-->
-    <option value = "it">Italiano</option>
-    <option value = "en">English</option>
-  </select>
-  <input type = "text" placeholder = "Where do you want to eat?"></input>
-  <input type = "text" placeholder = "What's your special purpose?"></input>
-  <i class = "fi-magnifying-glass"></i>
-  <img src="img/fbLogin.png" id="fblogin">
-</header>
+    <div class = "central">
+    
+      <div id ="maps"></div>
 
+      <div class="more">
+        <!--<button type = "button" class = "more" id = "orderby"> order by </button>-->
+        <div class="orderby">   
+          <form> 
+            <select name="order">
+              <option value="ordina" selected="selected"> ordina per </option>
+              <option value="price"> prezzo  </option>
+              <option value="distance"> distanza  </option>
+              <option value="boh"> boh </option>
+            </select>
+          </form>
+        </div>   
 
+        <div class="moredetails">
+          <button type = "button" class = "more" id= "moredetail"> more detailas </button>
+        </div>
+      </div>
 
-<body>
-<div class = "central">
+      <div class="location">
+        <img src="img/alleghe.png" id="imgplace">
+        <div id="description"> Descrizione del posto
+          <div id="stars"> valutazione: *** </div>
+        </div>
+      </div>
 
-  <div id ="maps"></div>
-
-  <div class="more">
-    <!--<button type = "button" class = "more" id = "orderby"> order by </button>-->
-    <div class="orderby">   
-      <form> 
-        <select name="order">
-          <option value="ordina" selected="selected"> ordina per </option>
-          <option value="price"> prezzo  </option>
-          <option value="distance"> distanza  </option>
-          <option value="boh"> boh </option>
-        </select>
-      </form>
-    </div>   
-
-    <div class="moredetails">
-      <button type = "button" class = "more" id= "moredetail"> more detailas </button>
     </div>
 
-  </div>
-
-  <div class="location">
-    <img src="img/alleghe.png" id="imgplace" >
-    <div id="description"> Descrizione del posto
-      <div id="stars"> valutazione: *** </div>
-    </div>
-  </div>
-
-  <footer>
-    <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
-  </footer>
+    <footer>
+      <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
+    </footer>
 
 
-  <!--MODAL WINDOW -->
-  <a href="javascript:modal_open('my_modal')">Open</a>
-  <!-- change only id="" -->
-  <div class="modal" id="my_modal">
-    <section>
-      <header>
-        <!-- put here the title -->
-        Ciao bella
-        <a href="#" class="close"><i class = "fi-x-circle"></i></a>
-      </header>
+    <!--MODAL WINDOW -->
+    <a href="javascript:modal_open('my_modal')">Open</a>
+    <!-- change only id="" -->
+    <div class="modal" id="my_modal">
       <section>
-        <!-- put here modal content -->
+        <header>
+          <!-- put here the title -->
+          Ciao bella
+          <a href="#" class="close"><i class = "fi-x-circle"></i></a>
+        </header>
+        <section>
+          <!-- put here modal content -->
+        </section>
       </section>
-    </section>
-  </div> 
+    </div> 
 
-  <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
   </body>
-  </hml> 
+</hml>
