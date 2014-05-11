@@ -1,3 +1,5 @@
+/*HEADER AND FOOTER ONLY*/
+
 #container {
   z-index: 100;
   position: relative;
@@ -79,68 +81,6 @@ div.pull-right > button {
 	position: fixed;
 	top: 10px;
 	right: 5px;
-}
-
-/* THIS SHIT should be defined in per page stylesheet! 
- * I suggest to rename this to content.
- * - Martin
- * */ 
-
-/***CENTRAL***/
-.central {
-	width: 450px;
-	height: 400px;
-	margin: 0 auto;
-	padding-top: 200px;
-}
-
-
-
-#text {
-	margin-top: 0px;
-	padding-top: 25px;
-}
-
-.credentials {
-	display: block;
-}
-
-i { 
-	color: black; 
-	font-size: 35px;
-	vertical-align: middle;
-}
-
-#signup {
-	margin-top: 0px;
-}
-
-#link {
-	display: inline;
-}
-
-#shit {
-	display: inline;
-}
-
-.controller {
-	margin-top: 20px;
-}
-
-#title {
-	margin-top: 0px;
-	padding-top: 20px;
-}
-
-#slogan {
-	margin-top: 0px;
-	padding-top: 20px;
-}
-
-.box {
-	width: 180px;
-	height: 35px;
-	margin-right: 15px;
 }
 
 /***FOOTER***/
