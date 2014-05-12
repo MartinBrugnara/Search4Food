@@ -5,6 +5,8 @@
   position: relative;
 }
 
+a {text-decoration: none; !important}
+
 body {
 	background-color: #32CDC3;
 	height: 100%; 
@@ -76,17 +78,23 @@ div.pull-right > button {
 	margin-right: 20px;
 }
 
-#fblogin {
-	width: 14%;
-	position: fixed;
-	top: 10px;
-	right: 5px;
+
+
+body > header  input{
+	height: 25px;
+	width: 300px;
+	margin-left: 10px;
+  font-size: 16px;
 }
 
-.inputs {
-	height: 25px;
-	width: 170px;
-	margin-left: 10px;
+.rw {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  height: 34px;
+  margin:0;
+  padding:0;
+  margin-top:15px;
 }
 
 i {
@@ -94,6 +102,28 @@ i {
 	margin-left: 5px;
 	color: black;
 }
+
+i.uk { background-image: url('../img/uk.png'); }
+i.it { background-image: url('../img/it.png'); }
+i.flag {
+  height: 30px; 
+  width: 30px;
+  border: 1px solid #333;
+  border-radius: 100%;
+  background-size: 100% 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+i.fb { 
+  height: 30px; 
+  width: 150px;
+  background-size: 100% 100%;
+  background-image: url('../img/fbLogin.png'); 
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 /***FOOTER***/
 footer{
