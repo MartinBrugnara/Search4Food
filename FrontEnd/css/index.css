@@ -1,3 +1,8 @@
+#container {
+  z-index: 100;
+  position: relative;
+}
+
 .central {
 	width: 450px;
 	height: 400px;

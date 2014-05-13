@@ -1,10 +1,5 @@
 /*HEADER AND FOOTER ONLY*/
 
-#container {
-  z-index: 100;
-  position: relative;
-}
-
 body {
 	background-color: #32CDC3;
 	height: 100%; 
