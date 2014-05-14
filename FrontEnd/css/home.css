@@ -50,12 +50,18 @@
 
 
 /***MODAL WINDOW***/
-.preference {
+
+section[name="preferences"] > section  {
   display: inline-block;
   vertical-align: top;
   margin: 0;
-  padding: 0;
+  width: 33%;
+  padding: 10px;
   box-sizing: border-box;
-  clear: both; /* this maybe is unusefull here */
 }
 
+
+section[name="preferences"] > section:last-child {
+  width: 34%;
+  padding-left: 1%;
+}
