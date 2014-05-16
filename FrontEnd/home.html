@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="shortcut icon" href="img/LogoSigla.png">
     <link rel="stylesheet" href="css/modal.css">
+
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
   </head>
 
   <body>
@@ -43,10 +45,12 @@
           <img src="img/alleghe.png" id="imgplace" alt="alleghe">
           <p> Descrizione del posto </p>
           <div id="stars"> valutazione: *** </div>
+          <span id="latitude"></span> <!--spans for lat and long of a plase, injected from DB-->
+          <span id="longitude"></span>
         </div>
       </div>    
 
-      <iframe id ="maps" src="http://www.openstreetmap.org/export/embed.html?bbox=11.013965606689453%2C46.02724347843214%2C11.20553970336914%2C46.098828625461984&amp;layer=mapnik"></iframe>
+      <div id="maps"></div>
 
     </div>
 
@@ -102,6 +106,7 @@
     </div> 
 
     <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
 
     <footer>
       <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
