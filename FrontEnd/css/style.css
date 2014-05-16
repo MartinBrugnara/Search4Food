@@ -1,14 +1,13 @@
 /*CONTAINS HEADER, FOOTER AND STUFF WHICH IS ALL THE SAME FOR ALL THE SITE*/
 
 #container {
-  z-index: 100;
   position: relative;
 }
 
 a {text-decoration: none;}
 
 body {
-	background-color: #32CDC3;
+	background-color: transparent;
 	height: 100%; 
 	margin: 0; 
 	padding: 0;
@@ -28,6 +27,7 @@ header {
   box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;
+  z-index: 100;
 }
 
 header > * {
@@ -131,4 +131,5 @@ footer{
 	background-color: #25CF30;
 	text-align: center;
   padding-top: 10px;
+  z-index: 100;
 }
