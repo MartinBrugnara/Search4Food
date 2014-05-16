@@ -1,4 +1,4 @@
-/*HEADER AND FOOTER ONLY*/
+/*CONTAINS HEADER, FOOTER AND STUFF WHICH IS ALL THE SAME FOR ALL THE SITE*/
 
 #container {
   z-index: 100;
@@ -78,8 +78,6 @@ div.pull-right > button {
 	margin-right: 20px;
 }
 
-
-
 body > header  input{
 	height: 25px;
 	width: 300px;
@@ -105,6 +103,7 @@ i {
 
 i.uk { background-image: url('../img/uk.png'); }
 i.it { background-image: url('../img/it.png'); }
+
 i.flag {
   height: 30px; 
   width: 30px;
