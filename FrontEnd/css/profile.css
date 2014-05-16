@@ -83,6 +83,7 @@ section[name="my_reviews"] > div {
   box-sizing: border-box;
 }
 
+#my-modal > section
 section[name="my_reviews"] > div:last-child {
   width: 34%;
   padding-left: 1%;
