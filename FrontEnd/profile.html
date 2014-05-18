@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/modal.css">
   </head>
   <body>
   
@@ -25,6 +26,8 @@
         <a href="logout.php" target="_self">log out</a>
       </div>
     </header>
+
+    <div>
 
     <section class="content">
       <!-- USER PROFILE -->
@@ -49,8 +52,8 @@
         <!-- preferences -->
         <section name="main_preferences">
           <h3 style="background: grey">preferenze</h3> 
-
-          <section name="purpose" style="background: red">
+          <div style= "display:flex">
+          <section name="purpose" style="background: red; width:100%">
             <h4>scopo</h4>
             <ul>
               <li>matrimonio  </li>
@@ -59,7 +62,7 @@
               <li>pranzo di lavoro</li>
               <li>...</li>
             </ul>
-          </section><section name="food" style="background: yellow;">
+          </section><section name="food" style="background: yellow;width:100%">
             <h4>cibi</h4>
             <ul>
               <li>pizza</li>
@@ -68,7 +71,7 @@
               <li>pesce</li>
               <li>...</li>
             </ul>
-          </section><section name="beverages" style="background: pink;">
+          </section><section name="beverages" style="background: pink;width:100%">
             <h4>bevande</h4>
             <ul>
               <li>vino</li>
@@ -77,7 +80,7 @@
               <li>acqua</li>
               <li>...</li>
             </ul>
-          </section><section name="needs" style="background: white;">
+          </section><section name="needs" style="background: white;width:100%">
             <h4>necessita'</h4>
             <ul>
               <li>vegetariano</li>
@@ -90,12 +93,14 @@
             </ul>
           </section>
         </section> <!-- END main_preferences -->
+      </div>
+      </div>
 
         <section name="my_reviews">
-          <h3>posti recenti</h3>
+          <h3> Posti recenti in cui sei stato:</h3>
           <!-- foreach reviewed location -->
           <div> 
-            <h4>Pizzeria</h4>
+            <a href="javascript:modal_open('modal_place')"><h4> Ristorante Uva & Menta</h4></a>
             <!-- suggestion: maybe let the text start aside the photo
               and put the rating on top-right with start icons (iTunes like) 
               -Martin
@@ -106,14 +111,14 @@
               <div class="rating">***(voto)</div>
             </div>
           </div><div> 
-            <h4>Ristorante</h4>
+            <a href="javascript:modal_open('modal_place')"><h4> Ristorante Uva & Menta</h4></a>
             <img src="img/alleghe.png" alt="unusefull alt">
             <div class="dataplace">
               <p class="comment">Commento sul luogo e sul cibo</p>
               <div class="rating">***(voto)</div>
             </div>
           </div><div> 
-            <h4>Albergo</h4>
+            <a href="javascript:modal_open('modal_place')"><h4> Ristorante Uva & Menta</h4></a>
             <img src="img/alleghe.png" alt="unusefull alt">
             <div class="dataplace">
               <p class="comment">Commento sul luogo e sul cibo</p>
@@ -123,6 +128,26 @@
         </section>
       </div>
     </section>
+
+            <!--MODAL WINDOW RESTAURANT-->
+    <!-- change only id="" -->
+    <div class="modal" id="modal_place">
+      <section>
+        <header>
+          <!-- put here the title -->
+          RISTORANTE UVA & MENTA
+          <a href="#" class="close"><i class = "fi-x-circle">&nbsp;</i></a>
+        </header>
+
+        <!-- preferences -->
+        FOTO
+        ALTRE COSE
+
+      </section>
+    </div> 
+
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
 
     <footer>
       &copy; Copyright 2014 MIT | GoPro Team 
