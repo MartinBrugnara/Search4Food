@@ -41,7 +41,7 @@ body {
 
 .modal > section {
   /* modal body */
-  z-index: 210;
+  z-index: 1110;
 
   max-width: 900px;
   min-width: 600px;
