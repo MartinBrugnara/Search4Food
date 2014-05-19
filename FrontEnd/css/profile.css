@@ -85,7 +85,7 @@ section[name="my_reviews"] h3,
 section[name="my_reviews"] h4 {
 }
 
-section[name="my_reviews"] > div {
+section[name="location"] > div {
   display: inline-block;
   margin: 0;
   width: 33%;
@@ -94,13 +94,92 @@ section[name="my_reviews"] > div {
 }
 
 #my-modal > section
-section[name="my_reviews"] > div:last-child {
+section[name="location"] > div:last-child {
   width: 34%;
   padding-left: 1%;
 }
 
-section[name="my_reviews"] > div > img {
+section[name="location"] > div > img {
 	width: 35%;
   border: 1px solid #333;
 	border-radius: 10px;
+}
+
+
+section.location {
+  width: 33%;
+  margin-top: 10px;
+  border-bottom: 1px #ccc dotted;
+  vertical-align: top;
+  box-size: border-box;
+  word-wrap:break-word;
+}
+
+section.location:last-child {
+  border-bottom: 0;
+}
+
+section.location span.rating  a:first-child {
+  text-decoration: none;
+  font-size: 24px;
+  color: steelblue;
+}
+
+section.location span.rating a:first-child:hover {text-decoration: underline;}
+
+section.location img {  
+  width: 150px;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-right: 10px;
+  clear: both;
+}
+
+section.location span.rating::after{
+  font-size: 24px;
+  color: gold;
+  display: inline-block;
+  content: "\2605";
+}
+section.location span.rating[data-stars="2"]::after{
+  content: "\2605\2605";
+}
+section.location span.rating[data-stars="3"]::after{
+  content: "\2605\2605\2605";
+}
+section.location span.rating[data-rate="4"]::after{
+  content: "\2605\2605\2605\2605";
+}
+section.location span.rating[data-stars="5"]::after{
+  content: "\2605\2605\2605\2605\2605";
+}
+
+section.location h4 {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.clear {
+  clear: both;
+}
+
+ul.comments {
+  list-style-type: square;
+}
+
+ul.comments li {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.orderby, .location {
+  margin-left: 2%
+}
+
+
+#imgplace{
+  border-radius: 15px;
+  width: 20%;
+  display: inline;
 }
