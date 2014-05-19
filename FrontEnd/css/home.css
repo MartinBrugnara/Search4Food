@@ -31,16 +31,13 @@
 .location{
 	width: 50%;
 	margin-top: 5px;
+	
 }
 
 .orderby, .location {
 	margin-left: 2%
 }
 
-#imgplace {
-	width: 50%;
-	display: inline;
-}
 
 #imgplace{
 	border-radius: 10px;

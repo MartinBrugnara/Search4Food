@@ -37,16 +37,18 @@
               <option value="distance"> distanza  </option>
               <option value="boh"> boh </option>
             </select>
-            <a href="javascript:modal_open('my_modal')"><button type = "button"> ricerca avanzata </button></a>
+            <a href="javascript:modal_open('my_modal')"><button type = "button"> ricerca avanazata </button></a>
 
         </div>   
 
-        <div class="location"> 
-          <a href="javascript:modal_open('my_modal1')"><div id="name"> Ristorante Uva & Menta</div></a>
+        <div class="location">
+          <a href="javascript:modal_open('modal_place')"><div id="name"> Pizzeria Albert </div></a>
           <img src="img/alleghe.png" id="imgplace" alt="alleghe">
+                <ul>
+                  <li>"Posto molto bello, ci tornerei!" </li>
+                  <li>"Servizio veloce e pizza molto buona"</li>
+                </ul>
 
-          <p> Descrizione del posto </p>
-          <div id="stars"> valutazione: *** </div>
           <span id="latitude"></span> <!--spans for lat and long of a plase, injected from DB-->
           <span id="longitude"></span>
         </div>
@@ -102,24 +104,8 @@
               </fieldset>
               </form>
           </section>
+          <!-- put here modal content -->
         </section>
-      </section>
-    </div> 
-
-        <!--MODAL WINDOW RESTAURANT-->
-    <!-- change only id="" -->
-    <div class="modal" id="my_modal1">
-      <section>
-        <header>
-          <!-- put here the title -->
-          RISTORANTE UVA & MENTA
-          <a href="#" class="close"><i class = "fi-x-circle">&nbsp;</i></a>
-        </header>
-
-        <!-- preferences -->
-        FOTO
-        ALTRE COSE
-
       </section>
     </div> 
 
