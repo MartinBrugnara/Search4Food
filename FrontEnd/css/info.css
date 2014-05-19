@@ -1,0 +1,20 @@
+.central{
+	margin: 10px;
+}
+
+#img_food{
+	border-radius: 10px;
+	width: 30%;
+	display: inline;
+}
+
+.right{
+	width: 68%;
+	display: inline;
+}
+
+textarea[name="comment"]{
+	float: right;
+	width: 100%;
+	border-color: blue;
+}

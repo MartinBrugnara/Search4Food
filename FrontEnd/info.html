@@ -36,13 +36,14 @@
         <h3> Tel:0461 231712 , link website</h3>
         <img src="img/pizza.png" id="img_food" alt="pizza">
         <!--rating fascia di prezzo e breve descrizione vanno a dx di foto-->
-        <p> rating: *****</p> <!--provvisorio-> c'è bisogno di js-->
+        <div class="right">
+          <p> rating: *****</p> <!--provvisorio-> c'è bisogno di js-->
+          <a href="javascript:modal_open('rating')"><button type = "button"> rating </button></a>
 
-        <a href="javascript:modal_open('rating')"><button type = "button"> rating </button></a>
-
-        <P> fascia di prezzo: €€€€€</p>
+          <P> fascia di prezzo: €€€€€</p>
         
-        <p> DESCRIZIONE: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat </p>
+          <p> DESCRIZIONE: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat </p>
+        </div>
 
         <!--commenti vanno a sotto la  foto-->
         COMMENTI
@@ -76,7 +77,7 @@
           </section>
 
           <section name="comment">
-            Lascia un commento:
+            <h4>Lascia un commento:</h4>
             <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
           </section>
 
