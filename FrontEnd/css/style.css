@@ -18,6 +18,7 @@ body {
 
 /***HEADER***/
 header {
+  z-index: 1099;
 	height: 60px;
 	width: 100%;
 	background-color: #006d41;
@@ -27,7 +28,6 @@ header {
   box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;
-  z-index: 100;
 }
 
 header > * {
@@ -132,5 +132,5 @@ footer{
 	text-align: center;
   padding-top: 10px;
   position: relative;
-  z-index: 100;
+  z-index: 1099;
 }

@@ -27,32 +27,122 @@
       </div>
     </header>
 
-    <div class = "central">
-
-      <div class="more">
+    <div class="central">
+      <section id="locations">
         <div class="orderby">   
-            <select name="order">
-              <option value="ordina" selected="selected"> ordina per </option>
-              <option value="price"> prezzo  </option>
-              <option value="distance"> distanza  </option>
-              <option value="boh"> boh </option>
-            </select>
-            <a href="javascript:modal_open('my_modal')"><button type = "button"> ricerca avanazata </button></a>
-
+          <select name="order">
+            <option value="ratings" selected>ratings</option>
+            <option value="price">prezzo</option>
+            <option value="distance">distanza</option>
+          </select>
+          <button type="button" onclick="modal_open('my_modal')">ricerca avanazata</button>
         </div>   
 
-        <div class="location">
-          <a href="javascript:modal_open('my_modal1')"><div id="name"> Pizzeria Albert </div></a>
-          <img src="img/alleghe.png" id="imgplace" alt="alleghe">
-                  <h4>"Posto molto bello, ci tornerei!" </h4>
-                  <h4>"Servizio veloce e pizza molto buona"</h4>
+        <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
+          </span>
+          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <h4>Slogan location</h4>
+          <!-- descrizione -->
+          dsajdhsjkdsahjksadhkjashsajkdhasjkdhskjdhdsajdhsajdh sajdhsajdshdkjs dhksjdhsajkdhas ljkdhsajkdhjkdh jkdhsakjdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhkajkdhsajkdhsakj
 
-          <span id="latitude"></span> <!--spans for lat and long of a plase, injected from DB-->
-          <span id="longitude"></span>
-        </div>
-      </div>    
+          <!-- comments -->
+          <section class="clear">
+            <span data-lat="23.432N">Lat: 23.432N</span>
+            <span data-lon="72.000E">Long: 72.000E</span>
+            <br>
 
-      <div id="maps"></div>
+            Comments:
+            <ul class="comments">
+              <li>Bello</li>
+              <li>Na merda</li>
+              <li> hdwadhwajdhwa </li>
+            </ul>
+          </section>
+        </section>
+        <!-- item end -->
+
+        <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
+          </span>
+          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <h4>Slogan location</h4>
+          <!-- descrizione -->
+          dsajdhsjkdsahjksadhkjashsajkdhasjkdhskjdhdsajdhsajdh sajdhsajdshdkjs dhksjdhsajkdhas ljkdhsajkdhjkdh jkdhsakjdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhkajkdhsajkdhsakj
+
+          <!-- comments -->
+          <section class="clear">
+            <span data-lat="23.432N">Lat: 23.432N</span>
+            <span data-lon="72.000E">Long: 72.000E</span>
+            <br>
+
+            Comments:
+            <ul class="comments">
+              <li>Bello</li>
+              <li>Na merda</li>
+              <li> hdwadhwajdhwa </li>
+            </ul>
+          </section>
+        </section>
+        <!-- item end -->
+
+        <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
+          </span>
+          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <h4>Slogan location</h4>
+          <!-- descrizione -->
+          dsajdhsjkdsahjksadhkjashsajkdhasjkdhskjdhdsajdhsajdh sajdhsajdshdkjs dhksjdhsajkdhas ljkdhsajkdhjkdh jkdhsakjdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhkajkdhsajkdhsakj
+
+          <!-- comments -->
+          <section class="clear">
+            <span data-lat="23.432N">Lat: 23.432N</span>
+            <span data-lon="72.000E">Long: 72.000E</span>
+            <br>
+
+            Comments:
+            <ul class="comments">
+              <li>Bello</li>
+              <li>Na merda</li>
+              <li> hdwadhwajdhwa </li>
+            </ul>
+          </section>
+        </section>
+        <!-- item end -->
+
+        <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
+          </span>
+          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <h4>Slogan location</h4>
+          <!-- descrizione -->
+          dsajdhsjkdsahjksadhkjashsajkdhasjkdhskjdhdsajdhsajdh sajdhsajdshdkjs dhksjdhsajkdhas ljkdhsajkdhjkdh jkdhsakjdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhsajkdhkajkdhsajkdhsakj
+
+          <!-- comments -->
+          <section class="clear">
+            <span data-lat="23.432N">Lat: 23.432N</span>
+            <span data-lon="72.000E">Long: 72.000E</span>
+            <br>
+
+            Comments:
+            <ul class="comments">
+              <li>Bello</li>
+              <li>Na merda</li>
+              <li> hdwadhwajdhwa </li>
+            </ul>
+          </section>
+        </section>
+        <!-- item end -->
+
+      </section><div id="maps"></div>
 
     </div>
 
@@ -69,7 +159,7 @@
         <!-- preferences -->
         <section name="preferences">
           <section name="purpose" style="background: red">
-              <form action="">
+            <form action="">
               <fieldset>
                 <legend>purpose</legend><br>
                 <input type="checkbox" name="pizzeria" value="pizzeria"/> pizzeria
@@ -80,9 +170,9 @@
                 <br/>
                 <input type="checkbox" name="casa" value="casa"/> casa 
               </fieldset>
-              </form>
+            </form>
           </section><section name="food" style="background: blue">
-              <form action="">
+            <form action="">
               <fieldset>
                 <legend>food</legend><br>
                 <input type="checkbox" name="Italian" value="Italian"/> Italian
@@ -93,21 +183,21 @@
                 <br/>
                 <input type="checkbox" name="Japanese" value="Japanese"/> Japanese 
               </fieldset>
-              </form>
+            </form>
           </section><section name="other" style="background: red">
-              <form action="">
+            <form action="">
               <fieldset>
                 <legend>purpose</legend><br>
                 <input type="checkbox" name="celiac" value="celiac"/> celiac
               </fieldset>
-              </form>
+            </form>
           </section>
           <!-- put here modal content -->
         </section>
       </section>
     </div> 
 
-            <!--MODAL WINDOW RESTAURANT-->
+    <!--MODAL WINDOW RESTAURANT-->
     <!-- change only id="" -->
     <div class="modal" id="my_modal1">
       <section>
@@ -123,7 +213,7 @@
         <!--rating fascia di prezzo e breve descrizione vanno a dx di foto-->
         <p> rating: *****</p> <!--provvisorio-> c'è bisogno di js-->
         <P> fascia di prezzo: €€€€€</p>
-        
+
         <p> DESCRIZIONE: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat </p>
 
         <!--commenti vanno a sotto la  foto-->
