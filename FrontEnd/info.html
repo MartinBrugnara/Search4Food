@@ -4,7 +4,7 @@
     <meta charset="utf-8">  
     <title> home </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/info.css">
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="shortcut icon" href="img/LogoSigla.png">
     <link rel="stylesheet" href="css/modal.css">
@@ -37,7 +37,9 @@
         <img src="img/pizza.png" id="img_food" alt="pizza">
         <!--rating fascia di prezzo e breve descrizione vanno a dx di foto-->
         <p> rating: *****</p> <!--provvisorio-> c'è bisogno di js-->
-        <button type = "button"> rating </button>
+
+        <a href="javascript:modal_open('rating')"><button type = "button"> rating </button></a>
+
         <P> fascia di prezzo: €€€€€</p>
         
         <p> DESCRIZIONE: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat </p>
@@ -52,6 +54,47 @@
 
     </div>
 
+
+        <!-- mw per rating -->
+    <div class="modal" id="rating">
+      <section>
+        <header>
+          <!-- put here the title -->
+          Ricerca avanzata
+          <a href="#" class="close"><i class = "fi-x-circle">&nbsp;</i></a>
+        </header>
+
+        <!-- preferences -->
+        <section name="preferences">
+          <section name="vote">
+              <form action="">
+              <fieldset>
+                <legend>Cosa ne pensi del posto in cui sei stato?</legend><br>
+                <input type="checkbox" name="vote5" value="vote5"/> eccellente
+                <br/> 
+                <input type="checkbox" name="vote4" value="vote4"/> molto buono
+                <br/> 
+                <input type="checkbox" name="vote3" value="vote3"/> buono
+                <br/>
+                <input type="checkbox" name="vote2" value="vote2"/> mediocre 
+                <br/>
+                <input type="checkbox" name="vote1" value="vote1"/> schifo
+              </fieldset>
+              </form>
+          </section>
+
+          <section name="comment">
+            Lascia un commento:
+            <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
+          </section>
+
+        </section>
+      </section>
+    </div> 
+
+
+    <script type="text/javascript" src="js/modal.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
     
     <footer>
       <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p> 
