@@ -1,0 +1,29 @@
+span.rating  a:first-child {
+  text-decoration: none;
+  font-size: 24px;
+  color: steelblue;
+}
+
+span.rating a:first-child:hover {text-decoration: underline;}
+
+span.rating { 
+  display: block;
+  width: 100%;
+}
+
+span.rating::after{
+  font-size: 24px;
+  color: gold;
+  display: inline-block;
+  content: "\2605";
+}
+
+span.rating[data-stars="2"]::after{content: "\2605\2605";}
+span.rating[data-stars="3"]::after{content: "\2605\2605\2605";}
+section.location span.rating[data-rate="4"]::after{
+  content: "\2605\2605\2605\2605";
+}
+
+section.location span.rating[data-stars="5"]::after{
+  content: "\2605\2605\2605\2605\2605";
+}

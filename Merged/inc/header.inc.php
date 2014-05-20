@@ -1,7 +1,7 @@
     <header>
       <img src="img/logo.png" id="logo" alt="logo">
-      <input type="text" placeholder="Where do you want to eat?">
-      <input type="text" placeholder="What's your special purpose?">
+      <input type="text" placeholder="<?=$GLOABLS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
+      <input type="text" placeholder="<?=$GLOABLS['dict']->wisp->{$_SESSION['lang']}; ?>">
 
       <!-- TODO: bind event to search -->
       <a><i class="fi-magnifying-glass">&nbsp;</i></a>
