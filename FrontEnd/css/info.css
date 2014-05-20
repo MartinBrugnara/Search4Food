@@ -9,13 +9,13 @@
 }
 
 .right{
-	width: 40%;
-	display: inline;
+	width: 60%;
+	display: inline-block;
 }
 
 
 .left{
-	width: 60%;
-	display: inline;
+	width: 40%;
+	display: inline-block;
 }
 
