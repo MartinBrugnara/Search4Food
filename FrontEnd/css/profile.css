@@ -51,30 +51,29 @@ section.content {
 section[name="purpose"] {
   background: #2eb780;
   width: 100%;
+  height: 100%;
 
 }
 
-section[name="food"] {
+section[name="tag"] {
   background: #54b78f;
   width: 100%;
+  height: 100%;
 }
 
-section[name="beverages"] {
+section[name="cousine"] {
   background: #2eb780;
   width: 100%;
+  height: 100%;
 
-}
-
-section[name="needs"] {
-  background: #54b78f;
-  width: 100%;
 }
 
 section[name="main_preferences"] > section  {
   display: inline-block;
   vertical-align: top;
-  margin: 0;
-  width: 25%;
+  margin: 1px;
+  width: 33%;
+  height: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
