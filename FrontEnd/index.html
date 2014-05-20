@@ -72,42 +72,30 @@
       
     </script>-->
 
-
-    <script type="text/javascript">
-        map = new OpenLayers.Map("maps");
+    <script type="text/javascript"> //geolocalization
+        map = new OpenLayers.Map("maps", {controls:[]});
         var mapnik = new OpenLayers.Layer.OSM();
-        var markers = new OpenLayers.Layer.Markers( "Markers" );
+        var markers = new OpenLayers.Layer.Markers("Markers");
         
         map.addLayer(mapnik);
-        //map = new OpenLayers.Map("basicMap");
-        //var mapnik = new OpenLayers.Layer.OSM();
-        //map.addLayer(mapnik);
         map.setCenter(new
-        OpenLayers.LonLat(3,3) // Center of the map
-          .transform(
-            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-            new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
-          ), 15 // Zoom level
+              OpenLayers.LonLat(11.1261,46.0605)
+                .transform(
+                  new OpenLayers.Projection("EPSG:4326"), 
+                  new OpenLayers.Projection("EPSG:900913")), 
+                  13
          );
-        //var markers = new OpenLayers.Layer.Markers( "Markers" );
         map.addLayer(markers);
-        var posss = new OpenLayers.Marker(0,0);
-        markers.addMarker(posss);                    
+        var pos = new OpenLayers.Marker(0,0);
+        markers.addMarker(pos);                    
                         
         navigator.geolocation.watchPosition(function(position) {       
-            var lonLat = new OpenLayers.LonLat(position.coords.longitude,
-                                    position.coords.latitude)
-                      .transform(
-                                  new OpenLayers.Projection("EPSG:4326"), //transform from WGS 1984
-                                              map.getProjectionObject() //to Spherical Mercator Projection
-                                            );
+            var lonLat = new OpenLayers.LonLat(position.coords.longitude, position.coords.latitude)
+                      .transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject() );
             
             markers.clearMarkers();                                
             markers.addMarker(new OpenLayers.Marker(lonLat));
-            //posss.lonlat(lonLat);
-            map.setCenter(lonLat, 14 // Zoom level
-            );
-           
+            map.setCenter(lonLat, 14);
         });
     </script>
 
