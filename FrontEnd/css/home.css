@@ -55,19 +55,13 @@ section.location {
   vertical-align: top;
   box-sizing: border-box;
   word-wrap:break-word;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 section.location:last-child {
   border-bottom: 0;
 }
-
-section.location span.rating  a:first-child {
-  text-decoration: none;
-  font-size: 24px;
-  color: steelblue;
-}
-
-section.location span.rating a:first-child:hover {text-decoration: underline;}
 
 section.location img {  
   width: 150px;
@@ -78,33 +72,22 @@ section.location img {
   clear: both;
 }
 
-section.location span.rating { 
-  display: block;
-  width: 100%;
-}
-
-section.location span.rating::after{
-  font-size: 24px;
-  color: gold;
-  display: inline-block;
-  content: "\2605";
-}
-section.location span.rating[data-stars="2"]::after{
-  content: "\2605\2605";
-}
-section.location span.rating[data-stars="3"]::after{
-  content: "\2605\2605\2605";
-}
-section.location span.rating[data-rate="4"]::after{
-  content: "\2605\2605\2605\2605";
-}
-section.location span.rating[data-stars="5"]::after{
-  content: "\2605\2605\2605\2605\2605";
-}
-
 section.location h4 {
   margin-top: 1px;
   margin-bottom: 1px;
+}
+
+.fi-widget { /* what a dirty hack.. bleah :P */
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  margin-top: 1px;
+}
+
+.fi-widget:hover {
+  cursor:pointer;
+  text-shadow: 1px 1px 5px #fff;
 }
 
 .clear {
@@ -120,16 +103,13 @@ ul.comments li {
   margin-bottom: 1px;
 }
 
-
 #imgplace, #img_food{
 	border-radius: 10px;
 	width: 20%;
 	display: inline;
 }
 
-
 /***MODAL WINDOW***/
-
 section[name="preferences"] > section  {
   display: inline-block;
   vertical-align: top;
@@ -144,5 +124,3 @@ section[name="preferences"] > section:last-child {
   width: 34%;
   padding-left: 1%;
 }
-
-

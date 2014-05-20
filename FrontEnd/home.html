@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="shortcut icon" href="img/LogoSigla.png">
     <link rel="stylesheet" href="css/modal.css">
-
+    <link rel="stylesheet" href="css/rating.css">
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
   </head>
 
@@ -18,8 +18,7 @@
       <input type="text" placeholder="Where do you want to eat?">
       <input type="text" placeholder="What's your special purpose?">
       <a href="#"><i class="fi-magnifying-glass">&nbsp;</i></a>
-
-
+      
       <div class="rw">
         <i class="flag uk">&nbsp;</i>
         <i class="flag it">&nbsp;</i>
@@ -30,12 +29,11 @@
     <div class="central">
       <section id="locations">
         <div class="orderby">   
-          <select name="order">
-            <option value="ratings" selected>ratings</option>
-            <option value="price">prezzo</option>
-            <option value="distance">distanza</option>
-          </select>
-          <button type="button" onclick="modal_open('my_modal')">ricerca avanazata</button>
+          Sort by:
+          <input type="radio" name="sort" value="ratings">Ratings
+          <input type="radio" name="sort" value="distance">Distance
+          &nbsp;&nbsp;
+          <i class="fi-widget" onclick="modal_open('my_modal')">&nbsp;</i>
         </div>   
 
         <!-- item start -->
@@ -61,7 +59,7 @@
         <!-- item start -->
         <section class="location">
           <span class="rating" data-stars="3">
-            <a href="info.html">Pizzeria Albert</a>
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
           </span>
           <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
           <h4>Descrizione</h4>
@@ -87,7 +85,7 @@
         <!-- item start -->
         <section class="location">
           <span class="rating" data-stars="3">
-            <a href="info.html">Pizzeria Albert</a>
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
           </span>
           <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
           <h4>Slogan location</h4>
@@ -113,7 +111,7 @@
         <!-- item start -->
         <section class="location">
           <span class="rating" data-stars="3">
-            <a href="info.html">Pizzeria Albert</a>
+            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
           </span>
           <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
           <h4>Slogan location</h4>
