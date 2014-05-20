@@ -9,8 +9,13 @@
 }
 
 .right{
-	width: 68%;
-	display: inline;
+	width: 60%;
+	display: inline-block;
 }
 
+
+.left{
+	width: 40%;
+	display: inline-block;
+}
 
