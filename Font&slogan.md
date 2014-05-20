@@ -44,6 +44,7 @@ SCRIVERE QUI SOTTO -NOME- -SCELTA SLOGAN- -SCELTA FONT-
 
 Andrea: 	slogan -> Woody Allen
 		font -> Raleway (su google font)
-	
+Gianluca	slogan -> Woody Allen
+		font -> Homizio Nova Font
 
 
