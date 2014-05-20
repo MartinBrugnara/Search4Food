@@ -29,13 +29,16 @@ footer { /* force footer to stay at the bottom of the page */
 #maps {border: 1px solid black;}
 #locations {
   overflow-x: scroll;
-  padding-top: 20px; /* equals to .order_by height */
+  padding-top: 25px; /* equals to .order_by height */
+  padding-right: 10px;
 }
 
 .orderby {
   position: absolute;
   top: 10px;
   width:50%;
+  height: 25px;
+  line-height: 25px;
 	display: block-inline;
   text-align: center;
 
@@ -50,7 +53,7 @@ section.location {
 	margin-top: 10px;
   border-bottom: 1px #ccc dotted;
   vertical-align: top;
-  box-size: border-box;
+  box-sizing: border-box;
   word-wrap:break-word;
 }
 
