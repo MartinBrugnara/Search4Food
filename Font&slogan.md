@@ -7,11 +7,12 @@ Open Sans: https://www.google.com/fonts#
 Futura Light: http://www.fontyukle.net/en/Futura+(Light).ttf
 
 Junction: http://www.fontsquirrel.com/fonts/junction-regular
+Fatbardha
 
 Quattrocento: Quattrocento
 
 Raleway: http://www.fontsquirrel.com/fonts/Raleway?q%5Bterm%5D=raleway&q%5Bsearch_check%5D=Y
-
+Fatbardha 
 Merriweather: merriweather
 
 Homizio Nova: http://www.dafont.com/homizio-nova.font
@@ -30,6 +31,7 @@ WOODY ALLEN
  
 Linda: "Ma tu ti cuoci solo cibi surgelati?”.
 Woody Allen: “Cuocerli? E chi li cuoce? Io neanche li scongelo. Li succhio come se fossero ghiaccioli!”.
+Fatbardha
 
 
 Le cose più belle della vita o sono immorali, o sono illegali, oppure fanno ingrassare.GEORGE BERNARD SHAW
