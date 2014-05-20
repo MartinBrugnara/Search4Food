@@ -85,6 +85,9 @@ section[name="my_reviews"] h3,
 section[name="my_reviews"] h4 {
 }
 
+
+/***LOCATION***/
+
 section[name="location"] > div {
   display: inline-block;
   margin: 0;
@@ -93,7 +96,6 @@ section[name="location"] > div {
   box-sizing: border-box;
 }
 
-#my-modal > section
 section[name="location"] > div:last-child {
   width: 34%;
   padding-left: 1%;
@@ -107,7 +109,7 @@ section[name="location"] > div > img {
 
 
 section.location {
-  width: 33%;
+  width: 100%;
   margin-top: 10px;
   border-bottom: 1px #ccc dotted;
   vertical-align: top;
@@ -118,7 +120,9 @@ section.location {
 section.location:last-child {
   border-bottom: 0;
 }
-
+section.location span.rating{
+  display: block;
+}
 section.location span.rating  a:first-child {
   text-decoration: none;
   font-size: 24px;
