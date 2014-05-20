@@ -1,6 +1,6 @@
 Font:
 
-Helvetica Neue : [a link] http://getbootstrap.com/getting-started/ ce lo danno gratis se usiamo bootstrap
+Helvetica Neue : http://getbootstrap.com/getting-started/ ce lo danno gratis se usiamo bootstrap
 
 Open Sans: https://www.google.com/fonts#
 
@@ -39,7 +39,7 @@ Tutta la storia umana attesta che la felicità dell’uomo, peccatore affamato, 
 Non c’è uomo che non possa bere o mangiare, ma sono in pochi in grado di capire che cosa abbia sapore
 
 Mangiare è uno dei quattro scopi della vita... quali siano gli altri tre, nessuno lo ha mai saputo.(proverbio cinese)
-
+SCRIVERE QUI SOTTO <NOME> <SCELTA SLOGAN> <SCELTA FONT>
 
 Andrea: 	slogan -> Woody Allen
 		font -> Raleway (su google font)
