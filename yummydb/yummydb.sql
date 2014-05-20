@@ -197,7 +197,7 @@ CREATE TABLE `tag` (
 
 LOCK TABLES `tag` WRITE;
 /*!40000 ALTER TABLE `tag` DISABLE KEYS */;
-INSERT INTO `tag` VALUES (1,'Restaurant','service'),(2,'Take-away','service'),(3,'Mexican','cousine'),(4,'Spanish','cousine');
+INSERT INTO `tag` VALUES (1,'Restaurant','service'),(2,'Take-away','service'),(3,'Take-away','service'),(4,'Mexican','cousine'),(5,'Spanish','cousine'),(6,'Italian','cousine'),(7,'Japanese','cousine');
 /*!40000 ALTER TABLE `tag` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -222,6 +222,7 @@ CREATE TABLE `purpose` (
 
 LOCK TABLES `purpose` WRITE;
 /*!40000 ALTER TABLE `purpose` DISABLE KEYS */;
+INSERT INTO `purpose` VALUES (1,'Friends',''),(2,'Romantic',''),(3,'Family','');
 /*!40000 ALTER TABLE `purpose` ENABLE KEYS */;
 UNLOCK TABLES;
 
