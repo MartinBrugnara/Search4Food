@@ -13,8 +13,4 @@
 	display: inline;
 }
 
-textarea[name="comment"]{
-	float: right;
-	width: 100%;
-	border-color: blue;
-}
+
