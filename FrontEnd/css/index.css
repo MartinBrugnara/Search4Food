@@ -3,12 +3,16 @@
 }
 
 .central {
-	width: 650px;
-	height: 300px;
+	width: 600px;
+	height: 120px;
 	margin: 0 auto;
-	padding-top: 200px;
+	margin-top: 200px;
+	padding-left: 20px;
 	position: relative;
 	z-index: 100;
+	background-color: rgba(245, 248, 239, 0.7);
+	border-radius: 3px;
+	border: 1px solid #fff;
 }
 
 #text {

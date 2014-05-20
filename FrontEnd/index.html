@@ -52,6 +52,7 @@
       map.setCenter(position, zoom);
 
       var geolocate = new OpenLayers.Control.Geolocate({
+        bind: false,
         geolocationOptions: {
           enableHighAccuracy: false,
           maximumAge: 0,
