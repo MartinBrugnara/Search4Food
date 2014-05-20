@@ -1,29 +1,41 @@
 /***HOME***/
-.central {
-	width: 100%;
-	padding-top: 1%;
-	padding-bottom: 1%;
+
+footer { /* force footer to stay at the bottom of the page */
+  position: absolute;
+  bottom: 0;
 }
 
-#maps{
-	width: 50%;
-	height: 500px;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  border: 1px solid black;
+.central { /* wrapper: fixed page size */
+  position: absolute;
+  top: 60px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+	padding: 10px;
   box-sizing: border-box;
 }
 
-#locations {
-	display: inline-block;
-	vertical-align: top;
+#maps, #locations {
+  display: inline-block;
 	width: 50%;
-	margin: 0;
-	padding: 0;
+	height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+#maps {border: 1px solid black;}
+#locations {
+  overflow-x: scroll;
+  padding-top: 20px; /* equals to .order_by height */
 }
 
 .orderby {
+  position: absolute;
+  top: 10px;
+  width:50%;
 	display: block-inline;
   text-align: center;
 
@@ -103,10 +115,6 @@ ul.comments {
 ul.comments li {
   margin-top: 1px;
   margin-bottom: 1px;
-}
-
-.orderby, .location {
-	margin-left: 2%
 }
 
 
