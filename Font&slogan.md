@@ -54,5 +54,5 @@ Fata: slogan -> Woody Allen
 Alex: slogan -> lord byron
 		font -> junction
 
-martin: slogan -> Woody Allen
+martin: slogan -> VICTOR HUGO
 		font -> Lato
