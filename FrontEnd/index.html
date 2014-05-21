@@ -27,7 +27,7 @@
       </header>
 
       <div class = "central">
-          <h2 id = "slogan">Slogan</h2>
+          <h4 id = "slogan">"Tu cuoci solo cibi surgelati?"<br>"Cuocerli? E chi li cuoce? Io neanche li scongelo. Li succhio come se fossero ghiaccioli!"<br><span id="cite">-Woody Allen-</span></h4>
           <input type = "text" placeholder = "Where do you want to eat?" class = "box">
           <input type = "text" placeholder = "What's your special purpose?" class = "box">
           <a href="#"><i class = "fi-magnifying-glass">&nbsp;</i></a>
@@ -37,40 +37,6 @@
           <p class = "licence">&copy; Copyright 2014 MIT | GoPro Team</p>
       </footer>
     </div>
-
-    <!--<script type="text/javascript">
-      map = new OpenLayers.Map("maps", {controls:[]});
-      var mapnik = new OpenLayers.Layer.OSM();
-      var fromProjection = new OpenLayers.Projection("EPSG:4326");  
-      var toProjection = new OpenLayers.Projection("EPSG:900913"); 
-      var latitude = 11.1261;
-      var longitude = 46.0605;
-
-      var lati, longi;
-
-      navigator.geolocation.getCurrentPosition(function(position){
-        lati = position.coords.latitude;
-        longi = position.coords.longitude;
-      });
-
-      var position = new OpenLayers.LonLat(lati, longi).transform(fromProjection, toProjection);
-      var zoom = 12; 
-       
-      map.addLayer(mapnik);
-      map.setCenter(position, zoom);
-
-      var geolocate = new OpenLayers.Control.Geolocate({
-        bind: false,
-        geolocationOptions: {
-          enableHighAccuracy: false,
-          maximumAge: 0,
-          timeout: 7000
-        }
-      });
-
-      map.addControl(geolocate);
-      
-    </script>-->
 
     <script type="text/javascript"> //geolocalization working
         map = new OpenLayers.Map("maps", {controls:[]});

@@ -1,10 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+
 #container {
   position: relative;
 }
 
 .central {
 	width: 600px;
-	height: 120px;
+	height: 140px;
 	margin: 0 auto;
 	margin-top: 200px;
 	padding-left: 20px;
@@ -51,11 +53,6 @@ i {
 	padding-top: 20px;
 }
 
-#slogan {
-	margin-top: 0px;
-	padding-top: 20px;
-}
-
 .box {
 	width: 180px;
 	height: 35px;
@@ -83,4 +80,21 @@ footer {
 
 body {
 	background-color: transparent;
+}
+
+#slogan {
+	margin-top: 0px;
+	padding-top: 15px;
+	font-family: Raleway, Helvetica;
+	font-size: 15px;
+}
+
+#cite {
+	position: absolute;
+	font-size: 13px;
+	right: 0;
+	padding: 0;
+	padding-top: 2px;
+	padding-right: 8px;
+	font-family: Raleway, Helvetica;
 }
