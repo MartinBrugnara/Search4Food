@@ -75,7 +75,7 @@
     <script type="text/javascript"> //geolocalization working
         map = new OpenLayers.Map("maps", {controls:[]});
         var mapnik = new OpenLayers.Layer.OSM();
-        var markers = new OpenLayers.Layer.Markers("Markers");
+        //var markers = new OpenLayers.Layer.Markers("Markers");
         
         map.addLayer(mapnik);
         map.setCenter(new
@@ -86,9 +86,9 @@
                   13
          );
 
-        map.addLayer(markers);
+        //map.addLayer(markers);
         var pos = new OpenLayers.Marker(0,0);
-        markers.addMarker(pos);                    
+        //markers.addMarker(pos);                    
                         
         navigator.geolocation.watchPosition(function(position) {       
             var lonLat = new OpenLayers.LonLat(position.coords.longitude, position.coords.latitude)
