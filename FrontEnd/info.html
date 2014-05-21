@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="css/info.css">
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
     <link rel="shortcut icon" href="img/LogoSigla.png">
-    <link rel="stylesheet" href="css/modal.css">
-
+    <link rel="stylesheet" href="css/rating.css">
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
   </head>
 
   <body>
@@ -29,80 +29,40 @@
 
     <div class = "central">
 
-    <h2>PIZZERIA ALBERT</h2>
-            <h3>Via Bernardino Bomporto, 2 38122 Trento‎ </h3>
-            <h3> Tel: 0461 231712  link website</h3>
-      <section>
-          <div style="display: inline-block">
+      <div id="title">
+        <h3>PIZZERIA ALBERT</h3>
+        <span class="rating" data-stars="3">
+      </div>
+
+
+
+        <div class="sx">
           <img src="img/pizza.png" id="img_food" alt="pizza" class="left">
-              
-            <!--rating fascia di prezzo e breve descrizione vanno a dx di foto-->
-            <div class="right">
-              <p> rating: *****</p> <!--provvisorio-> c'è bisogno di js-->
+            <p>Via Bernardino Bomporto, 2 38122 Trento‎ </p>
+            <div id="maps"></div>
+        </div><div class="comment">
+            <p>COMMENTI<p>
+            <p>"Ho letto le recensioni su questo ristorante e cosi ho deciso di farmici portare per il mio compleanno!! devo dire che il locale è davvero molto carino!!"</p> 
 
-              <section name="vote">
-                <form>
-                  <legend>Cosa ne pensi del posto in cui sei stato?</legend><br>
-                  <input type="radio" name="vote1" value="vote5"> eccellente<br> 
-                  <input type="radio" name="vote1" value="vote4"> molto buono<br>
-                  <input type="radio" name="vote1" value="vote3"> buono<br>
-                  <input type="radio" name="vote1" value="vote2"> mediocre<br> 
-                  <input type="radio" name="vote1" value="vote1"> schifo
-                </form>
-              </section>
-              <p> DESCRIZIONE: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat </p>
-            </div>
-    
-          </div>
-        
+            <p>"Ho apprezzato molta la cortesia di chi lo gestisce e gli aperitivi personalizzati!! la cena era davvero ottima con molta attenzione alla presentazione!! il personale attento alle esigenze dei clienti!! consigliatissimo"</p>          
 
-           <!--commenti vanno a sotto la  foto-->
+            <form>
+              <legend>Cosa ne pensi del posto in cui sei stato?</legend>
+                <input type="radio" name="vote1" value="vote5"> eccellente 
+                <input type="radio" name="vote1" value="vote4"> molto buono
+                <input type="radio" name="vote1" value="vote3"> buono
+                <input type="radio" name="vote1" value="vote2"> mediocre
+                <input type="radio" name="vote1" value="vote1"> pessimo
+            </form>
 
+            <textarea rows="5" cols="50">
+              Inserisci qui il tuo commento!
+            </textarea>
 
-      </section>
-        
-        <section>
-                 COMMENTI
-         <h4> Ho letto le recensioni su questo ristorante e cosi ho deciso di farmici portare per il mio compleanno!! devo dire che il locale è davvero molto carino!!</h4> 
-
-        <h4> Ho apprezzato molta la cortesia di chi lo gestisce e gli aperitivi personalizzati!! la cena era davvero ottima con molta attenzione alla presentazione!! il personale attento alle esigenze dei clienti!! consigliatissimo </h4>
-        </section>
+        </div>
 
     </div>
 
-
-        <!-- mw per rating -->
-    <div class="modal" id="rating">
-      <section>
-        <header>
-          <!-- put here the title -->
-          Rating
-          <a href="#" class="close"><i class = "fi-x-circle">&nbsp;</i></a>
-        </header>
-
-          <section name="vote">
-              <form>
-                <legend>Cosa ne pensi del posto in cui sei stato?</legend><br>
-                <input type="radio" name="vote1" value="vote5"> eccellente<br> 
-                <input type="radio" name="vote1" value="vote4"> molto buono<br>
-                <input type="radio" name="vote1" value="vote3"> buono<br>
-                <input type="radio" name="vote1" value="vote2"> mediocre<br> 
-                <input type="radio" name="vote1" value="vote1"> schifo
-              </form>
-          </section>
-
-          <section name="comment">
-            <h4>Lascia un commento:</h4>
-            <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
-          </section>
-
-          <button type = "button"> commenta </button>
-
-        </section>
-    </div> 
-
-
-    <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
     
     <footer>

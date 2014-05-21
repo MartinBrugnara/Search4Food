@@ -1,21 +1,40 @@
-.central{
-	margin: 10px;
-}
+
 
 #img_food{
 	border-radius: 10px;
-	width: 30%;
+	width: 50%;
 	display: inline;
 }
-
-.right{
-	width: 60%;
+.sx{
 	display: inline-block;
+	width: 50%;
+}
+.comment {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
 }
 
 
-.left{
-	width: 40%;
+.rating{
+	vertical-align: top;
 	display: inline-block;
 }
+
+#maps {
+  display: inline-block;
+	width: 30%;
+	height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+#maps {
+	border: 1px solid black;
+	width: 70%;
+	height: 300px;
+}
+
 
