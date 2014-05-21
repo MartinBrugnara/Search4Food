@@ -1,6 +1,9 @@
-
+.central{
+	margin: 30px;
+}
 
 #img_food{
+	margin:50px;
 	border-radius: 10px;
 	width: 50%;
 	display: inline;
@@ -15,9 +18,14 @@
 	width: 50%;
 }
 
+#commento{
+	margin-top: 3px;
+	border-bottom: 1px solid blue;	
+}
+
 .alex{
 width: 90%;
-height: 200px;
+height: 300px;
 padding: 30px;
 margin-bottom: 40px;
 overflow-x: hidden;
@@ -35,7 +43,7 @@ border: 1px solid black;
   display: inline-block;
 	width: 30%;
 	height: 100%;
-  margin: 0;
+  margin: 20px;
   padding: 0;
   box-sizing: border-box;
   vertical-align: top;
