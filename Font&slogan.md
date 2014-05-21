@@ -51,4 +51,8 @@ Gianluca	slogan -> Woody Allen
 Fata: slogan -> Woody Allen
 		font -> Junction /raleway
 
+Alex: slogan -> lord byron
+		font -> junction
 
+martin: slogan -> Woody Allen
+		font -> Lato
