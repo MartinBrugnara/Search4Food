@@ -72,7 +72,7 @@
       
     </script>-->
 
-    <script type="text/javascript"> //geolocalization
+    <script type="text/javascript"> //geolocalization working
         map = new OpenLayers.Map("maps", {controls:[]});
         var mapnik = new OpenLayers.Layer.OSM();
         var markers = new OpenLayers.Layer.Markers("Markers");
@@ -85,17 +85,18 @@
                   new OpenLayers.Projection("EPSG:900913")), 
                   13
          );
+
         map.addLayer(markers);
         var pos = new OpenLayers.Marker(0,0);
         markers.addMarker(pos);                    
                         
         navigator.geolocation.watchPosition(function(position) {       
             var lonLat = new OpenLayers.LonLat(position.coords.longitude, position.coords.latitude)
-                      .transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject() );
+                      .transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
             
             markers.clearMarkers();                                
             markers.addMarker(new OpenLayers.Marker(lonLat));
-            map.setCenter(lonLat, 14);
+            map.setCenter(lonLat, 13);
         });
     </script>
 
