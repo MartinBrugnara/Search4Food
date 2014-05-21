@@ -3,7 +3,12 @@
   Utils::update_env();
   Utils::load_dict(); 
 
-  $locations = []; // call search function
+  include_once('libs/db.php');
+  include_once('libs/core.php');
+
+  $locations = get_loc_ratings();
+  $comments = get_all_ratings();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
