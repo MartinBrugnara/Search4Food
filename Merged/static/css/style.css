@@ -1,8 +1,6 @@
 /*CONTAINS HEADER, FOOTER AND STUFF WHICH IS ALL THE SAME FOR ALL THE SITE*/
 
-#container {
-  position: relative;
-}
+#container {position: relative;}
 
 a {text-decoration: none;}
 
@@ -11,12 +9,11 @@ body {
 	height: 100%; 
 	margin: 0; 
 	padding: 0;
-  /* == header.height */
-  padding-top: 60px;
+  padding-top: 60px; /* == header.height */
   box-sizing: border-box;
 }
 
-/***HEADER***/
+/** HEADER **/
 header {
   z-index: 1099;
 	height: 60px;
@@ -35,57 +32,18 @@ header > * {
   vertical-align: middle;
 }
 
-#logo {
-  height: 60px;
-}
-
+#logo {height: 60px;}
 select > option {text-transform: capitalize;}
-
-#welcome {
-	float: right;
-	margin-right: 15px;
-  text-align: right;
-}
-
-#nickname {
-  text-transform: capitalize;
-  font-style: italic;
-  color: #333;
-}
-
-#welcome a { /* log out */
-  text-decoration: none;
-  text-transform: capitalize;
-  font-style: italic;
-  color: #000;
-}
-
-div.pull-right {
-  height: 100%;
-  box-sizing: border-box;
-  position: absolute;
-  right: 10px;
-}
-div.pull-right > button {
-  vertical-align: middle; /* chiedere a mattia come fixare! */
-}
-
-#language {
-	margin-left: 20px;
-}
-
-#login {
-	margin-right: 20px;
-}
 
 body > header  input{
 	height: 25px;
 	width: 300px;
 	margin-left: 10px;
   font-size: 16px;
+  text-transform: capitalize;
 }
 
-.rw {
+.options_wrapper {
   display: inline-block;
   position: absolute;
   right: 10px;
@@ -95,15 +53,15 @@ body > header  input{
   margin-top:15px;
 }
 
-i {
+header i {  /* icons */
 	font-size: 30px;
 	margin-left: 5px;
 	color: black;
 }
 
-i.uk { background-image: url('../img/uk.png'); }
+/* flags */
+i.en { background-image: url('../img/en.png'); }
 i.it { background-image: url('../img/it.png'); }
-
 i.flag {
   height: 30px; 
   width: 30px;
@@ -118,10 +76,14 @@ i.fb {
   height: 30px; 
   width: 150px;
   background-size: 100% 100%;
-  background-image: url('../img/fbLogin.png'); 
+  background-image: url('../img/fb.png'); 
   display: inline-block;
   vertical-align: middle;
 }
+
+/* logged in user */
+header .user {font-size: 18px;} 
+header .logout {font-size: 16px;} 
 
 
 /***FOOTER***/

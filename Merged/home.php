@@ -21,13 +21,6 @@
   <body>
     <?php include "./inc/header.inc.php"; ?>
 
-    <!-- TODO: remove debug -->
-    Debug: current_lang: <?= $_SESSION['lang'] ?>
-    Debug: get_lang: <?= $_GET['lang'] ?>
-<?=$_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];?>
-<br><br>
-<?=$_SERVER["SCRIPT_NAME"]?>
-
     <div class="central">
       <section id="locations">
         <div class="orderby">   
