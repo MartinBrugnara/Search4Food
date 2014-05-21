@@ -13,7 +13,8 @@
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="static/css/style.css">
 
-    <link rel="stylesheet" href="static/css/icons/foundation-icons.css">
+    <!-- TODO: update once #026 is closed -->
+    <link rel="stylesheet" href="static/css/foundation-icons.css">
 
     <link rel="stylesheet" href="static/css/modal.css">
     <link rel="stylesheet" href="static/css/rating.css">
@@ -28,11 +29,11 @@
         <!-- order by func -->
         <!-- TODO: do via javascript -->
         <div class="orderby">   
-          Sort by:
-          <input type="radio" name="sort" value="ratings">Ratings
-          <input type="radio" name="sort" value="distance">Distance
+          <?=$GLOBALS['dict']->sort_by->{$_SESSION['lang']}?>
+          <input type="radio" name="sort" value="ratings"><?=$GLOBALS['dict']->ratings->{$_SESSION['lang']}?>
+          <input type="radio" name="sort" value="distance"><?=$GLOBALS['dict']->distance->{$_SESSION['lang']}?>
           &nbsp;&nbsp;
-          <i class="fi-widget" onclick="modal_open('my_modal')">&nbsp;</i>
+          <i class="fi-widget" onclick="modal_open('advanced_search')">&nbsp;</i>
         </div>   
 
         <?php foreach($locations as $loc): ?>
@@ -48,25 +49,31 @@
           <!-- Descrizione -->
           <?=$loc->description?>
 
-          <!-- comments -->
-          <section class="clear">
-
-            <br>
+          <!-- Comments -->
+          <section class="clear comments">
+            <?php foreach($comments[$loc->loc_id] as $c): ?>
+            <p>
+              <span class="rating author" data-starts="<?=$c->rating?>"><?=$c->name?></span><br>
+              <?=$c->comment?>
+            </p>
+            <?php endforeach; ?>
           </section>
+
         </section>
         <?php endforeach; ?>
+
+      <!-- location end, map start -->
       </section><div id="maps"></div>
+    </div> <!-- central end -->
 
-    </div>
-
-    <!--MODAL WINDOW -->
-    <!-- change only id="" -->
-    <div class="modal" id="my_modal">
+    <!-- MODAL WINDOW -->
+    <!-- TODO: update this modal & it's style -->
+    <div class="modal" id="advanced_search">
       <section>
         <header>
           <!-- put here the title -->
           Ricerca avanzata
-          <a href="#" class="close"><i class = "fi-x-circle">&nbsp;</i></a>
+          <a href="#" class="close"><i class="fi-x-circle">&nbsp;</i></a>
         </header>
 
         <!-- preferences -->
@@ -101,11 +108,12 @@
         </section>
       </section>
     </div> 
+    <!-- MODAL END -->
 
     <?php include "./inc/footer.inc.php"; ?>
 
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
-    <script type="text/javascript" src="js/modal.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="/static/js/modal.js"></script>
+    <script type="text/javascript" src="/static/js/map.js"></script>
   </body>
 </html>

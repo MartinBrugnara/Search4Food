@@ -14,5 +14,17 @@
   "slogan": {
     "eng": "Slogan ENG",
     "ita": "Slogan ITA"
+  },
+  "sort_by": {
+    "eng": "sort by",
+    "ita": "ordina per"
+  },
+  "ratings": {
+    "eng": "ratings",
+    "ita": "ratings"
+  },
+  "distance": {
+    "eng": "distance",
+    "ita": "distanza"
   }
 }
