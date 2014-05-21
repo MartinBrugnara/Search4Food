@@ -24,7 +24,7 @@ class Utils {
 
     // Load config - set session vars
     public static function update_env() {
-        $GLOBALS['env'] = Utils::load_json('./config.json');
+        $GLOBALS['env'] = Utils::load_json('./texts/config.json');
 
         if(session_id() == "") {
             session_start();
