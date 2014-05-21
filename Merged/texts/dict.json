@@ -10,5 +10,9 @@
   "logout": {
     "eng": "logout",
     "ita": "disconnetti"
+  },
+  "slogan": {
+    "eng": "Slogan ENG",
+    "ita": "Slogan ITA"
   }
 }

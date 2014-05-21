@@ -2,6 +2,8 @@
   include_once('libs/Utils.php');
   Utils::update_env();
   Utils::load_dict(); 
+
+  $locations = []; // call search function
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +25,8 @@
 
     <div class="central">
       <section id="locations">
+        <!-- order by func -->
+        <!-- TODO: do via javascript -->
         <div class="orderby">   
           Sort by:
           <input type="radio" name="sort" value="ratings">Ratings
@@ -31,17 +35,18 @@
           <i class="fi-widget" onclick="modal_open('my_modal')">&nbsp;</i>
         </div>   
 
-        <!-- item start -->
+        <?php foreach($locations as $loc): ?>
         <section class="location">
-          <span class="rating" data-stars="3">
-            <a href="info.html">Pizzeria Albert</a>
-            <!-- Questo è solo un esempio -->
+          <!-- Name + rating -->
+          <span class="rating" data-stars="<?=$loc->rating?>">
+          <a href="/info.php?id=<?=$loc->place_id?>"><?=$loc->name?></a>
           </span>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
-          <!-- descrizione -->
-          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
-          <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
-          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+
+          <!-- Location Picture -->
+          <div style="float:left"><img src="<?=$loc->picture_url?>" alt="alleghe"></div>
+
+          <!-- Descrizione -->
+          <?=$loc->description?>
 
           <!-- comments -->
           <section class="clear">
@@ -49,85 +54,7 @@
             <br>
           </section>
         </section>
-        <!-- item end -->
-
-        <!-- item start -->
-        <section class="location">
-          <span class="rating" data-stars="3">
-            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
-          </span>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
-          <h4>Descrizione</h4>
-          <!-- descrizione -->
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-          <!-- comments -->
-          <section class="clear">
-            <span data-lat="23.432N">Lat: 23.432N</span>
-            <span data-lon="72.000E">Long: 72.000E</span>
-            <br>
-
-            Comments:
-            <ul class="comments">
-              <li>Bello</li>
-              <li>Na merda</li>
-              <li> hdwadhwajdhwa </li>
-            </ul>
-          </section>
-        </section>
-        <!-- item end -->
-
-        <!-- item start -->
-        <section class="location">
-          <span class="rating" data-stars="3">
-            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
-          </span>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
-          <h4>Slogan location</h4>
-          <!-- descrizione -->
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-          <!-- comments -->
-          <section class="clear">
-            <span data-lat="23.432N">Lat: 23.432N</span>
-            <span data-lon="72.000E">Long: 72.000E</span>
-            <br>
-
-            Comments:
-            <ul class="comments">
-              <li>Bello</li>
-              <li>Na merda</li>
-              <li> hdwadhwajdhwa </li>
-            </ul>
-          </section>
-        </section>
-        <!-- item end -->
-
-        <!-- item start -->
-        <section class="location">
-          <span class="rating" data-stars="3">
-            <a href="javascript:modal_open('my_modal1')">Pizzeria Albert</a>
-          </span>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
-          <h4>Slogan location</h4>
-          <!-- descrizione -->
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-
-          <!-- comments -->
-          <section class="clear">
-            <span data-lat="23.432N">Lat: 23.432N</span>
-            <span data-lon="72.000E">Long: 72.000E</span>
-            <br>
-
-            Comments:
-            <ul class="comments">
-              <li>Bello</li>
-              <li>Na merda</li>
-              <li> hdwadhwajdhwa </li>
-            </ul>
-          </section>
-        </section>
-        <!-- item end -->
+        <?php endforeach; ?>
       </section><div id="maps"></div>
 
     </div>
