@@ -109,6 +109,11 @@ ul.comments li {
 	display: inline;
 }
 
+#address{
+  display: block;
+  margin-bottom: 2%;
+}
+
 /***MODAL WINDOW***/
 section[name="preferences"] > section  {
   display: inline-block;
