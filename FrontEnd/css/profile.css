@@ -48,6 +48,14 @@ section.content {
 	border-radius: 20px;
 }
 
+#nome{
+  display: inline-block;
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
 section[name="purpose"] {
   background: #2eb780;
   width: 100%;
