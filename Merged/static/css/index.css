@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+
+#container {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.central {
+	width: 600px;
+	margin: auto;
+  padding: 15px; 
+	z-index: 100;
+	background-color: rgba(245, 248, 239, 0.7);
+	border-radius: 3px;
+	border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+/* search icon */
+i { 
+	color: #000; 
+	font-size: 35px;
+	vertical-align: middle;
+}
+
+.central input {
+	font-size: 18px;
+  text-transform: capitalize;
+	height: 30px;
+	width: 254px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+}
+
+#maps {
+	position: absolute;
+	top: 50px;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+}
+
+#slogan {
+	margin-top: 0px;
+	font-family: Raleway, Helvetica;
+	font-size: 15px;
+}
+
+#cite {
+	font-size: 13px;
+	font-family: Raleway, Helvetica;
+  float: right;
+}

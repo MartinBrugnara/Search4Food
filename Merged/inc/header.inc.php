@@ -12,7 +12,7 @@
       <div class="options_wrapper">
         <a href="<?=$_SERVER['SCRIPT_NAME']?>?lang=eng" target="_self"><i class="flag en">&nbsp;</i></a>
         <a href="<?=$_SERVER['SCRIPT_NAME']?>?lang=ita" target="_self"><i class="flag it">&nbsp;</i></a>
-        <?php if($_GLOBALS['user']->is_logged): ?>
+        <?php if(!$_GLOBALS['user']->is_logged): ?>
         <i class="fb">&nbsp;</i>
         <?php else: ?>
         <span class="user">Alex de biasio</span>
