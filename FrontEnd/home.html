@@ -111,36 +111,51 @@
 
         <!-- preferences -->
         <section name="preferences">
-          <section name="purpose">
+          <section name="tag">
             <form action="">
               <fieldset>
-                <legend>Servizi</legend>
-                <input type="checkbox" name="pizzeria" value="pizzeria"/> pizzeria
+                <legend>Scegli il posto in cui vuoi andare a mangiare:</legend><br> <!--tag-->
+                <input type="checkbox" name="pizzeria" value="pizzeria"/>Pizzeria
                 <br/> 
-                <input type="checkbox" name="ristorante" value="ristorante"/> ristorante 
+                <input type="checkbox" name="ristorante" value="ristorante"/>Ristorante 
                 <br/>
-                <input type="checkbox" name="fastfood" value="fastfood"/> fastfood 
+                <input type="checkbox" name="fastfood" value="fast_food"/>Fast-Food 
                 <br/>
-                <input type="checkbox" name="casa" value="casa"/> casa 
+                <input type="checkbox" name="casa" value="take_away"/>Take-Away
               </fieldset>
             </form>
-          </section><section name="food">
+          </section><section name="purpose">
             <form action="#">
               <fieldset>
-                <legend> Scopo</legend>
-                <input type="checkbox" name="friends" value="Friends"/> Friends
+                <legend>Ogni occasione è importante allo stesso modo:</legend><br> <!--purpose-->
+                <input type="checkbox" name="friends" value="friends"/>Friends
                 <br/> 
-                <input type="checkbox" name="romantic" value="Romantic"/> Romantic 
+                <input type="checkbox" name="romantic" value="romantic"/>Romantic 
                 <br/>
-                <input type="checkbox" name="family" value="Family"/> Family
+                <input type="checkbox" name="family" value="family"/>Family
                 <br/>
-                <input type="checkbox" name="alone" value="Alone"/> Alone 
+                <input type="checkbox" name="alone" value="alone"/>Alone 
+              </fieldset>
+            </form>
+          </section><section name="cousine">
+            <form action="#">
+              <fieldset>
+                <legend>Tutti i tipi di cucina a tua disposizione:</legend><br> <!--cousine-->
+                <input type="checkbox" name="iatalian" value="italian"/>Italiana
+                <br/> 
+                <input type="checkbox" name="romantic" value="japanese"/>Giapponese 
+                <br/>
+                <input type="checkbox" name="mexican" value="mexican"/>Messicana
+                <br/>
+                <input type="checkbox" name="spanish" value="spanish"/> Spagnola 
               </fieldset>
             </form>
           </section>
         </section>
       </section>
     </div> 
+
+
 
     <script type="text/javascript" src="js/modal.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
