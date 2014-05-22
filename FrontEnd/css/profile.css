@@ -186,3 +186,9 @@ ul.comments li {
   width: 20%;
   display: inline;
 }
+
+#address{
+  display: block;
+  margin-bottom: 1%;
+}
+
