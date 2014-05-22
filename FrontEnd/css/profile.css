@@ -6,7 +6,7 @@
  */
 
 section.content {
-  background-color: #32CDC3;
+  background-color: #f5f5f5;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,8 +25,9 @@ section.content {
 
 .profile {
   width: 30%;
-  background-color: blue;
+  background-color: #f5f5f5;
   padding: 10px;
+  border-right: 1px #ccc dotted;
 }
 
 .profile ul {
@@ -57,22 +58,27 @@ section.content {
 }
 
 section[name="purpose"] {
-  background: #2eb780;
+  background: #f5f5f5;
   width: 100%;
   height: 100%;
+  border-right: 1px #ccc dotted;
+
 
 }
 
 section[name="tag"] {
-  background: #54b78f;
+  background: #f5f5f5;
   width: 100%;
   height: 100%;
+  border-right: 1px #ccc dotted;
+
 }
 
 section[name="cousine"] {
-  background: #2eb780;
+  background: #f5f5f5;
   width: 100%;
   height: 100%;
+  border-right: 1px #ccc dotted;
 
 }
 
