@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-.central{
+
+section.content{
 	margin: 40px;
 	margin-left: 90px;
 	margin-right: 90px;

@@ -4,14 +4,53 @@
  * boh...
  * - Martin
  */
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
 section.content {
-  background-color: #f5f5f5;
-  margin: 0;
+  margin: 50px;
   padding: 0;
   box-sizing: border-box;
   clear: both; /* this maybe is unusefull here */
   display: block;
+  font-family: Raleway, Helvetica;
+  font-size: 16px;
+}
+
+/***PROFILE***/
+
+#name{
+  display: inline-block;
+  font-family: Lato;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.profile .rating::after{
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 18px;
+  color: green !important;
+}
+
+#profile_photo {
+  display: inline;
+  margin: 50px;
+  width: 50%;
+  margin-left: 20%;
+  border: 5px solid green;
+  border-radius: 20px;
+}
+.profile {
+  height: 900px;
+  width: 28%;
+  padding: 10px;
+  border-right: 2px green solid;
+}
+
+.profile ul {
+  font-size: 20px;
+  list-style: none;
 }
 
 .profile, .preference {
@@ -22,43 +61,16 @@ section.content {
   box-sizing: border-box;
   clear: both; /* this maybe is unusefull here */
 }
-
-.profile {
-  width: 30%;
-  background-color: blue;
-  padding: 10px;
-  border-right: 1px #ccc dotted;
-}
-
-.profile ul {
-  list-style: none;
-}
+/***PREFERENCE***/
 
 .preference {
+  margin-left: 2%;
   width: 70%;
-	background-color: #f5f5f5;
-}
-
-#profile_photo {
-	display: inline;
-  margin: auto;
-	width: 50%;
-  margin-left: 25%;
-  box-shadow: 1px 1px 3px #eee;
-  border: 1px solid #333;
-	border-radius: 20px;
-}
-
-#nome{
-  display: inline-block;
-  margin-left: 20%;
-  margin-top: 10px;
-  margin-bottom: 10px;
 
 }
 
 section[name="purpose"] {
-  background: green;
+  margin-left: 5%;
   width: 100%;
   height: 100%;
   border-right: 1px #ccc dotted;
@@ -67,7 +79,7 @@ section[name="purpose"] {
 }
 
 section[name="tag"] {
-  background: blue;
+  background-color: #f5f5f5;
   width: 100%;
   height: 100%;
   border-right: 1px #ccc dotted;
@@ -75,10 +87,9 @@ section[name="tag"] {
 }
 
 section[name="cousine"] {
-  background: red;
+  background-color: #f5f5f5;
   width: 100%;
   height: 100%;
-  border-right: 1px #ccc dotted;
 
 }
 
@@ -128,6 +139,15 @@ section.location {
   vertical-align: top;
   box-size: border-box;
   word-wrap:break-word;
+}
+
+section[name=my_reviews]{
+  width: 90%;
+  height: 500px;
+  padding: 30px;
+  margin-bottom: 40px;
+  overflow-x: hidden;
+  border: 2px solid green;
 }
 
 section.location:last-child {
