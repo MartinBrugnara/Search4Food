@@ -13,7 +13,7 @@
       <div class="options_wrapper">
         <a href="<?=$_SERVER['SCRIPT_NAME']?>?lang=eng" target="_self"><i class="flag en">&nbsp;</i></a>
         <a href="<?=$_SERVER['SCRIPT_NAME']?>?lang=ita" target="_self"><i class="flag it">&nbsp;</i></a>
-        <?php if(!($user_profile && isset($user_profile->identifier))): ?>
+        <?php if(!$_GLOBALS['user']->is_logged): ?>
         <a href="login-with.php?provider=Facebook"><i class="fb"></i></a>
         <?php else: ?>
         <span class="user">
