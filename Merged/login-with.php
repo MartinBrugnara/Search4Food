@@ -15,7 +15,7 @@
         	
         	$authProvider = $hybridauth->authenticate($provider);
 
-	        $user_profile = $authProvider->getUserProfile();
+	        $GLOBALS['user_profile'] = $user_profile = $authProvider->getUserProfile();
 	        
 			if($user_profile && isset($user_profile->identifier))
             {
@@ -26,7 +26,7 @@
 	        	echo "<img src='".$user_profile->photoURL."'/><br>";
 	        	echo "<b>Email</b> :".$user_profile->email."<br>";	        		        		        	
                 echo "<br> <a href='logout.php'>Logout</a>";
-                header("Location: index.php");
+                #header("Location: index.php");
 
 	        }	        
 
