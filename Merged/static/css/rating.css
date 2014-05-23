@@ -20,10 +20,9 @@ span.rating::after{
 
 span.rating[data-stars="2"]::after{content: "\2605\2605";}
 span.rating[data-stars="3"]::after{content: "\2605\2605\2605";}
-section.location span.rating[data-rate="4"]::after{
+span.rating[data-stars="4"]::after{
   content: "\2605\2605\2605\2605";
 }
-
-section.location span.rating[data-stars="5"]::after{
+span.rating[data-stars="5"]::after{
   content: "\2605\2605\2605\2605\2605";
 }
