@@ -18,8 +18,9 @@
         <?php else: ?>
         <span class="user">
             <?= $user_profile['name']; ?>
+            &nbsp;
         </span>
-        <a href="/logout.php" class="logout"><?=$GLOBALS['dict']->logout->{$_SESSION['lang']}; ?></a>
+        <a href="/logout.php" class="logout"><?=$GLOBALS['dict']->logout->{$_SESSION['lang']}; ?>&nbsp;&nbsp;&nbsp;</a>
         <?php endif; ?>
       </div>
    </header>
