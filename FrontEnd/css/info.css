@@ -2,8 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 .central{
 	margin: 40px;
-	margin-left: 60px;
-	margin-right: 60px;
+	margin-left: 90px;
+	margin-right: 90px;
 	font-family: Raleway, Helvetica;
 	font-size: 16px;
 }
@@ -16,9 +16,11 @@
 	display: inline;
 	border: 2px solid green;
 }
+
 .sx{
 	display: inline-block;
-	width: 50%;
+	width: 40%;
+	margin-left: 4%;
 }
 
 #description{
