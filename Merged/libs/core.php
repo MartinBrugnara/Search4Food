@@ -36,4 +36,37 @@ function get_all_ratings() {
   return $a;
 }
 
+function get_loc_info($loc_id) {
+
+  $result = mysql_query("
+      SELECT p.name,'NULL' as rating, p.place_id, CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
+          'NULL' as coord,p.picture_url as img_url, p.description
+        FROM places p;
+      ");
+
+  $a[] = null;	
+  while ($row = mysql_fetch_object($result))
+    $a[]= $row; 
+
+  mysql_free_result($result);	
+
+  return $a;
+}
+
+function get_comments($loc_id) {
+
+  $result = mysql_query("
+      SELECT u.name, r.value as rating,r.comment
+      FROM users u INNER JOIN ratings r ON u.user_id=r.user_id;
+      ");
+
+  $a[] = null;	
+  while ($row = mysql_fetch_object($result))
+    $a[]= $row; 
+
+  mysql_free_result($result);	
+
+  return $a;
+}
+
 ?>
