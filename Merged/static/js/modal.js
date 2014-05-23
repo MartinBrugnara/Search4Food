@@ -24,7 +24,6 @@ function modal_close(id) {
 /* automate close on X click */
 (function() {
   var cl = document.getElementsByClassName("close");
-  console.log(cl);
   for (var i=0; i<cl.length; i++) {
     cl[i].onclick = (function(a) {
       return function() {
