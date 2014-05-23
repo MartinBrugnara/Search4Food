@@ -59,11 +59,11 @@
           <input type="hiddend" name="loc_id" value="<?=$info->loc_id?>">
 
           <br>
-          <input type="radio" name="rating" value="5">eccellente</input>
-          <input type="radio" name="rating" value="4">molto buono</input>
-          <input type="radio" name="rating" value="3">buono</input>
-          <input type="radio" name="rating" value="2">mediocre</input>
-          <input type="radio" name="rating" value="1">pessimo</input>
+          <input type="radio" name="rating" value="5">excellent</input>
+          <input type="radio" name="rating" value="4">very good</input>
+          <input type="radio" name="rating" value="3">good</input>
+          <input type="radio" name="rating" value="2">bad</input>
+          <input type="radio" name="rating" value="1">vary bad</input>
 
           <br>
           <textarea name="comment" rows="6" cols="50"></textarea>
