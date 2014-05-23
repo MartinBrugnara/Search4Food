@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
-.central{
+.central {
 	margin: 40px;
 	margin-left: 60px;
 	margin-right: 60px;
@@ -7,7 +7,7 @@
 	font-size: 16px;
 }
 
-#img_food{
+#location_img {
 	margin:20px;
 	margin-left: 8%;
 	border-radius: 10px;
@@ -25,19 +25,19 @@
 	font-size: 20px;
 }
 
-.comment {
+.data {
 	display: inline-block;
 	vertical-align: top;
 	width: 50%;
 }
 
-#commento{
+.comments > div {
 	margin-top: 3px;
 	border-bottom: 1px solid green;
 	font-style: italic;	
 }
 
-.alex{
+.comments {
 	width: 90%;
 	height: 300px;
 	padding: 30px;
@@ -46,27 +46,24 @@
 	border: 2px solid green;
 }
 
-#dicono, #qui{
+.comments .rating {
+	vertical-align: top;
+	display: inline-block;
+	width: 10%;
+	font-size: 20px;
+	font-weight: bold;
+	font-style: none;
+}
+
+#tau, #wware{
 	font-size: 18px;
 	font-style:;
 }
 
-.rating{
-	vertical-align: top;
-	display: inline-block;
-	width: 10%;
-}
-
-#name{
+#name {
 	font-size: 35px;
 	font-weight: bold;
 	width: 50%;
-}
-
-#name1{
-	font-size: 20px;
-	font-weight: bold;
-	font-style: none;
 }
 
 #maps {
@@ -79,11 +76,9 @@
 	height: 400px;
 }
 
-textarea{
-	width: 100%;
-}
+textarea {width: 100%;}
 
-#invia{
+button[type=submit] {
 	display: inline-block;
 	border-radius: 5px;
 	background-color: white;
@@ -91,4 +86,3 @@ textarea{
 	height: 30px;
 	width: 20%;
 }
- 
