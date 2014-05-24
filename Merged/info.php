@@ -44,7 +44,7 @@
         <br>
 
         <!-- comments -->
-        <p id="tau">Tell about us:<p>
+        <p id="tau">$GLOBALS['dict']->say_something->{$_SESSION['lang'])<p>
         <div class="comments">
           <?php foreach ($comments as &$cm): ?>
           <div>
@@ -57,19 +57,19 @@
 
         <!-- write comment -->
         <form action="/rate.php" method="POST">
-          <legend>Leave a comment:</legend>
+          <legend>$GLOBALS['dict']->leave_comment->{$_SESSION['lang'])</legend>
           <input type="hiddend" name="loc_id" value="<?=$info->loc_id?>">
 
           <br>
-          <input type="radio" name="rating" value="5">excellent</input>
-          <input type="radio" name="rating" value="4">very good</input>
-          <input type="radio" name="rating" value="3">good</input>
-          <input type="radio" name="rating" value="2">bad</input>
-          <input type="radio" name="rating" value="1">vary bad</input>
+          <input type="radio" name="rating" value="5">$GLOBALS['dict']->value_five->{$_SESSION['lang'])</input>
+          <input type="radio" name="rating" value="4">$GLOBALS['dict']->value_four->{$_SESSION['lang'])</input>
+          <input type="radio" name="rating" value="3">$GLOBALS['dict']->value_three->{$_SESSION['lang'])</input>
+          <input type="radio" name="rating" value="2">$GLOBALS['dict']->value_two->{$_SESSION['lang'])</input>
+          <input type="radio" name="rating" value="1">$GLOBALS['dict']->value_one->{$_SESSION['lang'])</input>
 
           <br>
           <textarea name="comment" rows="6" cols="50"></textarea>
-          <button type="submit">comment</button>
+          <button type="submit">$GLOBALS['dict']->comment->{$_SESSION['lang'])</button>
         </form>
       </div> <!-- end data -->
     </div> <!-- end central -->

@@ -70,5 +70,41 @@
   "sadly_alone": {
     "eng": "Alone",
     "ita": "Da solo"
+  },
+  "location": {
+    "eng": "location",
+    "ita": "luogo"
+  },
+  "say_something": {
+    "eng": "Tell about us",
+    "ita": "Parlaci di noi"
+  },
+  "leave_comment": {
+    "eng": "Leave a comment:",
+    "ita": "Scrivi un commento"
+  },
+  "value_five": {
+    "eng": "excellent",
+    "ita": "ottimo"
+  },
+  "value_four": {
+    "eng": "very good",
+    "ita": "molto buono"
+  },
+  "value_three": {
+    "eng": "good",
+    "ita": "normale"
+  },
+  "value_two": {
+    "eng": "bad",
+    "ita": "cattivo"
+  },
+  "value_one": {
+    "eng": "vary bad",
+    "ita": "pessimo"
+  },
+  "comment": {
+    "eng": "comment!",
+    "ita": "commenta!"
   }
 }
