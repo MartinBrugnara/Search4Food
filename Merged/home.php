@@ -77,7 +77,7 @@
       <section>
         <header>
           <!-- put here the title -->
-          <?=$GLOBALS['dict']->advance_serch->{$_SESSION['lang']}?>
+          <?=$GLOBALS['dict']->advance_search->{$_SESSION['lang']}?>
           <a href="#" class="close"><i class="fi-x-circle">&nbsp;</i></a>
         </header>
 

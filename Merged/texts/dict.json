@@ -26,50 +26,47 @@
   "distance": {
     "eng": "distance",
     "ita": "distanza"
-  }
+  },
   "advanced_search": {
     "eng": "andvanced search",
     "ita": "ricerca avanzata"
-  }
-
+  },
   "services": {
     "eng": "services",
     "ita": "servizi"
-  }
-
+  },
   "pizzeria": {
     "eng": "pizzeria",
     "ita": "pizzeria"
-  }
+  },
   "restaurant": {
     "eng": "restaurant",
     "ita": "ristorante"
-  }
+  },
   "fast_food": {
     "eng": "fast food",
     "ita": "fast food"
-  }
+  },
   "home": {
     "eng": "home",
     "ita": "casa"
-  }
-
+  },
   "purpose": {
     "eng": "purpose",
     "ita": "scopo"
-  }
+  },
   "friends": {
     "eng": "Friends",
     "ita": "Amici"
-  }
+  },
   "family": {
     "eng": "Family",
     "ita": "Famiglia"
-  }
+  },
   "romantic": {
     "eng": "Romantic",
     "ita": "Romantico"
-  }
+  },
   "sadly_alone": {
     "eng": "Alone",
     "ita": "Da solo"
