@@ -36,7 +36,6 @@ function get_loc_info($loc_id) {
 
         //TODO @Martin rating is the average of all ratings? i think yes;
     return Q("
-        //TODO @Martin rating is the average of all ratings? i think yes;
     SELECT p.name,'NULL' as rating, p.place_id, 
       CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
       p.loc_latitude as latit,p.loc_longitude as longit,p.picture_url as img_url, p.description
