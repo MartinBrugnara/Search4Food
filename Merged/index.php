@@ -43,7 +43,6 @@
       (function(){
         var map = new OpenLayers.Map("maps", {controls:[]});
         var mapnik = new OpenLayers.Layer.OSM();
-        //var markers = new OpenLayers.Layer.Markers("Markers");
 
         map.addLayer(mapnik);
         map.setCenter(new OpenLayers.LonLat(11.1261,46.0605).transform(
@@ -51,20 +50,13 @@
             new OpenLayers.Projection("EPSG:900913")
           ), 13);
 
-        //map.addLayer(markers);
         var pos = new OpenLayers.Marker(0,0);
-        //markers.addMarker(pos);
 
         navigator.geolocation.watchPosition(function(position) {
           var lonLat = new OpenLayers
             .LonLat(position.coords.longitude, position.coords.latitude)
             .transform(new OpenLayers.Projection("EPSG:4326"), 
               map.getProjectionObject());
-
-          /*
-          markers.clearMarkers();
-          markers.addMarker(new OpenLayers.Marker(lonLat));
-          */
           map.setCenter(lonLat, 13);
         });
       })();
