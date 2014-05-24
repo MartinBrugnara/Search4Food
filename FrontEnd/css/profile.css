@@ -39,6 +39,11 @@ section.content {
   content: "\25C9";
 }
 
+.profile li span {
+  display: inline-block;
+  width: 120px;
+}
+
 .profile .rating[data-stars="2"]::after{
   content: "\25C9\25C9";
 }
