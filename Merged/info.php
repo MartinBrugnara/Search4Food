@@ -33,6 +33,11 @@
       <div class="sx">
         <p id="address"><?= $info->addr ?></p>
         <img src="<?= $info->img_url ?>" id="location_img" alt="location_img" class="left">
+
+        <!-- location coords -->
+        <input type="hidden" name="long" value="<?= $info->long ?>">
+        <input type="hidden" name="lat" value="<?= $info->lat ?>">
+
         <p id="wware">
           $GLOBALS['dict']->location->{$_SESSION['lang'])
           </p>

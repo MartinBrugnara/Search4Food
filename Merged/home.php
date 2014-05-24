@@ -18,7 +18,6 @@
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="static/css/style.css">
 
-    <!-- TODO: update once #026 is closed -->
     <link rel="stylesheet" href="static/css/foundation-icons.css">
 
     <link rel="stylesheet" href="static/css/modal.css">
@@ -49,7 +48,11 @@
           </span>
 
           <!-- Location Picture -->
-          <div style="float:left"><img src="<?=$loc->picture_url?>" alt="alleghe"></div>
+          <div style="float:left"><img src="<?=$loc->picture_url?>" alt="location picture"></div>
+
+          <!-- location coords -->
+          <input type="hidden" name="long" value="<?= $loc->long ?>">
+          <input type="hidden" name="lat" value="<?= $loc->lat ?>">
 
           <!-- Descrizione -->
           <?=$loc->description?>
