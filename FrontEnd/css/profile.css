@@ -30,7 +30,7 @@ section.content {
   vertical-align: middle;
   display: inline-block;
   font-size: 28px;
-  color: green !important;
+  color: green;
   content: "\25C9";
 }
 
@@ -52,12 +52,11 @@ section.content {
   margin: 50px;
   width: 50%;
   margin-left: 20%;
-  border: 5px solid green;
+  border: 3px solid #333;
   border-radius: 20px;
 }
 
 .profile {
-  height: 950px;
   width: 28%;
   padding: 10px;
   border-right: 2px green solid;
@@ -76,12 +75,13 @@ section.content {
   box-sizing: border-box;
   clear: both; /* this maybe is unusefull here */
 }
+
 /***PREFERENCE***/
-
 .preference {
-  margin-left: 2%;
+  padding-left: 2%;
   width: 70%;
-
+  border-left: 2px solid green;
+  margin-left: -2px;
 }
 
 section[name="purpose"] {
@@ -229,23 +229,26 @@ ul.comments li {
 }
 
 
-#address{
+.address{
   color: grey;
   display: block;
   margin: 1%;
 }
 
-#tag{
+.tag{
   font-family: Lato;
   color: green;
   font-weight: bold;
   font-size: 20px;
 }
 
-#link{
-font-family: Lato;
+.loc_info_link {
+  font-family: Lato;
   color: green;
   font-weight: bold;
   font-size: 20px;
 }
 
+.fleft {
+  float: left;
+}

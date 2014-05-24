@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/rating.css"
+    <link rel="stylesheet" href="css/rating.css">
   </head>
   <body>
-  
     <header>
       <img src="img/LogoIntero.png" id="logo" alt="logo">
       <!-- TODO: add flags icons instead of language name -->
@@ -28,19 +27,17 @@
       </div>
     </header>
 
-    <div>
-
     <section class="content">
       <!-- USER PROFILE -->
       <div class="profile" >
         <span class="rating" data-stars="3" id="name">Alex </span>
         <img src="img/foto.png" id="profile_photo" alt="Profile photo"> 
         <ul>
-          <li>Date of Birth: 1/08/1991</li><br>
-          <li>Gender: Male</li><br>
-          <li>Email: Lupino@unitn.it</li><br><!--email-->
-          <li>Location: Trento, Trentino, Italia<li><br><!--loc_city, loc_country-->
-          <li>First login: 3 giugno 2014<li><br>
+          <li>Date of Birth: 1/08/1991</li>
+          <li>Gender: Male</li>
+          <li>Email: Lupino@unitn.it</li><!--email-->
+          <li>Location: Trento, Trentino, Italia</li><!--loc_city, loc_country-->
+          <li>First login: 3 giugno 2014</li>
         </ul>
 
       <!-- PLEASE, PLEASE DO NOT INSERT (ws, cr, nl, tab) or anything lese here!!! -->
@@ -51,7 +48,7 @@
 
         <!-- preferences -->
         <section name="main_preferences">
-          <h3>Le tue preferenze</h3>
+          <h2>Le tue preferenze</h2>
           <section name="purpose">
             <h4 id="tag">Occasione</h4>
             <ul>
@@ -61,7 +58,7 @@
               <li>Work</li>
             </ul>
           </section><section name="tag">
-            <h4 id="tag">Luogo</h4>
+            <h4 class="tag">Luogo</h4>
             <ul>
               <li>Ristorante</li>
               <li>Pizzeria</li>
@@ -69,7 +66,7 @@
               <li>Fast-Food</li>
             </ul>
           </section><section name="cousine">
-            <h4 id="tag">Cucina</h4>
+            <h4 class="tag">Cucina</h4>
             <ul>
               <li>Italiana</li>
               <li>Giapponese</li>
@@ -79,91 +76,102 @@
           </section>
         </section> <!-- END main_preferences -->
 
-       <h3> Posti recenti in cui sei stato</h3><br>
-       <section name="my_reviews">                          
-        <section class="location"><!-- item start -->
-          <span class="rating" data-stars="3">
-            <a href="info.html" id="link">Pizzeria Albert</a>
-          </span>
-          <div id="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
-          <!-- comments -->
-          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
-          <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
-          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+        <h2> Posti recenti in cui sei stato</h2>
 
-                    <!-- comments -->
-          <section class="clear">
-
-            <br>
-          </section>
-
-        </section>
-        <!-- item end -->
+        <!-- item start -->
         <section class="location">
           <span class="rating" data-stars="3">
-            <a href="info.html" id="link">Pizzeria Albert</a>
+            <a href="info.html" class="loc_info_link">Pizzeria Albert</a>
           </span>
-          <div id="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <div class="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
+          <div class="fleft"><img src="img/alleghe.png" alt="alleghe"></div>
           <!-- comments -->
           <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
           <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
           <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
-
-                    <!-- comments -->
-          <section class="clear">
-
-            <br>
-          </section>
-
+          <!-- end comments -->
+          <section class="clear">&nbsp;<!-- valign hack --></section>
         </section>
-        <!-- item end --> 
-                <section class="location">
+        <!-- item end -->
+
+        <!-- item start -->
+        <section class="location">
           <span class="rating" data-stars="3">
-            <a href="info.html" id="link">Pizzeria Albert</a>
+            <a href="info.html" class="loc_info_link">Pizzeria Albert</a>
           </span>
-          <div id="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <div class="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
+          <div class="fleft"><img src="img/alleghe.png" alt="alleghe"></div>
           <!-- comments -->
           <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
           <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
           <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
-
-                    <!-- comments -->
-          <section class="clear">
-
-            <br>
-          </section>
-
+          <!-- end comments -->
+          <section class="clear">&nbsp;<!-- valign hack --></section>
         </section>
-        <!-- item end --> 
-                <section class="location">
+        <!-- item end -->
+        <!-- item start -->
+        <section class="location">
           <span class="rating" data-stars="3">
-            <a href="info.html" id="link">Pizzeria Albert</a>
+            <a href="info.html" class="loc_info_link">Pizzeria Albert</a>
           </span>
-          <div id="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
-          <div style="float:left"><img src="img/alleghe.png" alt="alleghe"></div>
+          <div class="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
+          <div class="fleft"><img src="img/alleghe.png" alt="alleghe"></div>
           <!-- comments -->
           <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
           <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
           <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
-
-                    <!-- comments -->
-          <section class="clear">
-
-            <br>
-          </section>
-
+          <!-- end comments -->
+          <section class="clear">&nbsp;<!-- valign hack --></section>
         </section>
-        <!-- item end -->  
-
-      </section>
+        <!-- item end -->
+         <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="info.html" class="loc_info_link">Pizzeria Albert</a>
+          </span>
+          <div class="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
+          <div class="fleft"><img src="img/alleghe.png" alt="alleghe"></div>
+          <!-- comments -->
+          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+          <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
+          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+          <!-- end comments -->
+          <section class="clear">&nbsp;<!-- valign hack --></section>
+        </section>
+        <!-- item end -->
+         <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="info.html" class="loc_info_link">Pizzeria Albert</a>
+          </span>
+          <div class="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
+          <div class="fleft"><img src="img/alleghe.png" alt="alleghe"></div>
+          <!-- comments -->
+          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+          <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
+          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+          <!-- end comments -->
+          <section class="clear">&nbsp;<!-- valign hack --></section>
+        </section>
+        <!-- item end -->
+         <!-- item start -->
+        <section class="location">
+          <span class="rating" data-stars="3">
+            <a href="info.html" class="loc_info_link">Pizzeria Albert</a>
+          </span>
+          <div class="address">Via Don Arcangelo Rizzi 11, Trento , TN , Italia </div>
+          <div class="fleft"><img src="img/alleghe.png" alt="alleghe"></div>
+          <!-- comments -->
+          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+          <p>"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip"</p>
+          <p>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."</p>
+          <!-- end comments -->
+          <section class="clear">&nbsp;<!-- valign hack --></section>
+        </section>
+        <!-- item end -->
+ 
       </div>
-
-
     </section>
-
 
     <footer>
       &copy; Copyright 2014 MIT | GoPro Team 
