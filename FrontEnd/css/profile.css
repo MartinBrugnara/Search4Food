@@ -94,7 +94,7 @@ section[name="purpose"] {
   margin-left: 5%;
   width: 100%;
   height: 100%;
-  border-right: 2px green solid;
+  border-right: 1px #ccc dotted;
 }
 
 section[name="tag"] {
@@ -241,7 +241,7 @@ ul.comments li {
 
 .tag{
   font-family: Lato;
-  color: green;
+  color: #333;
   font-weight: bold;
   font-size: 20px;
 }
