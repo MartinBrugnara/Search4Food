@@ -14,7 +14,7 @@ section.content {
   clear: both; /* this maybe is unusefull here */
   display: block;
   font-family: Raleway, Helvetica;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /***PROFILE***/
@@ -43,7 +43,7 @@ section.content {
 }
 
 .profile {
-  height: 950px;
+  height: 1000px;
   width: 28%;
   padding: 10px;
   border-right: 2px green solid;
@@ -235,3 +235,8 @@ font-family: Lato;
   font-size: 20px;
 }
 
+h3{
+  font-family: Lato;
+  font-style: bold;
+  font-size: 24px;
+}

@@ -86,7 +86,7 @@
           <section name="purpose">
             <form action="">
               <fieldset>
-                <legend>Luogo</legend><br>
+                <legend>Luogo</legend>
                 <input type="checkbox" name="pizzeria" value="pizzeria"/> Pizzeria
                 <br/> 
                 <input type="checkbox" name="ristorante" value="ristorante"/> Ristorante 
@@ -99,7 +99,7 @@
           </section><section name="food">
             <form action="#">
               <fieldset>
-              <legend id="boh">Occasione</legend><br>
+              <legend>Occasione</legend><br>
                 <input type="checkbox" name="friends" value="Friends"/> Friends
                 <br/> 
                 <input type="checkbox" name="romantic" value="Romantic"/> Romantic 
