@@ -44,7 +44,7 @@
         <section class="location">
           <!-- Name + rating -->
           <span class="rating" data-stars="<?=$loc->rating?>">
-          <a href="/info.php?id=<?=$loc->place_id?>"><?=$loc->name?></a>
+          <a href="/info.php?loc_id=<?=$loc->place_id?>"><?=$loc->name?></a>
           </span>
 
           <!-- Location Picture -->
