@@ -77,7 +77,7 @@
       <section>
         <header>
           <!-- put here the title -->
-          Ricerca avanzata
+          <?=$GLOBALS['dict']->advance_search->{$_SESSION['lang']}?>
           <a href="#" class="close"><i class="fi-x-circle">&nbsp;</i></a>
         </header>
 
@@ -86,27 +86,35 @@
           <section name="purpose">
             <form action="">
               <fieldset>
-                <legend>Servizi</legend>
-                <input type="checkbox" name="pizzeria" value="pizzeria"/> pizzeria
+                <legend><?=$GLOBALS['dict']->services->{$_SESSION['lang']}?></legend>
+                <input type="checkbox" name="pizzeria" value="pizzeria"/>
+                <?=$GLOBALS['dict']->pizzeria->{$_SESSION['lang']}?>
                 <br/> 
-                <input type="checkbox" name="ristorante" value="ristorante"/> ristorante 
+                <input type="checkbox" name="ristorante" value="ristorante"/>
+                <?=$GLOBALS['dict']->restaurant->{$_SESSION['lang']}?>
                 <br/>
-                <input type="checkbox" name="fastfood" value="fastfood"/> fastfood 
+                <input type="checkbox" name="fastfood" value="fastfood"/>
+                <?=$GLOBALS['dict']->fast_food->{$_SESSION['lang']}?>
                 <br/>
-                <input type="checkbox" name="casa" value="casa"/> casa 
+                <input type="checkbox" name="casa" value="casa"/>
+                <?=$GLOBALS['dict']->home->{$_SESSION['lang']}?>
               </fieldset>
             </form>
           </section><section name="food">
             <form action="#">
               <fieldset>
-                <legend> Scopo</legend>
-                <input type="checkbox" name="friends" value="Friends"/> Friends
+                <legend> <?=$GLOBALS['dict']->purpose->{$_SESSION['lang']}?></legend>
+                <input type="checkbox" name="friends" value="Friends"/>
+                <?=$GLOBALS['dict']->friend->{$_SESSION['lang']}?>
                 <br/> 
-                <input type="checkbox" name="romantic" value="Romantic"/> Romantic 
+                <input type="checkbox" name="romantic" value="Romantic"/>
+                <?=$GLOBALS['dict']->romantic->{$_SESSION['lang']}?>
                 <br/>
-                <input type="checkbox" name="family" value="Family"/> Family
+                <input type="checkbox" name="family" value="Family"/>
+                <?=$GLOBALS['dict']->family->{$_SESSION['lang']}?>
                 <br/>
-                <input type="checkbox" name="alone" value="Alone"/> Alone 
+                <input type="checkbox" name="alone" value="Alone"/>
+                <?=$GLOBALS['dict']->sadly_alone->{$_SESSION['lang']}?>
               </fieldset>
             </form>
           </section>
