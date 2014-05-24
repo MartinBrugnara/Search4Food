@@ -86,20 +86,20 @@
           <section name="purpose">
             <form action="">
               <fieldset>
-                <legend>Servizi</legend>
-                <input type="checkbox" name="pizzeria" value="pizzeria"/> pizzeria
+                <legend>Luogo</legend><br>
+                <input type="checkbox" name="pizzeria" value="pizzeria"/> Pizzeria
                 <br/> 
-                <input type="checkbox" name="ristorante" value="ristorante"/> ristorante 
+                <input type="checkbox" name="ristorante" value="ristorante"/> Ristorante 
                 <br/>
-                <input type="checkbox" name="fastfood" value="fastfood"/> fastfood 
+                <input type="checkbox" name="fastfood" value="fastfood"/> Fast-food 
                 <br/>
-                <input type="checkbox" name="casa" value="casa"/> casa 
+                <input type="checkbox" name="casa" value="casa"/> Take-away 
               </fieldset>
             </form>
           </section><section name="food">
             <form action="#">
               <fieldset>
-                <legend> Scopo</legend>
+              <legend id="boh">Occasione</legend><br>
                 <input type="checkbox" name="friends" value="Friends"/> Friends
                 <br/> 
                 <input type="checkbox" name="romantic" value="Romantic"/> Romantic 
@@ -107,6 +107,19 @@
                 <input type="checkbox" name="family" value="Family"/> Family
                 <br/>
                 <input type="checkbox" name="alone" value="Alone"/> Alone 
+              </fieldset>
+            </form>
+          </section><section name="purpose">
+            <form action="">
+              <fieldset>
+                <legend>Cucina</legend><br>
+                <input type="checkbox" name="italian" value="cousine"/>Italiana
+                <br/> 
+                <input type="checkbox" name="Japanese" value="cousine"/>Giapponese 
+                <br/>
+                <input type="checkbox" name="Mexican" value="cousine"/>Messicana
+                <br/>
+                <input type="checkbox" name="Spanish" value="cousine"/>Spagnola 
               </fieldset>
             </form>
           </section>

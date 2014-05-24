@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 /***HOME***/
 
 footer { /* force footer to stay at the bottom of the page */
@@ -6,6 +8,8 @@ footer { /* force footer to stay at the bottom of the page */
 }
 
 .central { /* wrapper: fixed page size */
+  font-family: Raleway, Helvetica;
+  font-size: 16px;
   position: absolute;
   top: 60px;
   bottom: 30px;
@@ -26,7 +30,8 @@ footer { /* force footer to stay at the bottom of the page */
   vertical-align: top;
 }
 
-#maps {border: 1px solid black;}
+#maps {border: 1px solid green;}
+
 #locations {
   overflow-x: scroll;
   padding-top: 25px; /* equals to .order_by height */
@@ -42,7 +47,7 @@ footer { /* force footer to stay at the bottom of the page */
 	display: block-inline;
   text-align: center;
 
-  background-color: tan;
+  background-color: #64cc70;
   border: 1px solid #333;
   border-right: 0;
   border-left: 0;
@@ -111,16 +116,23 @@ ul.comments li {
 
 /***MODAL WINDOW***/
 section[name="preferences"] > section  {
+  border-right: 2px #ccc dotted;
+  font-family: Raleway, Helvetica;
+  font-size: 18px;
   display: inline-block;
   vertical-align: top;
-  margin: 0;
   width: 33%;
   padding: 10px;
   box-sizing: border-box;
 }
 
+#boh{
+  font-weight: bold;
+}
+
 
 section[name="preferences"] > section:last-child {
+  border-right: none;
   width: 34%;
   padding-left: 1%;
 }

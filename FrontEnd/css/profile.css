@@ -38,7 +38,7 @@ section.content {
   margin: 50px;
   width: 50%;
   margin-left: 20%;
-  border: 5px solid green;
+  border: 1px solid green;
   border-radius: 20px;
 }
 
@@ -147,7 +147,7 @@ section[name=my_reviews]{
   padding: 30px;
   margin-bottom: 40px;
   overflow-x: hidden;
-  border: 2px solid green;
+  border: 2px dotted green;
 }
 
 section.location:last-child {
