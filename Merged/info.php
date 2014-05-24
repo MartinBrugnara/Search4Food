@@ -33,7 +33,9 @@
       <div class="sx">
         <p id="address"><?= $info->addr ?></p>
         <img src="<?= $info->img_url ?>" id="location_img" alt="location_img" class="left">
-        <p id="wware">We are here:</p>
+        <p id="wware">
+          $GLOBALS['dict']->location->{$_SESSION['lang'])
+          </p>
         <div id="maps"></div>
 
       </div><div class="data">

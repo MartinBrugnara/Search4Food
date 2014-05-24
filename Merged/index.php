@@ -24,7 +24,7 @@
     <div id="container">
       <div class="central">
         <h2 id="slogan">
-          <?=$GLOBALS['dict']->slogan->{$_SESSION['lang']}; ?>
+          <?=$GLOBALS['dict']->we are->{$_SESSION['lang']}?>
           <span id="cite">-Woody Allen-</span>
         </h2>
         
