@@ -24,7 +24,7 @@
     <div id="container">
       <div class="central">
         <h2 id="slogan">
-          <?=$GLOBALS['dict']->slogan->{$_SESSION['lang']}; ?>
+          <?=$GLOBALS['dict']->slogan->{$_SESSION['lang']}?>
           <span id="cite">-Woody Allen-</span>
         </h2>
         
@@ -40,32 +40,26 @@
     <!-- geoloc script -->
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript"> //geolocalization working
-      var map = new OpenLayers.Map("maps", {controls:[]});
-      var mapnik = new OpenLayers.Layer.OSM();
-      //var markers = new OpenLayers.Layer.Markers("Markers");
+      (function(){
+        var map = new OpenLayers.Map("maps", {controls:[]});
+        var mapnik = new OpenLayers.Layer.OSM();
 
-      map.addLayer(mapnik);
-      map.setCenter(new OpenLayers.LonLat(11.1261,46.0605).transform(
-          new OpenLayers.Projection("EPSG:4326"),
-          new OpenLayers.Projection("EPSG:900913")
-        ), 13);
+        map.addLayer(mapnik);
+        map.setCenter(new OpenLayers.LonLat(11.1261,46.0605).transform(
+            new OpenLayers.Projection("EPSG:4326"),
+            new OpenLayers.Projection("EPSG:900913")
+          ), 13);
 
-      //map.addLayer(markers);
-      var pos = new OpenLayers.Marker(0,0);
-      //markers.addMarker(pos);
+        var pos = new OpenLayers.Marker(0,0);
 
-      navigator.geolocation.watchPosition(function(position) {
-        var lonLat = new OpenLayers
-          .LonLat(position.coords.longitude, position.coords.latitude)
-          .transform(new OpenLayers.Projection("EPSG:4326"), 
-            map.getProjectionObject());
-
-        /*
-        markers.clearMarkers();
-        markers.addMarker(new OpenLayers.Marker(lonLat));
-        */
-        map.setCenter(lonLat, 13);
-      });
+        navigator.geolocation.watchPosition(function(position) {
+          var lonLat = new OpenLayers
+            .LonLat(position.coords.longitude, position.coords.latitude)
+            .transform(new OpenLayers.Projection("EPSG:4326"), 
+              map.getProjectionObject());
+          map.setCenter(lonLat, 13);
+        });
+      })();
     </script>
   </body>
 </html>
