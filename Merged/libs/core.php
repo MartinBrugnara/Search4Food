@@ -69,9 +69,17 @@ function get_profile($user_id) {
     return Q("SELECT name,bday as birth_date,gender,email,loc_city as addr,
         first_login,trustful as rating,'NULL' as img_url
         FROM users
-        WHERE user_id = ". $user_id                    
+        WHERE user_id = ".intval($user_id)                    
   );
 }
 
+function get_recent_loc($user_id) {
+    return Q(" SELECT p.name, r.value as rating,p.place_id,p.img_url,
+        CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr
+        FROM user u INNER JOIN ratings r ON u.user_id=r.user id
+            INNER JOIN places p ON r.place_id=p.place_id
+        WHERE u.user_id = ".intval($user_id)          
+        );
+}
 
 ?>
