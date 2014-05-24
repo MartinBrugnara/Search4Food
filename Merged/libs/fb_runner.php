@@ -36,6 +36,11 @@ if ($user) {
   try {
     // Proceed knowing you have a logged in user who's authenticated.
     $user_profile = $facebook->api('/me');
+
+    // TODO: get_or_create (user in db)
+    $_SESSION['user_id'] = 0; // get from db
+
+
   } catch (FacebookApiException $e) {
     error_log($e);
     $user = null;

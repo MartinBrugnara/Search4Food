@@ -50,8 +50,17 @@ function get_comments($loc_id) {
 
 function insert_rate($loc_id, $rating, $comment) {
   $srv = connect();
+  
+  // TODO: @alex check this
+  $stmt = $srv->prepare("INSERT INTO ratings (place_id, user_id, value, comment, creation_time) VALUES (?, ?, ?, ?, NOW());");
+  $stmt->bind_param("i", $loc_id);
+  $stmt->bind_param("i", $_SESSION['user_id']);
+  $stmt->bind_param("i", $rating);
+  $stmt->bind_param("s", $comment);
+  $stmt_>execute();
 
- // TODO: implement 
+  $srv->close();
+
 }
 
 ?>
