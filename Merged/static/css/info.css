@@ -19,7 +19,6 @@ section.content{
 	border-radius: 10px;
 	width: 55%;
 	display: inline;
-	border: 2px solid green;
 }
 
 .sx{
@@ -55,7 +54,7 @@ section.content{
 	padding: 30px;
 	margin-bottom: 40px;
 	overflow-x: hidden;
-	border: 2px solid green;
+	border: 2px dotted green;
 }
 
 <<<<<<< HEAD:FrontEnd/css/info.css
