@@ -16,6 +16,8 @@
  */
 
 require './libs/facebook.php';
+require './libs/db.php';
+require './libs/core.php';
 
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
@@ -37,10 +39,7 @@ if ($user) {
     // Proceed knowing you have a logged in user who's authenticated.
     $user_profile = $facebook->api('/me');
 
-    // TODO: get_or_create (user in db)
-    $_SESSION['user_id'] = 0; // get from db
-
-
+    $_SESSION['user_id'] = Q("SELECT user_id FROM users WHERE fb_extid = ".intval($user))[0]->user_id OR -1;
   } catch (FacebookApiException $e) {
     error_log($e);
     $user = null;
