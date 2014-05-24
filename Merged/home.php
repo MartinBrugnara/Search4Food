@@ -8,7 +8,6 @@
 
   $locations = get_loc_ratings();
   $comments = get_all_ratings();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,5 +130,7 @@
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript" src="/static/js/modal.js"></script>
     <script type="text/javascript" src="/static/js/map.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/home.js"></script>
   </body>
 </html>
