@@ -40,32 +40,34 @@
     <!-- geoloc script -->
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript"> //geolocalization working
-      var map = new OpenLayers.Map("maps", {controls:[]});
-      var mapnik = new OpenLayers.Layer.OSM();
-      //var markers = new OpenLayers.Layer.Markers("Markers");
+      (function(){
+        var map = new OpenLayers.Map("maps", {controls:[]});
+        var mapnik = new OpenLayers.Layer.OSM();
+        //var markers = new OpenLayers.Layer.Markers("Markers");
 
-      map.addLayer(mapnik);
-      map.setCenter(new OpenLayers.LonLat(11.1261,46.0605).transform(
-          new OpenLayers.Projection("EPSG:4326"),
-          new OpenLayers.Projection("EPSG:900913")
-        ), 13);
+        map.addLayer(mapnik);
+        map.setCenter(new OpenLayers.LonLat(11.1261,46.0605).transform(
+            new OpenLayers.Projection("EPSG:4326"),
+            new OpenLayers.Projection("EPSG:900913")
+          ), 13);
 
-      //map.addLayer(markers);
-      var pos = new OpenLayers.Marker(0,0);
-      //markers.addMarker(pos);
+        //map.addLayer(markers);
+        var pos = new OpenLayers.Marker(0,0);
+        //markers.addMarker(pos);
 
-      navigator.geolocation.watchPosition(function(position) {
-        var lonLat = new OpenLayers
-          .LonLat(position.coords.longitude, position.coords.latitude)
-          .transform(new OpenLayers.Projection("EPSG:4326"), 
-            map.getProjectionObject());
+        navigator.geolocation.watchPosition(function(position) {
+          var lonLat = new OpenLayers
+            .LonLat(position.coords.longitude, position.coords.latitude)
+            .transform(new OpenLayers.Projection("EPSG:4326"), 
+              map.getProjectionObject());
 
-        /*
-        markers.clearMarkers();
-        markers.addMarker(new OpenLayers.Marker(lonLat));
-        */
-        map.setCenter(lonLat, 13);
-      });
+          /*
+          markers.clearMarkers();
+          markers.addMarker(new OpenLayers.Marker(lonLat));
+          */
+          map.setCenter(lonLat, 13);
+        });
+      })();
     </script>
   </body>
 </html>
