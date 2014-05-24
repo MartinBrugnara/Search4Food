@@ -64,4 +64,14 @@ function insert_rate($loc_id, $rating, $comment) {
 
 }
 
+
+function get_profile($user_id) {
+    return Q("SELECT name,bday as birth_date,gender,email,loc_city as addr,
+        first_login,trustful as rating,'NULL' as img_url
+        FROM users
+        WHERE user_id = ". $user_id                    
+  );
+}
+
+
 ?>
