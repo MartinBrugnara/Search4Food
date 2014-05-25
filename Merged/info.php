@@ -18,7 +18,6 @@
     <link rel="shortcut icon" href="static/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
-    <!-- TODO: update once #026 is closed -->
     <link rel="stylesheet" type="text/css" href="static/css/foundation-icons.css">
 
     <link rel="stylesheet" type="text/css" href="static/css/rating.css">
