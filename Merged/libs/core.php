@@ -78,8 +78,10 @@ function get_recent_loc($user_id) {
     CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr
     FROM user u INNER JOIN ratings r ON u.user_id=r.user id
     INNER JOIN places p ON r.place_id=p.place_id
-    WHERE u.user_id = ".intval($user_id)          
-  );
+    WHERE u.user_id = ".intval($user_id)."
+    ORDER BY r.creation_time DESC
+    LIMIT 20    
+  ");
 }
 
 ?>
