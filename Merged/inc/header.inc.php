@@ -3,11 +3,13 @@
       <img src="/static/img/logo.png" id="logo" alt="logo">
 
       <?php if ($_SERVER['SCRIPT_NAME'] != '/index.php'): ?>
-      <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
-      <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
 
-      <!-- TODO: bind event to search -->
-      <a><i class="fi-magnifying-glass">&nbsp;</i></a>
+      <form action="" method="post">
+        <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
+        <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
+        <a><button type="submit" class="fi-magnifying-glass">&nbsp;</i></a>
+      </form>
+      
       <?php endif; ?>
 
       <div class="options_wrapper">

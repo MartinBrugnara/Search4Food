@@ -28,9 +28,12 @@
           <span id="cite">-Woody Allen-</span>
         </h2>
         
-        <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
-        <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
-        <a href="#"><i class = "fi-magnifying-glass">&nbsp;</i></a>
+        <form action="" method="post">
+          <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
+          <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
+          <a href="#"><button type="submit" class="fi-magnifying-glass">&nbsp;</i></a>
+        </form>
+
       </div>
     </div>
 
