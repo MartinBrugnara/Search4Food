@@ -20,9 +20,9 @@ function Q($query){
 
 
 function get_loc_ratings(){
-  $query = "SELECT r.place_id, AVG(r.value) AS rating,p.picture_url,p.description,
+  $query = "SELECT r.place_id, AVG(r.value) AS rating,p.picture, p.description,
     CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
-    p.loc_latitude AS lat, p.loc_longitude AS long
+    p.loc_latitude AS lat, p.loc_longitude AS \"long\"
     FROM ratings r inner join places p ON r.place_id=p.place_id
     GROUP BY r.place_id;";
   return Q($query);
@@ -42,7 +42,7 @@ function get_loc_info($loc_id) {
   return Q("
     SELECT p.name,'NULL' as rating, p.place_id, 
     CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
-    p.loc_latitude AS lat, p.loc_longitude AS long, p.picture_url as img_url, p.description
+    p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.picture as img_url, p.description
     FROM places p;
   WHERE places.place_id = ".intval($loc_id));
 }
