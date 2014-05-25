@@ -41,11 +41,11 @@
         <span class="rating" data-stars="<?= $u->rating ?>" id="name"><?= $u->name ?></span>
         <img src="<?= $u->img_url ?>" id="profile_photo" alt="Profile photo"> 
         <ul>
-          <li><span>Date of Birth:</span><?= $u->birth_date ?></li>
-          <li><span>Gender:</span><?= $u->gender ?></li>
-          <li><span>Email:</span><?= $u->email ?></li>
-          <li><span>Location:</span><?= $u->addr ?></li>
-          <li><span>First login:</span><?= $u->first_login ?></li>
+          <li><span>$GLOBALS['dict']->born->{$_SESSION['lang'])</span><?= $u->birth_date ?></li>
+          <li><span>$GLOBALS['dict']->gender->{$_SESSION['lang'])</span><?= $u->gender ?></li>
+          <li><span>$GLOBALS['dict']->e_mail->{$_SESSION['lang'])</span><?= $u->email ?></li>
+          <li><span>$GLOBALS['dict']->location->{$_SESSION['lang'])</span><?= $u->addr ?></li>
+          <li><span>$GLOBALS['dict']->first_login->{$_SESSION['lang'])</span><?= $u->first_login ?></li>
         </ul>
 
       </div><div class="preference">
@@ -54,35 +54,35 @@
         <!-- TODO: WTF I should do here? -->
         <!-- preferences -->
         <section name="main_preferences">
-          <p class="title">Preferenze</p>
+          <p class="title">$GLOBALS['dict']->preferences->{$_SESSION['lang'])</p>
           <section name="purpose">
-            <h4 class="tag">Occasione</h4>
+            <h4 class="tag">$GLOBALS['dict']->occasion->{$_SESSION['lang'])</h4>
             <ul>
-              <li>Friends</li>
-              <li>Romantic</li>
-              <li>Family</li>
-              <li>Work</li>
+              <li>$GLOBALS['dict']->friends->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->romantic->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->family->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->work->{$_SESSION['lang'])</li>
             </ul>
           </section><section name="tag">
-            <h4 class="tag">Luogo</h4>
+            <h4 class="tag">$GLOBALS['dict']->place->{$_SESSION['lang'])</h4>
             <ul>
-              <li>Ristorante</li>
-              <li>Pizzeria</li>
-              <li>Take-away</li>
-              <li>Fast-Food</li>
+              <li>$GLOBALS['dict']->restaurant->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->pizzeria->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->take_away->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->fast_food->{$_SESSION['lang'])</li>
             </ul>
           </section><section name="cousine">
-            <h4 class="tag">Cucina</h4>
+            <h4 class="tag">$GLOBALS['dict']->cousine->{$_SESSION['lang'])</h4>
             <ul>
-              <li>Italiana</li>
-              <li>Giapponese</li>
-              <li>Messicana</li>
-              <li>Spagnola</li>
+              <li>$GLOBALS['dict']->italian->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->japanese->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->mexican->{$_SESSION['lang'])</li>
+              <li>$GLOBALS['dict']->spanish->{$_SESSION['lang'])</li>
             </ul>
           </section>
         </section> <!-- END main_preferences -->
 
-        <p class="title"> Posti visitati recentemente</p>
+        <p class="title">$GLOBALS['dict']->recent_places->{$_SESSION['lang'])</p>
 
         <?php foreach($locations as $loc): ?>
         <!-- item start -->
