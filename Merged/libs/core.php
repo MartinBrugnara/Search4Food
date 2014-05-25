@@ -45,7 +45,7 @@ function get_loc_info($loc_id) {
 
 function get_comments($loc_id) {
   return Q("
-    SELECT u.name, r.value as rating,r.comment
+    SELECT u.user_id,u.name, r.value as rating,r.comment
     FROM users u INNER JOIN ratings r ON u.user_id=r.user_id;
   WHERE ratings.place_id = ".intval($loc_id));
 }
