@@ -8,9 +8,9 @@
   <head>
     <meta charset="utf-8">
     <title>Search4Food</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="static/css/foundation-icons.css">
 
     <link rel="shortcut icon" href="static/img/favicon.png">
   </head>
@@ -28,9 +28,12 @@
           <span id="cite">-Woody Allen-</span>
         </h2>
         
-        <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
-        <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
-        <a href="#"><i class = "fi-magnifying-glass">&nbsp;</i></a>
+        <form action="home.php" method="post">
+          <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
+          <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
+          <a href="#"><button type="submit" class="fi-magnifying-glass">&nbsp;</i></a>
+        </form>
+
       </div>
     </div>
 

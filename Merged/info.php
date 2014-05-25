@@ -18,7 +18,6 @@
     <link rel="shortcut icon" href="static/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
-    <!-- TODO: update once #026 is closed -->
     <link rel="stylesheet" type="text/css" href="static/css/foundation-icons.css">
 
     <link rel="stylesheet" type="text/css" href="static/css/rating.css">
@@ -85,6 +84,6 @@
     <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript" src="static/js/map.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/info.js"></script>
+    <script type="text/javascript" src="static/js/info.js"></script>
   </body>
 </html>

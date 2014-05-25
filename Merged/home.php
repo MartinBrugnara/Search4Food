@@ -60,7 +60,7 @@
           <section class="clear comments">
             <?php foreach($comments[$loc->loc_id] as $c): ?>
             <p>
-              <span class="rating author" data-starts="<?=$c->rating?>"><?=$c->name?></span><br>
+              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>"><?=$c->name?></a></span><br>
               <?=$c->comment?>
             </p>
             <?php endforeach; ?>
@@ -157,9 +157,9 @@
     <?php include "./inc/footer.inc.php"; ?>
 
     <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
-    <script type="text/javascript" src="/static/js/modal.js"></script>
-    <script type="text/javascript" src="/static/js/map.js"></script>
+    <script type="text/javascript" src="static/js/modal.js"></script>
+    <script type="text/javascript" src="static/js/map.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/home.js"></script>
+    <script type="text/javascript" src="static/js/home.js"></script>
   </body>
 </html>

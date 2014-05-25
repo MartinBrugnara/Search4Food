@@ -14,8 +14,13 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-
-require './libs/facebook.php';
+$user = NULL;
+try {
+  require './libs/facebook.php';
+} catch (Exception $e) {
+    print("<!-- FACEBOOK error: $e -->");
+    return;
+}
 require './libs/db.php';
 require './libs/core.php';
 
@@ -39,9 +44,14 @@ if ($user) {
     // Proceed knowing you have a logged in user who's authenticated.
     $user_profile = $facebook->api('/me');
 
-    $_SESSION['user_id'] = Q("SELECT user_id FROM users WHERE fb_extid = ".intval($user))[0]->user_id OR -1;
+    $us = Q("SELECT user_id FROM users WHERE fb_extid = ".intval($user));
+    if (count($us))
+      $_SESSION['user_id'] = $us[0]->user_id OR -1;
+    else
+      ; // user is not in db
   } catch (FacebookApiException $e) {
-    error_log($e);
+    print("<!-- FACEBOOK error: $e --> ");
+    //error_log($e);
     $user = null;
   }
 }

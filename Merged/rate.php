@@ -9,7 +9,7 @@
 
   insert_rate($loc_id, $rating, $comment);
 
-  header("Location: /info.php?loc_id=".$loc_id);
+  header("Location: info.php?loc_id=".$loc_id);
 
 ?>
 
