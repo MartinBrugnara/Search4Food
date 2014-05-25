@@ -1,5 +1,5 @@
 <?php
-
+ 
 /* plain query with mysqli */
 function Q($query){
   $srv = connect();
