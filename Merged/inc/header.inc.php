@@ -6,7 +6,7 @@
       <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
       <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
 
-      <form action="" method="post">
+      <form action="home.php" method="post">
         <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
         <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
         <a><button type="submit" class="fi-magnifying-glass">&nbsp;</i></a>
