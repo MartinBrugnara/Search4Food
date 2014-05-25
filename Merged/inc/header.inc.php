@@ -1,8 +1,8 @@
     <header>
       <?php include('./libs/fb_runner.php'); ?> 
-      <img src="/static/img/logo.png" id="logo" alt="logo">
+      <img src="static/img/logo.png" id="logo" alt="logo">
 
-      <?php if ($_SERVER['SCRIPT_NAME'] != '/index.php'): ?>
+      <?php if (!strpos($_SERVER['SCRIPT_NAME'], '/index.php')): ?>
       <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
       <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
 
@@ -20,7 +20,7 @@
             <?= $user_profile['name']; ?>
             &nbsp;
         </span>
-        <a href="/logout.php" class="logout"><?=$GLOBALS['dict']->logout->{$_SESSION['lang']}; ?>&nbsp;&nbsp;&nbsp;</a>
+        <a href="logout.php" class="logout"><?=$GLOBALS['dict']->logout->{$_SESSION['lang']}; ?>&nbsp;&nbsp;&nbsp;</a>
         <?php endif; ?>
       </div>
    </header>
