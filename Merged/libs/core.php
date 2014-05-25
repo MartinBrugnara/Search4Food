@@ -3,7 +3,11 @@
 /* plain query with mysqli */
 function Q($query){
   $srv = connect();
-  $result = $srv->query($query);
+  if (!$result = $srv->query($query)) {
+    printf("<!-- DB ERROR: This query is broken: \\ $query \\ -->");
+    return array();
+  }
+
 
   $a[] = null;	
   while ($row = $result->fetch_object())
