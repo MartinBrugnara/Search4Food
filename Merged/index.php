@@ -8,9 +8,9 @@
   <head>
     <meta charset="utf-8">
     <title>Search4Food</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="static/css/foundation-icons.css">
 
     <link rel="shortcut icon" href="static/img/favicon.png">
   </head>

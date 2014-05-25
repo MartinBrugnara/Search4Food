@@ -1,4 +1,10 @@
 <?php 
+  if (!isset($_GET['user_id'])) {
+    print("Please specify an user_id");
+    exit;
+  }
+    
+
   include_once('libs/Utils.php');
   Utils::update_env();
   Utils::load_dict(); 
@@ -6,7 +12,7 @@
   include_once('libs/db.php');
   include_once('libs/core.php');
 
-  $u = get_profile();
+  $u = get_profile($_GET['user_id']);
   $locations = get_recent_loc();
   $comments = get_recent_loc_comm();
 ?>
