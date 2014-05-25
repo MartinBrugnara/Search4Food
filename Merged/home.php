@@ -60,7 +60,7 @@
           <section class="clear comments">
             <?php foreach($comments[$loc->loc_id] as $c): ?>
             <p>
-              <span class="rating author" data-starts="<?=$c->rating?>"><?=$c->name?></span><br>
+              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>"><?=$c->name?></a></span><br>
               <?=$c->comment?>
             </p>
             <?php endforeach; ?>
