@@ -18,7 +18,7 @@ $(function(){
 
     // create marker
     var m = new OpenLayers.Marker(loc);
-    var res = markerL.addMarker(m);
+    markerL.addMarker(m);
 
     // add redirect to location
     // http://forum.openstreetmap.org/viewtopic.php?id=5537
