@@ -1,11 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
-<<<<<<< HEAD:FrontEnd/css/info.css
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-section.content{
-=======
 .central {
->>>>>>> FETCH_HEAD:Merged/static/css/info.css
 	margin: 40px;
 	margin-left: 90px;
 	margin-right: 90px;
@@ -38,11 +34,7 @@ section.content{
 	width: 50%;
 }
 
-<<<<<<< HEAD:FrontEnd/css/info.css
-.alex > div {
-=======
 .comments > div {
->>>>>>> FETCH_HEAD:Merged/static/css/info.css
 	margin-top: 3px;
 	border-bottom: 1px solid green;
 	font-style: italic;	
@@ -57,33 +49,6 @@ section.content{
 	border: 2px dotted green;
 }
 
-<<<<<<< HEAD:FrontEnd/css/info.css
-#dicono, #qui{
-	font-size: 18px;
-	font-style:;
-}
-
-.alex .rating::after{
-	vertical-align: top;
-	display: inline-block;
-	font-size: 18px;
-	color: green !important;
-}
-
-.alex .rating {
-	font-family: Lato;
-	font-size: 20px;
-	font-weight: bold;
-	font-style: normal;
-}
-
-#name{
-	font-family: Lato;
-	font-size: 35px;
-	font-weight: bold;
-	width: 50%;
-	color: green;
-=======
 .comments .rating {
 	vertical-align: top;
 	display: inline-block;
@@ -102,7 +67,6 @@ section.content{
 	font-size: 35px;
 	font-weight: bold;
 	width: 50%;
->>>>>>> FETCH_HEAD:Merged/static/css/info.css
 }
 
 #maps {
@@ -125,14 +89,3 @@ button[type=submit] {
 	height: 30px;
 	width: 20%;
 }
-<<<<<<< HEAD:FrontEnd/css/info.css
-
-#address{
-	color: grey;
-}
-
-.
-
- 
-=======
->>>>>>> FETCH_HEAD:Merged/static/css/info.css

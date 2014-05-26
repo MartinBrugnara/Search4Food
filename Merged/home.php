@@ -6,8 +6,8 @@
   include_once('libs/db.php');
   include_once('libs/core.php');
 
-  $locations = get_loc_ratings();
-  $comments = get_all_ratings();
+  $locations = home_locations();
+  $comments = home_comments();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,33 +35,35 @@
           <?=$GLOBALS['dict']->sort_by->{$_SESSION['lang']}?>
           <input type="radio" name="sort" value="ratings"><?=$GLOBALS['dict']->ratings->{$_SESSION['lang']}?>
           <input type="radio" name="sort" value="distance"><?=$GLOBALS['dict']->distance->{$_SESSION['lang']}?>
+          <!--
           &nbsp;&nbsp;
           <i class="fi-widget" onclick="modal_open('advanced_search')">&nbsp;</i>
+          -->
         </div>   
-
-        <?php foreach($locations as $loc): ?>
+        <?php foreach($locations as $i => &$loc): ?>
         <section class="location">
           <!-- Name + rating -->
-          <span class="rating" data-stars="<?=$loc->rating?>">
-          <a href="/info.php?loc_id=<?=$loc->place_id?>"><?=$loc->name?></a>
+          <span class="rating" data-stars="<?= round($loc->rating)?>">
+          <a href="info.php?place_id=<?=$loc->place_id?>"><?=$loc->name?></a>
           </span>
 
           <!-- Location Picture -->
-          <div style="float:left"><img src="<?=$loc->picture_url?>" alt="location picture"></div>
+          <div style="float:left"><img src="<?=$loc->picture?>" alt="location picture"></div>
 
           <!-- location coords -->
           <input type="hidden" name="long" value="<?= $loc->long ?>">
           <input type="hidden" name="lat" value="<?= $loc->lat ?>">
 
           <!-- Descrizione -->
-          <?=$loc->description?>
+          <?= trim($loc->description, ' ') ?>
 
           <!-- Comments -->
           <section class="clear comments">
-            <?php foreach($comments[$loc->loc_id] as $c): ?>
+            <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
             <p>
-              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>"><?=$c->name?></a></span><br>
-              <?=$c->comment?>
+              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>">
+              <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?></a></span><br>
+              <?= $c->comment ?>
             </p>
             <?php endforeach; ?>
           </section>
@@ -75,30 +77,19 @@
 
     <!-- MODAL WINDOW -->
     <!-- TODO: update this modal & it's style -->
+    <!--
     <div class="modal" id="advanced_search">
       <section>
         <header>
-          <!-- put here the title -->
           <?=$GLOBALS['dict']->advance_search->{$_SESSION['lang']}?>
           <a href="#" class="close"><i class="fi-x-circle">&nbsp;</i></a>
         </header>
 
-        <!-- preferences -->
         <section name="preferences">
           <section name="purpose">
             <form action="">
               <fieldset>
-<<<<<<< HEAD
-                <legend><h3 id="boh">Luogo</h3></legend><br>
-                <input type="checkbox" name="pizzeria" value="pizzeria"/> Pizzeria
-                <br/> 
-                <input type="checkbox" name="ristorante" value="ristorante"/> Ristorante 
-                <br/>
-                <input type="checkbox" name="fastfood" value="fastfood"/> Fast-food 
-                <br/>
-                <input type="checkbox" name="casa" value="casa"/> Take-away 
-=======
-                <legend><?=$GLOBALS['dict']->services->{$_SESSION['lang']}?></legend>
+               <legend><?=$GLOBALS['dict']->services->{$_SESSION['lang']}?></legend>
                 <input type="checkbox" name="pizzeria" value="pizzeria"/>
                 <?=$GLOBALS['dict']->pizzeria->{$_SESSION['lang']}?>
                 <br/> 
@@ -110,20 +101,14 @@
                 <br/>
                 <input type="checkbox" name="casa" value="casa"/>
                 <?=$GLOBALS['dict']->home->{$_SESSION['lang']}?>
->>>>>>> FETCH_HEAD
               </fieldset>
             </form>
           </section><section name="food">
             <form action="#">
               <fieldset>
-<<<<<<< HEAD
-              <legend><h3>Occasione</h3></legend><br>
-                <input type="checkbox" name="friends" value="Friends"/> Friends
-=======
                 <legend> <?=$GLOBALS['dict']->purpose->{$_SESSION['lang']}?></legend>
                 <input type="checkbox" name="friends" value="Friends"/>
                 <?=$GLOBALS['dict']->friend->{$_SESSION['lang']}?>
->>>>>>> FETCH_HEAD
                 <br/> 
                 <input type="checkbox" name="romantic" value="Romantic"/>
                 <?=$GLOBALS['dict']->romantic->{$_SESSION['lang']}?>
@@ -151,7 +136,7 @@
           </section>
         </section>
       </section>
-    </div> 
+    </div> -->
     <!-- MODAL END -->
 
     <?php include "./inc/footer.inc.php"; ?>

@@ -9,7 +9,7 @@ function Q($query){
   }
 
 
-  $a[] = null;	
+  $a = array();	
   while ($row = $result->fetch_object())
     $a[]= $row; 
 
@@ -19,9 +19,9 @@ function Q($query){
 }
 
 
-function get_loc_ratings(){
-  $query = "SELECT r.place_id, AVG(r.value) AS rating,p.picture, p.description,
-    CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
+function home_locations(){
+    $query = "SELECT r.place_id, p.name, AVG(r.value) AS rating,p.picture,
+    p.description, CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
     p.loc_latitude AS lat, p.loc_longitude AS \"long\"
     FROM ratings r inner join places p ON r.place_id=p.place_id
     GROUP BY r.place_id;";
@@ -29,11 +29,19 @@ function get_loc_ratings(){
 }
 
 
-function get_all_ratings() {
-  return Q("
-    SELECT r.place_id, r.comment, u.name, r.value AS rating
+function home_comments() {
+  $qres = Q("
+    SELECT r.place_id, r.comment, u.user_id, u.name, u.email, r.value AS rating
     FROM ratings r INNER JOIN users u ON r.user_id=u.user_id;
   ");
+
+  $res = array();
+  foreach ($qres as $i => $r) {
+    if (!in_array($r->place_id, $res))
+      $res[$r->place_id] = array();
+    $res[$r->place_id][] = $r;
+  }
+  return $res;
 }
 
 function get_loc_info($loc_id) {
