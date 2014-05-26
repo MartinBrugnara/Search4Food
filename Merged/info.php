@@ -57,7 +57,7 @@ $comments = info_comments($_GET['place_id']);
           <br>
           <?php endforeach; ?>
         </div>       
-
+ 
         <!-- write comment -->
         <form action="/rate.php" method="POST">
         <legend><?=$GLOBALS['dict']->leave_comment->{$_SESSION['lang']}?></legend>

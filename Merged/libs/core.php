@@ -58,8 +58,8 @@ function info_get($loc_id) {
 function info_comments($loc_id) {
   return Q("
     SELECT u.user_id,u.name, r.value as rating,r.comment
-    FROM users u INNER JOIN ratings r ON u.user_id=r.user_id;
-  WHERE ratings.place_id = ".intval($loc_id));
+    FROM users u INNER JOIN ratings r ON u.user_id=r.user_id
+  WHERE r.place_id = ".intval($loc_id));
 }
 
 function insert_rate($loc_id, $rating, $comment) {
