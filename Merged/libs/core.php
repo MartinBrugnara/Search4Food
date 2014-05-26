@@ -31,7 +31,7 @@ function home_locations(){
 
 function home_comments() {
   return Q("
-    SELECT r.place_id, r.comment, u.name, r.value AS rating
+    SELECT r.place_id, r.comment, u.user_id, u.name, r.value AS rating
     FROM ratings r INNER JOIN users u ON r.user_id=u.user_id;
   ");
 }
