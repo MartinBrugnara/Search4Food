@@ -9,7 +9,7 @@ function Q($query){
   }
 
 
-  $a[] = null;	
+  $a = array();	
   while ($row = $result->fetch_object())
     $a[]= $row; 
 
