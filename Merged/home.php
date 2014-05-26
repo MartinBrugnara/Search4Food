@@ -62,14 +62,14 @@
                 <a href="profile.php?user_id=<?= $c->user_id ?>">
                   <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?>
                 </a>
-              </span><br>
+              </span>
               <?php if (strlen($c->comment)): ?>
               <span class="txt">
                 <?= $c->comment ?>
-              </span>
+              </span><br>
               <?php endif; ?>
-            <br><br>
             <?php endforeach; ?>
+            <br><br>
           </section>
 
         </section>

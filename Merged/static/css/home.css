@@ -65,6 +65,7 @@ section.location {
   padding-right: 10px;
   padding-left: 10px;
   font-size: 19px;
+  text-align: justify;
 }
 
 section.location:last-child {
@@ -137,6 +138,12 @@ span.rating.author::after{
 .txt{
   font-size: 17px;
   font-style: italic;
+  padding-left: 20px;
+  display: block;
+}
+
+.txt::before, .txt::after {
+  content: "\"";
 }
 
 /***MODAL WINDOW***/
