@@ -50,12 +50,12 @@ function info_get($loc_id) {
   return Q("
     SELECT p.name,'NULL' as rating, p.place_id, 
     CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
-    p.loc_latitude AS lat, p.loc_longitude AS longit, p.picture as img_url, p.description
+    p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.picture as img_url, p.description
     FROM places p
   WHERE p.place_id = ".intval($loc_id).";");
 }
 
-function get_comments($loc_id) {
+function info_comments($loc_id) {
   return Q("
     SELECT u.user_id,u.name, r.value as rating,r.comment
     FROM users u INNER JOIN ratings r ON u.user_id=r.user_id;

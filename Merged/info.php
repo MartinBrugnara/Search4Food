@@ -1,15 +1,13 @@
 <?php 
-  include_once('libs/Utils.php');
-  Utils::update_env();
-  Utils::load_dict(); 
+include_once('libs/Utils.php');
+Utils::update_env();
+Utils::load_dict(); 
 
-  include_once('libs/db.php');
-  include_once('libs/core.php');
+include_once('libs/db.php');
+include_once('libs/core.php');
 
-  $info = info_get($_GET['place_id']); 
-  
-  
-  $comments = get_comments($_GET['place_id']);
+$info = info_get($_GET['place_id']); 
+$comments = info_comments($_GET['place_id']);
 ?>
 <!DOCTYPE html>
 <html>
@@ -39,7 +37,7 @@
         <input type="hidden" name="lat" value="<?= $info[0]->lat ?>">
 
         <p id="wware">
-<?=$GLOBALS['dict']->location->{$_SESSION['lang']}?>
+            <?=$GLOBALS['dict']->location->{$_SESSION['lang']}?>
           </p>
         <div id="maps"></div>
 
@@ -51,7 +49,7 @@
         <!-- comments -->
         <p id="tau"><?$GLOBALS['dict']->say_something->{$_SESSION['lang']}?><p>
         <div class="comments">
-          <?php foreach ($comments as &$cm): ?>
+          <?php foreach ($comments as $i => &$cm): ?>
           <div>
             <span class="rating" data-stars="<?=$cm->rating?>"><?=$cm->name?></span> 
             <p><?=$cm->comment?></p>
@@ -74,7 +72,7 @@
 
           <br>
           <textarea name="comment" rows="6" cols="50"></textarea>
-          <button type="submit">$GLOBALS['dict']->comment->{$_SESSION['lang'])</button>
+          <button type="submit"><?=$GLOBALS['dict']->comment->{$_SESSION['lang']}?></button>
         </form>
       </div> <!-- end data -->
     </div> <!-- end central -->
