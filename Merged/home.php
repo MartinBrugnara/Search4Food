@@ -5,8 +5,7 @@
 
   include_once('libs/db.php');
   include_once('libs/core.php');
-
-  $locations = home_locations();
+  $locations = home_locations($_POST['wheat'],$_POST['whent']);
   $comments = home_comments();
 ?>
 <!DOCTYPE html>
@@ -26,7 +25,6 @@
   </head>
   <body>
     <?php include "./inc/header.inc.php"; ?>
-
     <div class="central">
       <section id="locations">
         <!-- order by func -->
