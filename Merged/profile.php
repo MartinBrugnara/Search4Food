@@ -12,7 +12,8 @@
   include_once('libs/core.php');
 
   $user_id = intval($_GET['user_id']);
-  $u = profile_get($user_id)[0];
+  $u = profile_get($user_id);
+  $u = $u[0];
   $locations = profile_locations($user_id);
   $comments = profile_comments($user_id);
 ?>
@@ -20,7 +21,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">  
-    <title>Profile: <?= $u[0]->name ?></title>
+    <title>Profile: <?= $u->name ?></title>
 
     <link rel="shortcut icon" href="static/img/favicon.png">
     <link rel="stylesheet" href="static/css/style.css">
@@ -41,7 +42,7 @@
         <span class="rating" data-stars="<?= $u->rating ?>" id="name">
           <?= strlen($u->name) ? trim($u->name, ' ') : (strlen($u->email) ? $u->email : "No name") ?>
         </span>
-        <img src="<?= $u->picture ?>" id="profile_photo" alt="profile photo"> 
+        <img src="<?= strlen($u->picture) && $u->picture != "NULL" ? $u->picture : 'static/img/placeholder.jpg' ?>" id="profile_photo" alt="profile photo"> 
         <ul>
           <li><span><?= $GLOBALS['dict']->born->{$_SESSION['lang']}?></span><?= $u->birth_date ?></li>
           <li><span><?= $GLOBALS['dict']->gender->{$_SESSION['lang']}?></span><?= $u->gender ?></li>
@@ -97,7 +98,14 @@
           <div class="fleft"><img src="<?= $loc->picture ?>" alt="location img"></div>
             
           <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
-            <p><?= $c ?></p>
+            <span class="rating commenter" data-stars="<?= round($c->rating) ?>">
+              <a href="profile.php?user_id=<?= $c->user_id ?>">
+                <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?>
+              </a>
+            </span>
+            <?php if (strlen($c->comment)): ?>
+              <p><?= $c->comment ?></p>
+            <?php endif; ?>
           <?php endforeach; ?>
 
           <section class="clear">&nbsp;<!-- valign hack --></section>

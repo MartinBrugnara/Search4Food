@@ -17,7 +17,8 @@ section.content {
   font-size: 18px;
 }
 
-.tag ul {list-style: none;}
+ul {list-style-type: none;}
+ul input {vertical-align: middle;}
 
 .title {
   font-size: 32px;
@@ -166,6 +167,7 @@ section.location {
   word-wrap:break-word;
 }
 
+
 section[name=my_reviews]{
   width: 90%;
   height: 500px;
@@ -198,23 +200,9 @@ section.location img {
   clear: both;
 }
 
-section.location span.rating::after{
-  font-size: 24px;
-  color: gold;
-  display: inline-block;
-  content: "\2605";
-}
-section.location span.rating[data-stars="2"]::after{
-  content: "\2605\2605";
-}
-section.location span.rating[data-stars="3"]::after{
-  content: "\2605\2605\2605";
-}
-section.location span.rating[data-rate="4"]::after{
-  content: "\2605\2605\2605\2605";
-}
-section.location span.rating[data-stars="5"]::after{
-  content: "\2605\2605\2605\2605\2605";
+.location span.commenter {
+  font-size: 18px;
+  color: darkgreen;
 }
 
 section.location h4 {
