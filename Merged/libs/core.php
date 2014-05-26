@@ -19,16 +19,27 @@ function Q($query){
 }
 
 function home_locations($wheat, $whent){
-    $query = "SELECT r.place_id, p.name, AVG(r.value) AS rating,p.picture,
+  $srv = connect();
+  
+  $stmt = $srv->prepare("SELECT r.place_id, p.name, AVG(r.value) AS rating,p.picture,
     p.description, CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
     p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.loc_city
     FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
     INNER JOIN places p ON r.place_id=p.place_id
-        
-    WHERE p.loc_city LIKE \"". $wheat .
-    "\" AND k.name LIKE \"%" . $whent .
-    "\" GROUP BY r.place_id;";
-  return Q($query);
+    WHERE p.loc_city LIKE ? AND k.name LIKE %? GROUP BY r.place_id;");
+  $stmt->bind_param("s", $wheat);
+  $stmt->bind_param("s", $whent);
+  $stmt->execute();
+  $result=$stmt->get_result();
+  $stmt->close();
+  $srv->close();
+  $a = array();	
+  while ($row = $result->fetch_object())
+     $a[]= $row; 
+
+
+
+  return $a;
 }
 
 
