@@ -27,8 +27,8 @@ function home_locations($wheat, $whent){
     FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
     INNER JOIN places p ON r.place_id=p.place_id
     WHERE p.loc_city LIKE ? AND k.name LIKE ? GROUP BY r.place_id;");
-  $stmt->bind_param("s", $wheat);
-  $stmt->bind_param("s", $whent);
+  msqli_stmt_bind_param($stmt,"s", $wheat);
+  msqli_stmt_bind_param($stmt,"s", $whent);
   $stmt->execute();
   $result=$stmt->get_result();
   $stmt->close();
