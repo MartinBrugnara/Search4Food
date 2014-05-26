@@ -124,6 +124,7 @@ span.author::before {
 }
 
 span.author a {
+  margin-bottom: 2px;
   font-size: 18px !important;
   color: #333 !important;
 }
@@ -131,6 +132,11 @@ span.author a {
 span.rating.author::after{
   color: green;
   font-size: 18px;
+}
+
+.txt{
+  font-size: 17px;
+  font-style: italic;
 }
 
 /***MODAL WINDOW***/

@@ -32,14 +32,17 @@ function home_locations(){
 function home_comments() {
   $qres = Q("
     SELECT r.place_id, r.comment, u.user_id, u.name, u.email, r.value AS rating
-    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id;
+    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id
+    ORDER BY r.creation_time DESC
+    ;
   ");
 
   $res = array();
-  foreach ($qres as $i => $r) {
-    if (!in_array($r->place_id, $res))
+  foreach ($qres as $i => &$r) {
+    if (!array_key_exists($r->place_id, $res))
       $res[$r->place_id] = array();
-    $res[$r->place_id][] = $r;
+    else if (count($res[$r->place_id]) <= 5)
+      array_push($res[$r->place_id], $r);
   }
   return $res;
 }

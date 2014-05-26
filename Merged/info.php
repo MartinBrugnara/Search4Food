@@ -36,9 +36,6 @@ $comments = info_comments($_GET['place_id']);
         <input type="hidden" name="long" value="<?= $info[0]->long ?>">
         <input type="hidden" name="lat" value="<?= $info[0]->lat ?>">
 
-        <p id="wware">
-            <?=$GLOBALS['dict']->location->{$_SESSION['lang']}?>
-          </p>
         <div id="maps"></div>
 
       </div><div class="data">
