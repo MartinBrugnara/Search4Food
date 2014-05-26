@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
+body {
+	background-color: rgb(237,234,227);
+}
+
 .central {
 	margin: 40px;
 	margin-left: 90px;
@@ -47,6 +51,7 @@
 	margin-bottom: 40px;
 	overflow-x: hidden;
 	border: 2px dotted green;
+	background-color: white;
 }
 
 .comments .rating {
