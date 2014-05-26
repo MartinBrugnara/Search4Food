@@ -124,6 +124,7 @@ span.author::before {
 }
 
 span.author a {
+  margin-bottom: 2px;
   font-size: 18px !important;
   color: #333 !important;
 }
@@ -133,7 +134,8 @@ span.rating.author::after{
   font-size: 18px;
 }
 
-blockquote{
+.txt{
+  font-size: 17px;
   font-style: italic;
 }
 
