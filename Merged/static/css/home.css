@@ -114,12 +114,20 @@ ul.comments li {
 	width: 20%;
 	display: inline;
 }
-span.rating.author{
-  font-size: 16px;
+
+span.author::before {
+  content: '- ';
+  display: inline-block;
+}
+
+span.author a {
+  font-size: 18px !important;
+  color: #333 !important;
 }
 
 span.rating.author::after{
   color: green;
+  font-size: 18px;
 }
 
 /***MODAL WINDOW***/
@@ -133,9 +141,6 @@ section[name="preferences"] > section  {
   padding: 10px;
   box-sizing: border-box;
 }
-
-
-
 
 section[name="preferences"] > section:last-child {
   border-right: none;
