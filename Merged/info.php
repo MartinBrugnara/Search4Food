@@ -46,16 +46,25 @@ $comments = info_comments($_GET['place_id']);
         <!-- comments -->
         <p id="tau"><?$GLOBALS['dict']->say_something->{$_SESSION['lang']}?><p>
         <div class="comments">
-          <?php foreach ($comments as $i => &$cm): ?>
+          <?php foreach ($comments as $i => &$c): ?>
           <div>
-            <span class="rating" data-stars="<?= round($cm->rating)?>"><?=$cm->name?></span> 
-            <p><?=$cm->comment?></p>
+            <span class="rating" data-stars="<?= round($c->rating)?>">
+              <a href="profile.php?user_id=<?=$c->user_id?>">
+                <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?>
+              </a>
+            </span> 
+            <?php if (strlen($c->comment)): ?>
+            <p class="txt">
+              <?= $c->comment ?>
+            </p>
+            <?php endif; ?>
           </div>
           <br>
           <?php endforeach; ?>
         </div>       
  
         <!-- write comment -->
+        <?php if($user): ?>
         <form action="/rate.php" method="POST">
         <legend><?=$GLOBALS['dict']->leave_comment->{$_SESSION['lang']}?></legend>
           <input type="hidden" name="place_id" value="<?=$info[0]->place_id?>">
@@ -71,6 +80,8 @@ $comments = info_comments($_GET['place_id']);
           <textarea name="comment" rows="6" cols="50"></textarea>
           <button type="submit"><?=$GLOBALS['dict']->comment->{$_SESSION['lang']}?></button>
         </form>
+        <?php endif; ?>
+
       </div> <!-- end data -->
     </div> <!-- end central -->
 

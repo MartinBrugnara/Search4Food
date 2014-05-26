@@ -41,7 +41,7 @@ function home_comments() {
   foreach ($qres as $i => &$r) {
     if (!array_key_exists($r->place_id, $res))
       $res[$r->place_id] = array();
-    else if (count($res[$r->place_id]) <= 5)
+    else if (count($res[$r->place_id]) < 5)
       array_push($res[$r->place_id], $r);
   }
   return $res;
@@ -59,7 +59,7 @@ function info_get($loc_id) {
 
 function info_comments($loc_id) {
   return Q("
-    SELECT u.user_id,u.name, r.value as rating,r.comment
+    SELECT u.user_id, u.name, u.email, r.value as rating, r.comment
     FROM users u INNER JOIN ratings r ON u.user_id=r.user_id
   WHERE r.place_id = ".intval($loc_id));
 }
