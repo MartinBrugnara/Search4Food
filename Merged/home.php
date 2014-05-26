@@ -44,7 +44,7 @@
         <section class="location">
           <!-- Name + rating -->
           <span class="rating" data-stars="<?= round($loc->rating)?>">
-          <a href="/info.php?id=<?=$loc->place_id?>"><?=$loc->name?></a>
+          <a href="info.php?place_id=<?=$loc->place_id?>"><?=$loc->name?></a>
           </span>
 
           <!-- Location Picture -->
@@ -55,14 +55,15 @@
           <input type="hidden" name="lat" value="<?= $loc->lat ?>">
 
           <!-- Descrizione -->
-          <?=$loc->description?>
+          <?= trim($loc->description, ' ') ?>
 
           <!-- Comments -->
           <section class="clear comments">
             <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
             <p>
-              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>"><?=$c->name?></a></span><br>
-              <?=$c->comment?>
+              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>">
+              <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?></a></span><br>
+              <?= $c->comment ?>
             </p>
             <?php endforeach; ?>
           </section>
