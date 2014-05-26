@@ -39,9 +39,10 @@ function home_comments() {
 
   $res = array();
   foreach ($qres as $i => &$r) {
-      if (!array_key_exists($r->place_id, $res))
-        $res[$r->place_id] = array();
-    array_push($res[$r->place_id], $r);
+    if (!array_key_exists($r->place_id, $res))
+      $res[$r->place_id] = array();
+    else if (count($res[$r->place_id]) <= 5)
+      array_push($res[$r->place_id], $r);
   }
   return $res;
 }
