@@ -61,7 +61,7 @@ $comments = info_comments($_GET['place_id']);
         <!-- write comment -->
         <form action="/rate.php" method="POST">
         <legend><?=$GLOBALS['dict']->leave_comment->{$_SESSION['lang']}?></legend>
-          <input type="hiddend" name="place_id" value="<?=$info[0]->place_id?>">
+          <input type="hidden" name="place_id" value="<?=$info[0]->place_id?>">
 
           <br>
           <input type="radio" name="rating" value="5"><?=$GLOBALS['dict']->value_five->{$_SESSION['lang']}?></input>
