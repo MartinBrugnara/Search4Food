@@ -27,21 +27,34 @@ function home_locations($wheat, $whent){
     FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
     INNER JOIN places p ON r.place_id=p.place_id
     WHERE p.loc_city LIKE ? AND k.name LIKE ? GROUP BY r.place_id;");
-  $stmt->bind_param("s", $wheat);
-  $stmt->bind_param("s", $whent);
+  $stmt->bind_param("ss", $wheat, $whent);
   $stmt->execute();
-  $result=$stmt->get_result();
+
+  // bind results to named array
+  $rows = array();
+  $meta = $stmt->result_metadata();
+  $fields = $meta->fetch_fields();
+  foreach($fields as $field) {
+    $result[$field->name] = "";
+    $resultArray[$field->name] = &$result[$field->name];
+  }
+
+  call_user_func_array(array($stmt, 'bind_result'), $resultArray);
+
+  // create object of results and array of objects
+  while($stmt->fetch()) {
+    $resultObject = new stdClass();
+
+    foreach ($resultArray as $key => $value) {
+      $resultObject->$key = $value;
+    }
+
+    $rows[] = $resultObject;
+  }
+
   $stmt->close();
-  $srv->close();
-  $a = array();	
-  while ($row = $result->fetch_object())
-     $a[]= $row; 
-
-
-
-  return $a;
+  return $rows;
 }
-
 
 function home_comments() {
   $qres = Q("
