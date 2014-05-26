@@ -60,18 +60,17 @@
           <!-- Comments -->
           <section class="clear comments">
             <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
-            <p>
               <span class="rating author" data-starts="<?= round($c->rating)?>">
                 <a href="profile.php?user_id=<?= $c->user_id ?>">
                   <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?>
                 </a>
               </span><br>
               <?php if (strlen($c->comment)): ?>
-              <p class="txt">
+              <span class="txt">
                 <?= $c->comment ?>
-              </p>
+              </span>
               <?php endif; ?>
-            </p>
+            <br><br>
             <?php endforeach; ?>
           </section>
 
