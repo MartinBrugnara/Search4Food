@@ -62,19 +62,11 @@ section.content {
   margin: 50px;
   width: 50%;
   margin-left: 20%;
-<<<<<<< HEAD:FrontEnd/css/profile.css
   border: 1px solid green;
-=======
-  border: 1px solid #333;
->>>>>>> FETCH_HEAD:Merged/static/css/profile.css
   border-radius: 20px;
 }
 
 .profile {
-<<<<<<< HEAD:FrontEnd/css/profile.css
-  height: 1000px;
-=======
->>>>>>> FETCH_HEAD:Merged/static/css/profile.css
   width: 28%;
   padding: 10px;
   border-right: 2px green solid;
@@ -266,13 +258,6 @@ ul.comments li {
   font-size: 20px;
 }
 
-<<<<<<< HEAD:FrontEnd/css/profile.css
-h3{
-  font-family: Lato;
-  font-style: bold;
-  font-size: 24px;
-=======
 .fleft {
   float: left;
->>>>>>> FETCH_HEAD:Merged/static/css/profile.css
 }
