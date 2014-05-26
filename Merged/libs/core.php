@@ -105,7 +105,7 @@ function profile_locations($user_id) {
   return Q("SELECT p.name, r.value as rating, 
       p.place_id, p.picture,
       CONCAT_WS(', ', p.loc_street, p.loc_city, p.loc_state) as addr
-    FROM user u 
+    FROM users u 
       INNER JOIN ratings r ON u.user_id=r.user_id
       INNER JOIN places p ON r.place_id=p.place_id
     WHERE u.user_id = ".intval($user_id)."
@@ -120,7 +120,7 @@ function profile_comments($user_id) {
     FROM ratings r INNER JOIN users u ON r.user_id=u.user_id
     WHERE place_id IN (
       SELECT p.place_id
-      FROM user u 
+      FROM users u 
         INNER JOIN ratings r ON u.user_id=r.user_id
         INNER JOIN places p ON r.place_id=p.place_id
       WHERE u.user_id = ".intval($user_id)."

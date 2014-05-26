@@ -17,7 +17,8 @@ section.content {
   font-size: 18px;
 }
 
-.tag ul {list-style: none;}
+ul {list-style-type: none;}
+ul input {vertical-align: middle;}
 
 .title {
   font-size: 32px;
