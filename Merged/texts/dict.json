@@ -16,44 +16,44 @@
     "ita": "\"Tu cuoci solo cibi surgelati?\"<br>\"Cuocerli? E chi li cuoce? Io neanche li scongelo.<br>Li succhio come se fossero ghiaccioli!\""
   },
   "sort_by": {
-    "eng": "sort by",
-    "ita": "ordina per"
+    "eng": "Sort by",
+    "ita": "Ordina per"
   },
   "ratings": {
-    "eng": "ratings",
-    "ita": "ratings"
+    "eng": "Ratings",
+    "ita": "Ratings"
   },
   "distance": {
-    "eng": "distance",
-    "ita": "distanza"
+    "eng": "Distance",
+    "ita": "Distanza"
   },
   "advanced_search": {
-    "eng": "andvanced search",
-    "ita": "ricerca avanzata"
+    "eng": "Andvanced Search",
+    "ita": "Ricerca Avanzata"
   },
   "services": {
-    "eng": "services",
-    "ita": "servizi"
+    "eng": "Services",
+    "ita": "Servizi"
   },
   "pizzeria": {
-    "eng": "pizzeria",
-    "ita": "pizzeria"
+    "eng": "Pizzeria",
+    "ita": "Pizzeria"
   },
   "restaurant": {
-    "eng": "restaurant",
-    "ita": "ristorante"
+    "eng": "Restaurant",
+    "ita": "Ristorante"
   },
   "fast_food": {
-    "eng": "fast food",
-    "ita": "fast food"
+    "eng": "Fast Food",
+    "ita": "Fast Food"
   },
   "home": {
-    "eng": "home",
-    "ita": "casa"
+    "eng": "Home",
+    "ita": "Casa"
   },
   "purpose": {
-    "eng": "purpose",
-    "ita": "scopo"
+    "eng": "Purpose",
+    "ita": "Scopo"
   },
   "friends": {
     "eng": "Friends",
