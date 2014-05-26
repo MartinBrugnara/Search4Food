@@ -85,6 +85,22 @@ function info_get($loc_id) {
     WHERE p.place_id = ".intval($loc_id).";");
 }
 
+function index_where() {
+
+  return Q("
+      SELECT DISTINCT loc_country as loc
+      FROM places;
+      ;");
+}
+
+function index_when() {
+
+  return Q("
+      SELECT DISTINCT name as when 
+      FROM purpose;
+      ;");
+}
+
 function info_comments($loc_id) {
   return Q("
     SELECT u.user_id, u.name, u.email, r.value as rating, r.comment
