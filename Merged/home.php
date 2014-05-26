@@ -59,7 +59,8 @@
 
           <!-- Comments -->
           <section class="clear comments">
-            <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
+<?php var_dump($comments); ?>
+            <?php $tmp=& $comments[$loc->place_id]; foreach($tmp as $i => &$c): ?>
             <p>
               <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>">
               <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?></a></span><br>
