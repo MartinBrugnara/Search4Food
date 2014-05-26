@@ -88,7 +88,7 @@
         <!-- item start -->
         <section class="location">
           <span class="rating" data-stars="<?= $loc->rating ?>">
-            <a href="/info.php?loc_id=<?= $loc->place_id ?>" class="loc_info_link">
+            <a href="/info.php?place_id=<?= $loc->place_id ?>" class="loc_info_link">
               <?= $loc->name ?>
             </a>
           </span>
