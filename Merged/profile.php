@@ -20,7 +20,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">  
-    <title>Profile: <?= $u->name ?></title>
+    <title>Profile: <?= $u[0]->name ?></title>
 
     <link rel="shortcut icon" href="static/img/favicon.png">
     <link rel="stylesheet" href="static/css/style.css">
@@ -38,14 +38,14 @@
     <section class="content">
       <!-- USER PROFILE -->
       <div class="profile" >
-        <span class="rating" data-stars="<?= $u->rating ?>" id="name"><?= $u->name ?></span>
+        <span class="rating" data-stars="<?= $u[0]->rating ?>" id="name"><?= $u[0]->name ?></span>
         <img src="<?= $u->picture ?>" id="profile_photo" alt="profile photo"> 
         <ul>
-          <li><span><?= $GLOBALS['dict']->born->{$_SESSION['lang']}?></span><?= $u->birth_date ?></li>
-          <li><span><?= $GLOBALS['dict']->gender->{$_SESSION['lang']}?></span><?= $u->gender ?></li>
-          <li><span><?= $GLOBALS['dict']->e_mail->{$_SESSION['lang']}?></span><?= $u->email ?></li>
-          <li><span><?= $GLOBALS['dict']->location->{$_SESSION['lang']}?></span><?= $u->addr ?></li>
-          <li><span><?= $GLOBALS['dict']->first_login->{$_SESSION['lang']}?></span><?= $u->first_login ?></li>
+          <li><span><?= $GLOBALS['dict']->born->{$_SESSION['lang']}?></span><?= $u[0]->birth_date ?></li>
+          <li><span><?= $GLOBALS['dict']->gender->{$_SESSION['lang']}?></span><?= $u[0]->gender ?></li>
+          <li><span><?= $GLOBALS['dict']->e_mail->{$_SESSION['lang']}?></span><?= $u[0]->email ?></li>
+          <li><span><?= $GLOBALS['dict']->location->{$_SESSION['lang']}?></span><?= $u[0]->addr ?></li>
+          <li><span><?= $GLOBALS['dict']->first_login->{$_SESSION['lang']}?></span><?= $u[0]->first_login ?></li>
         </ul>
 
       </div><div class="preference">
