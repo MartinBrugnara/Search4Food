@@ -1,1 +1,1 @@
-    <footer>&copy; Copyright 2014 MIT | GoPro Team</footer>
+    <footer>&copy; Copyright 2014 GoPro Team | MIT </footer>

@@ -18,13 +18,16 @@ function Q($query){
   return $a;
 }
 
-
-function home_locations(){
+function home_locations($wheat, $whent){
     $query = "SELECT r.place_id, p.name, AVG(r.value) AS rating,p.picture,
     p.description, CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
-    p.loc_latitude AS lat, p.loc_longitude AS \"long\"
-    FROM ratings r inner join places p ON r.place_id=p.place_id
-    GROUP BY r.place_id;";
+    p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.loc_city
+    FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
+    INNER JOIN places p ON r.place_id=p.place_id
+        
+    WHERE p.loc_city LIKE \"". $wheat .
+    "\" AND k.name LIKE \"%" . $whent .
+    "\" GROUP BY r.place_id;";
   return Q($query);
 }
 
@@ -32,34 +35,37 @@ function home_locations(){
 function home_comments() {
   $qres = Q("
     SELECT r.place_id, r.comment, u.user_id, u.name, u.email, r.value AS rating
-    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id;
+    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id
+    ORDER BY r.creation_time DESC
+    ;
   ");
 
   $res = array();
-  foreach ($qres as $i => $r) {
-    if (!in_array($r->place_id, $res))
+  foreach ($qres as $i => &$r) {
+    if (!array_key_exists($r->place_id, $res))
       $res[$r->place_id] = array();
-    $res[$r->place_id][] = $r;
+    else if (count($res[$r->place_id]) < 5)
+      array_push($res[$r->place_id], $r);
   }
   return $res;
 }
 
-function get_loc_info($loc_id) {
+// INFO
+function info_get($loc_id) {
 
-  //TODO @Martin rating is the average of all ratings? i think yes;
   return Q("
-    SELECT p.name,'NULL' as rating, p.place_id, 
-    CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
-    p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.picture as img_url, p.description
-    FROM places p;
-  WHERE places.place_id = ".intval($loc_id));
+    SELECT p.name, AVG(r.value) as rating, p.place_id, 
+      CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
+      p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.picture as img_url, p.description
+    FROM places p INNER JOIN ratings r ON p.place_id=r.place_id
+    WHERE p.place_id = ".intval($loc_id).";");
 }
 
-function get_comments($loc_id) {
+function info_comments($loc_id) {
   return Q("
-    SELECT u.user_id,u.name, r.value as rating,r.comment
-    FROM users u INNER JOIN ratings r ON u.user_id=r.user_id;
-  WHERE ratings.place_id = ".intval($loc_id));
+    SELECT u.user_id, u.name, u.email, r.value as rating, r.comment
+    FROM users u INNER JOIN ratings r ON u.user_id=r.user_id
+    WHERE r.place_id = ".intval($loc_id));
 }
 
 function insert_rate($loc_id, $rating, $comment) {
@@ -73,27 +79,52 @@ function insert_rate($loc_id, $rating, $comment) {
   $stmt->execute();
   $stmt->close();
   $srv->close();
-
 }
 
-
-function get_profile($user_id) {
-  return Q("SELECT name,bday as birth_date,gender,email,loc_city as addr,
-    first_login,trustful as rating,'NULL' as img_url
-    FROM users
-    WHERE user_id = ".intval($user_id)                    
+// PROFILE
+function profile_get($user_id) {
+  return Q("SELECT name, bday as birth_date, gender, 
+    email, loc_city as addr, first_login,
+    trustful as rating,'NULL' as picture
+    FROM users WHERE user_id = ".intval($user_id)                    
   );
 }
 
-function get_recent_loc($user_id) {
-  return Q(" SELECT p.name, r.value as rating,p.place_id,p.img_url,
-    CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr
-    FROM user u INNER JOIN ratings r ON u.user_id=r.user id
-    INNER JOIN places p ON r.place_id=p.place_id
+function profile_locations($user_id) {
+  return Q("SELECT p.name, r.value as rating, 
+      p.place_id, p.picture,
+      CONCAT_WS(', ', p.loc_street, p.loc_city, p.loc_state) as addr
+    FROM user u 
+      INNER JOIN ratings r ON u.user_id=r.user_id
+      INNER JOIN places p ON r.place_id=p.place_id
     WHERE u.user_id = ".intval($user_id)."
     ORDER BY r.creation_time DESC
     LIMIT 20    
   ");
 }
 
+function profile_comments($user_id) {
+  $qres = Q("
+    SELECT r.place_id, r.comment, u.user_id, u.name, u.email, r.value AS rating
+    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id
+    WHERE place_id IN (
+      SELECT p.place_id
+      FROM user u 
+        INNER JOIN ratings r ON u.user_id=r.user_id
+        INNER JOIN places p ON r.place_id=p.place_id
+      WHERE u.user_id = ".intval($user_id)."
+      ORDER BY r.creation_time DESC
+      LIMIT 20 
+    )
+    ORDER BY r.creation_time DESC;");
+
+  $res = array();
+  foreach ($qres as $i => &$r) {
+    if (!array_key_exists($r->place_id, $res))
+      $res[$r->place_id] = array();
+    else if (count($res[$r->place_id]) < 5)
+      array_push($res[$r->place_id], $r);
+  }
+  return $res;
+}
 ?>

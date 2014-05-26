@@ -4,6 +4,7 @@
 
 footer { /* force footer to stay at the bottom of the page */
   position: absolute;
+  font-family: Raleway,Helvetica;
   bottom: 0;
 }
 
@@ -63,6 +64,8 @@ section.location {
   word-wrap:break-word;
   padding-right: 10px;
   padding-left: 10px;
+  font-size: 19px;
+  text-align: justify;
 }
 
 section.location:last-child {
@@ -75,6 +78,7 @@ section.location img {
   border: 1px solid #000;
   border-radius: 3px;
   margin-right: 10px;
+  margin:5px;
   clear: both;
 }
 
@@ -114,12 +118,32 @@ ul.comments li {
 	width: 20%;
 	display: inline;
 }
-span.rating.author{
-  font-size: 16px;
+
+span.author::before {
+  content: '- ';
+  display: inline-block;
+}
+
+span.author a {
+  margin-bottom: 2px;
+  font-size: 18px !important;
+  color: #333 !important;
 }
 
 span.rating.author::after{
   color: green;
+  font-size: 18px;
+}
+
+.txt{
+  font-size: 17px;
+  font-style: italic;
+  padding-left: 20px;
+  display: block;
+}
+
+.txt::before, .txt::after {
+  content: "\"";
 }
 
 /***MODAL WINDOW***/
@@ -133,9 +157,6 @@ section[name="preferences"] > section  {
   padding: 10px;
   box-sizing: border-box;
 }
-
-
-
 
 section[name="preferences"] > section:last-child {
   border-right: none;
@@ -151,4 +172,12 @@ h3.boh{
 
 .checkbox{
   font-family: Relawey;
+}
+
+p{
+  margin-bottom: 0px;
+
+}
+p.txt{
+  margin-left: 15px;
 }

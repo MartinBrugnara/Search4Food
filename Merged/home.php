@@ -5,8 +5,7 @@
 
   include_once('libs/db.php');
   include_once('libs/core.php');
-
-  $locations = home_locations();
+  $locations = home_locations($_POST['wheat'],$_POST['whent']);
   $comments = home_comments();
 ?>
 <!DOCTYPE html>
@@ -26,7 +25,6 @@
   </head>
   <body>
     <?php include "./inc/header.inc.php"; ?>
-
     <div class="central">
       <section id="locations">
         <!-- order by func -->
@@ -60,12 +58,18 @@
           <!-- Comments -->
           <section class="clear comments">
             <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
-            <p>
-              <span class="rating author" data-starts="<?=$c->rating?>"><a href="profile.php?user_id=<?=$c->user_id?>">
-              <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?></a></span><br>
-              <?= $c->comment ?>
-            </p>
+              <span class="rating author" data-starts="<?= round($c->rating)?>">
+                <a href="profile.php?user_id=<?= $c->user_id ?>">
+                  <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?>
+                </a>
+              </span>
+              <?php if (strlen($c->comment)): ?>
+              <span class="txt">
+                <?= $c->comment ?>
+              </span><br>
+              <?php endif; ?>
             <?php endforeach; ?>
+            <br><br>
           </section>
 
         </section>

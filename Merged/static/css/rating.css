@@ -1,3 +1,7 @@
+span.rating * {
+  display: inline-block;
+}
+
 span.rating  a:first-child {
   text-decoration: none;
   font-size: 24px;
@@ -12,10 +16,11 @@ span.rating {
 }
 
 span.rating::after{
-  font-size: 17px;
+  font-size: 24px;
   color: gold;
   display: inline-block;
   content: "\2605";
+  text-shadow: 1px 1px 1px #333;
 }
 
 span.rating[data-stars="2"]::after{content: "\2605\2605";}

@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
+body {
+	background-color: rgb(237,234,227);
+}
+
 .central {
 	margin: 40px;
 	margin-left: 90px;
@@ -10,9 +14,10 @@
 }
 
 #location_img {
+	border: 2px solid green;
 	margin:20px;
 	margin-left: 8%;
-	border-radius: 10px;
+	border-radius: 5px;
 	width: 55%;
 	display: inline;
 }
@@ -46,16 +51,36 @@
 	padding: 30px;
 	margin-bottom: 40px;
 	overflow-x: hidden;
-	border: 2px dotted green;
+	border: 2px solid green;
+	background-color: white;
 }
 
 .comments .rating {
 	vertical-align: top;
 	display: inline-block;
-	width: 10%;
 	font-size: 20px;
 	font-weight: bold;
 	font-style: none;
+}
+
+span.rating{
+	font-family: Lato, Helvetica;
+	font-weight: bold;
+}
+
+span#name.rating::after{
+	vertical-align: top;
+	font-family: Lato, Helvetica;
+	margin-left: 4px;
+	font-size: 30px;
+	color: gold;
+}
+span.rating::after{
+	margin-left: 3px;
+	vertical-align: top;
+	display: inline;
+	color: green;
+	font-size: 20px;
 }
 
 #tau, #wware{
