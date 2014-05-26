@@ -40,8 +40,7 @@
           <i class="fi-widget" onclick="modal_open('advanced_search')">&nbsp;</i>
           -->
         </div>   
-
-        <?php foreach($locations as $loc): ?>
+        <?php foreach($locations as $i => &$loc): ?>
         <section class="location">
           <!-- Name + rating -->
           <span class="rating" data-stars="<?= round($loc->rating)?>">
