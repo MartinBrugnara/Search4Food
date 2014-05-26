@@ -11,8 +11,15 @@
       <?php endif; ?>
 
       <div class="options_wrapper">
-        <a href="<?=$_SERVER['SCRIPT_NAME']?>?lang=eng" target="_self"><i class="flag en">&nbsp;</i></a>
-        <a href="<?=$_SERVER['SCRIPT_NAME']?>?lang=ita" target="_self"><i class="flag it">&nbsp;</i></a>
+
+        <?php
+          $uri = $_SERVER['REQUEST_URI'];
+          $uri = str_replace('lang=eng', '', $uri);
+          $uri = str_replace('lang=ita', '', $uri);
+          $uri = trim($uri, '?&');
+        ?>
+        <a href="<?= $uri ?><?= strpos($uri, "?") ? "&" : "?" ?>lang=eng" target="_self"><i class="flag en">&nbsp;</i></a>
+        <a href="<?= $uri ?><?= strpos($uri, "?") ? "&" : "?" ?>lang=ita" target="_self"><i class="flag it">&nbsp;</i></a>
         <?php if(!$user): ?>
              <a href="<?=$loginUrl;?>"><i class="fb"></i></a>
         <?php else: ?>
