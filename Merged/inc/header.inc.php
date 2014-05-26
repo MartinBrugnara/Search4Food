@@ -1,6 +1,6 @@
     <header>
       <?php include('./libs/fb_runner.php'); ?> 
-      <img src="static/img/logo.png" id="logo" alt="logo">
+      <a href="index.php"><img src="static/img/logo.png" id="logo" alt="logo"></a>
 
       <?php if (!strpos($_SERVER['SCRIPT_NAME'], '/index.php')): ?>
       <form action="home.php" method="post" id="search_form">

@@ -1,6 +1,7 @@
 $(function(){
   $(".location").each(function(i, e){
     // get location info
+    var e = $(e);
     var name = e.find('a').text();
     var link = e.fins('a').attr('href');
     var lat = parseInt(e.find('input[name=lat]').val());
