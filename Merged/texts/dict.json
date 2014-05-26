@@ -166,5 +166,9 @@
   "recent_places": {
     "eng": "Places visited recently",
     "ita": "Posti visitati recentemente"
+  },
+  "place": {
+    "eng": "Places",
+    "ita": "Posti"
   }
 }
