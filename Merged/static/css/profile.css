@@ -200,9 +200,19 @@ section.location img {
   clear: both;
 }
 
-.location span.commenter {
-  font-size: 18px;
-  color: darkgreen;
+.commenter a::before {
+  content: "- ";
+}
+.commenter a {
+  font-size: 18px !important;
+  color: darkgreen !important;
+}
+
+.location p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  display: block;
 }
 
 section.location h4 {

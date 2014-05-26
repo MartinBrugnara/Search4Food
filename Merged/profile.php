@@ -13,6 +13,12 @@
 
   $user_id = intval($_GET['user_id']);
   $u = profile_get($user_id);
+
+  if (!count($u)) {
+    print("Person not found");
+    exit;
+  }
+
   $u = $u[0];
   $locations = profile_locations($user_id);
   $comments = profile_comments($user_id);
