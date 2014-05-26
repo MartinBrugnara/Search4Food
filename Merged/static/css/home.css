@@ -18,6 +18,7 @@ footer { /* force footer to stay at the bottom of the page */
   overflow: hidden;
 	padding: 10px;
   box-sizing: border-box;
+  background-color: rgb(237, 234, 227);
 }
 
 #maps, #locations {
@@ -114,6 +115,21 @@ ul.comments li {
 	display: inline;
 }
 
+span.author::before {
+  content: '- ';
+  display: inline-block;
+}
+
+span.author a {
+  font-size: 18px !important;
+  color: #333 !important;
+}
+
+span.rating.author::after{
+  color: green;
+  font-size: 18px;
+}
+
 /***MODAL WINDOW***/
 section[name="preferences"] > section  {
   border-right: 2px #ccc dotted;
@@ -125,9 +141,6 @@ section[name="preferences"] > section  {
   padding: 10px;
   box-sizing: border-box;
 }
-
-
-
 
 section[name="preferences"] > section:last-child {
   border-right: none;
