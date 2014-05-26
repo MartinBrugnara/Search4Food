@@ -12,7 +12,7 @@
   include_once('libs/core.php');
 
   $user_id = intval($_GET['user_id']);
-  $u = profile_get($user_id);
+  $u = profile_get($user_id)[0];
   $locations = profile_locations($user_id);
   $comments = profile_comments($user_id);
 ?>
@@ -20,7 +20,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">  
-    <title>Profile: <?= $u->name ?></title>
+    <title>Profile: <?= $u[0]->name ?></title>
 
     <link rel="shortcut icon" href="static/img/favicon.png">
     <link rel="stylesheet" href="static/css/style.css">
