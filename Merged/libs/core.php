@@ -44,7 +44,7 @@ function home_comments() {
   return $res;
 }
 
-function get_loc_info($loc_id) {
+function info_get($loc_id) {
 
   //TODO @Martin rating is the average of all ratings? i think yes;
   return Q("
