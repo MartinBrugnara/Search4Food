@@ -114,9 +114,12 @@ ul.comments li {
 	width: 20%;
 	display: inline;
 }
+span.rating.author{
+  font-size: 16px;
+}
 
 span.rating.author::after{
-  background-color: green;
+  color: green;
 }
 
 /***MODAL WINDOW***/
