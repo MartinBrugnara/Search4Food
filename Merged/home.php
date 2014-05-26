@@ -38,7 +38,7 @@
           &nbsp;&nbsp;
           <i class="fi-widget" onclick="modal_open('advanced_search')">&nbsp;</i>
         </div>   
-        <?php var_dump($location); ?>
+        <?php var_dump($locations); ?>
         <?php foreach($locations as $loc): ?>
         <section class="location">
           <!-- Name + rating -->
