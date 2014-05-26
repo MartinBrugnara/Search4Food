@@ -26,7 +26,6 @@
   </head>
   <body>
     <?php include "./inc/header.inc.php"; ?>
-
     <div class="central">
       <span class="rating" data-stars="<?= $info->rating ?>" id="name"><?= $info->name ?></span>
       <div class="sx">

@@ -50,9 +50,9 @@ function get_loc_info($loc_id) {
   return Q("
     SELECT p.name,'NULL' as rating, p.place_id, 
     CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
-    p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.picture as img_url, p.description
-    FROM places p;
-  WHERE places.place_id = ".intval($loc_id));
+    p.loc_latitude AS lat, p.loc_longitude AS longit, p.picture as img_url, p.description
+    FROM places p
+  WHERE p.place_id = ".intval($loc_id).";");
 }
 
 function get_comments($loc_id) {
