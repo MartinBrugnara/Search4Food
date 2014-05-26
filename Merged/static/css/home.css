@@ -4,6 +4,7 @@
 
 footer { /* force footer to stay at the bottom of the page */
   position: absolute;
+  font-family: Raleway,Helvetica;
   bottom: 0;
 }
 
@@ -63,6 +64,7 @@ section.location {
   word-wrap:break-word;
   padding-right: 10px;
   padding-left: 10px;
+  font-size: 19px;
 }
 
 section.location:last-child {
@@ -75,6 +77,7 @@ section.location img {
   border: 1px solid #000;
   border-radius: 3px;
   margin-right: 10px;
+  margin:5px;
   clear: both;
 }
 
@@ -121,6 +124,7 @@ span.author::before {
 }
 
 span.author a {
+  margin-bottom: 2px;
   font-size: 18px !important;
   color: #333 !important;
 }
@@ -128,6 +132,11 @@ span.author a {
 span.rating.author::after{
   color: green;
   font-size: 18px;
+}
+
+.txt{
+  font-size: 17px;
+  font-style: italic;
 }
 
 /***MODAL WINDOW***/

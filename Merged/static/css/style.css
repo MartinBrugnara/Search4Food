@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 /*CONTAINS HEADER, FOOTER AND STUFF WHICH IS ALL THE SAME FOR ALL THE SITE*/
 
 #container {position: relative;}
@@ -25,6 +27,7 @@ header {
   box-sizing: border-box;
   padding-left: 10px;
   padding-right: 10px;
+  font-family: Raleway, Helvetica;
 }
 
 header > * {
@@ -36,6 +39,7 @@ header > * {
 select > option {text-transform: capitalize;}
 
 body > header  input{
+  font-family: Raleway, Helvetica;
 	height: 25px;
 	width: 300px;
 	margin-left: 10px;
@@ -90,11 +94,14 @@ header .logout {font-size: 16px;}
 
 /***FOOTER***/
 footer{
+  vertical-align: middle;
+  font-family: Raleway, Helvetica;
 	height: 20px;
 	width: 100%;
 	background-color: #006d41;
 	text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   position: relative;
   z-index: 1099;
 }

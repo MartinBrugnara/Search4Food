@@ -51,33 +51,32 @@
       </div><div class="preference">
 
       <!-- USER PREFERENCES -->
-        <!-- TODO: WTF I should do here? -->
         <!-- preferences -->
         <section name="main_preferences">
           <p class="title">$GLOBALS['dict']->preferences->{$_SESSION['lang'])</p>
           <section name="purpose">
             <h4 class="tag">$GLOBALS['dict']->occasion->{$_SESSION['lang'])</h4>
             <ul>
-              <li>$GLOBALS['dict']->friends->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->romantic->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->family->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->work->{$_SESSION['lang'])</li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->friends->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->romantic->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->family->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->work->{$_SESSION['lang']}?></li>
             </ul>
           </section><section name="tag">
             <h4 class="tag">$GLOBALS['dict']->place->{$_SESSION['lang'])</h4>
             <ul>
-              <li>$GLOBALS['dict']->restaurant->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->pizzeria->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->take_away->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->fast_food->{$_SESSION['lang'])</li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->restaurant->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->pizzeria->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->take_away->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->fast_food->{$_SESSION['lang']}?></li>
             </ul>
           </section><section name="cousine">
             <h4 class="tag">$GLOBALS['dict']->cousine->{$_SESSION['lang'])</h4>
             <ul>
-              <li>$GLOBALS['dict']->italian->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->japanese->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->mexican->{$_SESSION['lang'])</li>
-              <li>$GLOBALS['dict']->spanish->{$_SESSION['lang'])</li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->italian->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->japanese->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->mexican->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->spanish->{$_SESSION['lang']}?></li>
             </ul>
           </section>
         </section> <!-- END main_preferences -->
