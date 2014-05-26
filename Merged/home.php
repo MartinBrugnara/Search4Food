@@ -6,8 +6,8 @@
   include_once('libs/db.php');
   include_once('libs/core.php');
 
-  $locations = get_ratings();
-  $comments = get_all_ratings();
+  $locations = home_locations();
+  $comments = home_comments();
 ?>
 <!DOCTYPE html>
 <html lang="en">
