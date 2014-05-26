@@ -29,8 +29,8 @@
         </h2>
         
         <form action="home.php" method="post" id="search_form">
-          <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
-          <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
+          <input type="text" name="wheat" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
+          <input type="text" name="whent" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
           <a href="javascript:document.getElementById('search_form').submit()"><i class="fi-magnifying-glass">&nbsp;</i></a>
         </form>
 

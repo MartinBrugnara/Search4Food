@@ -18,13 +18,16 @@ function Q($query){
   return $a;
 }
 
-// HOME
-function home_locations(){
+function home_locations($wheat, $whent){
     $query = "SELECT r.place_id, p.name, AVG(r.value) AS rating,p.picture,
     p.description, CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
-    p.loc_latitude AS lat, p.loc_longitude AS \"long\"
-    FROM ratings r inner join places p ON r.place_id=p.place_id
-    GROUP BY r.place_id;";
+    p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.loc_city
+    FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
+    INNER JOIN places p ON r.place_id=p.place_id
+        
+    WHERE p.loc_city LIKE \"". $wheat .
+    "\" AND k.name LIKE \"%" . $whent .
+    "\" GROUP BY r.place_id;";
   return Q($query);
 }
 
