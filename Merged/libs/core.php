@@ -30,10 +30,18 @@ function home_locations(){
 
 
 function home_comments() {
-  return Q("
+  $qres = Q("
     SELECT r.place_id, r.comment, u.user_id, u.name, r.value AS rating
     FROM ratings r INNER JOIN users u ON r.user_id=u.user_id;
   ");
+
+  $res = array();
+  foreach ($qres as $i => $r) {
+    if (!in_array($r->place_id, $res))
+      $res[$r->place_id] = array();
+    $res[$r->place_id][] = $r;
+  }
+  return $res;
 }
 
 function get_loc_info($loc_id) {
