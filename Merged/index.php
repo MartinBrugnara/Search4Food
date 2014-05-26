@@ -1,7 +1,12 @@
 <?php
   include_once('libs/Utils.php');
+  include_once('libs/db.php');
+  include_once('libs/core.php');
   Utils::update_env();
   Utils::load_dict();
+
+  $where = index_where();
+  $when = index_when();
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,8 +34,18 @@
         </h2>
         
         <form action="home.php" method="post" id="search_form">
-          <input type="text" name="wheat" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
-          <input type="text" name="whent" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
+          <input type="text" list="lst_where" name="wheat" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
+          <datalist id="lst_where">
+            <?php foreach($where as $i => &$e): ?>
+              <option value="<?=$e->loc?>">
+            <?php endforeach; ?>
+          </datalist>
+          <input type="text" list="lst_when" name="whent" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
+          <datalist id="lst_when">
+            <?php foreach($when as $i => &$e): ?>
+              <option value="<?=$e->w?>">
+            <?php endforeach; ?>
+          </datalist>
           <a href="javascript:document.getElementById('search_form').submit()"><i class="fi-magnifying-glass">&nbsp;</i></a>
         </form>
 

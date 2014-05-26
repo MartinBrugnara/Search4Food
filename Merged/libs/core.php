@@ -20,14 +20,17 @@ function Q($query){
 
 function home_locations($wheat, $whent){
   $srv = connect();
-  $whent="%".$whent;
   $stmt = $srv->prepare("SELECT r.place_id, p.name, AVG(r.value) AS rating,p.picture,
     p.description, CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as loc,
     p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.loc_city
     FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
     INNER JOIN places p ON r.place_id=p.place_id
     WHERE p.loc_city LIKE ? AND k.name LIKE ? GROUP BY r.place_id;");
-  $stmt->bind_param("ss", $wheat, $whent);
+
+  $a = '%'.strtolower($wheat).'%';
+  $b = '%'.strtolower($whent).'%';
+
+  $stmt->bind_param("ss", $a, $b);
   $stmt->execute();
 
   // bind results to named array
@@ -88,17 +91,15 @@ function info_get($loc_id) {
 function index_where() {
 
   return Q("
-      SELECT DISTINCT loc_country as loc
-      FROM places;
-      ;");
+      SELECT DISTINCT loc_city as loc
+      FROM places;");
 }
 
 function index_when() {
 
   return Q("
-      SELECT DISTINCT name as when 
-      FROM purpose;
-      ;");
+      SELECT DISTINCT name as w 
+      FROM purpose;");
 }
 
 function info_comments($loc_id) {
