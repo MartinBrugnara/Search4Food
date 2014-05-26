@@ -18,6 +18,7 @@ footer { /* force footer to stay at the bottom of the page */
   overflow: hidden;
 	padding: 10px;
   box-sizing: border-box;
+  background-color: rgb(234, 239, 227);
 }
 
 #maps, #locations {
