@@ -117,16 +117,17 @@ function profile_locations($user_id) {
 function profile_comments($user_id) {
   $qres = Q("
     SELECT r.place_id, r.comment, u.user_id, u.name, u.email, r.value AS rating
-    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id
-    WHERE place_id IN (
+    FROM ratings r 
+    INNER JOIN users u ON r.user_id=u.user_id
+    JOIN (
       SELECT p.place_id
       FROM users u 
-        INNER JOIN ratings r ON u.user_id=r.user_id
-        INNER JOIN places p ON r.place_id=p.place_id
+        INNER JOIN ratings r ON u.user_id = r.user_id
+        INNER JOIN places p ON r.place_id = p.place_id
       WHERE u.user_id = ".intval($user_id)."
       ORDER BY r.creation_time DESC
       LIMIT 20 
-    )
+    ) AS S ON S.place_id = r.place_id
     ORDER BY r.creation_time DESC;");
 
   $res = array();
