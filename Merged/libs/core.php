@@ -46,12 +46,11 @@ function home_comments() {
 
 function info_get($loc_id) {
 
-  //TODO @Martin rating is the average of all ratings? i think yes;
   return Q("
-    SELECT p.name,'NULL' as rating, p.place_id, 
+    SELECT p.name, AVG(r.value) as rating, p.place_id, 
     CONCAT_WS(', ',p.loc_street, p.loc_city, p.loc_state) as addr,
     p.loc_latitude AS lat, p.loc_longitude AS \"long\", p.picture as img_url, p.description
-    FROM places p
+    FROM places p INNER JOIN ratings r ON p.place_id=r.place_id
   WHERE p.place_id = ".intval($loc_id).";");
 }
 
