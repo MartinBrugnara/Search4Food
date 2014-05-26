@@ -40,8 +40,8 @@ function home_comments() {
   $res = array();
   foreach ($qres as $i => &$r) {
     if (!in_array($r->place_id, $res))
-      $res[$r->place_id] = array();
-    $res[$r->place_id][] = $r;
+      $res->{$r->place_id} = array();
+    $res->{$r->place_id}[] = $r;
   }
   return $res;
 }
