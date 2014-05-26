@@ -115,6 +115,10 @@ ul.comments li {
 	display: inline;
 }
 
+span.rating.author::after{
+  background-color: green;
+}
+
 /***MODAL WINDOW***/
 section[name="preferences"] > section  {
   border-right: 2px #ccc dotted;

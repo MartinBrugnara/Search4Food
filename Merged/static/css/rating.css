@@ -12,7 +12,7 @@ span.rating {
 }
 
 span.rating::after{
-  font-size: 24px;
+  font-size: 17px;
   color: gold;
   display: inline-block;
   content: "\2605";
