@@ -27,8 +27,8 @@ function home_locations($wheat, $whent){
     FROM ratings r INNER JOIN purpose k ON r.purpose_id=k.purpose_id
     INNER JOIN places p ON r.place_id=p.place_id
     WHERE p.loc_city LIKE ? AND k.name LIKE ? GROUP BY r.place_id;");
-  msqli_stmt_bind_param($stmt,"s", $wheat);
-  msqli_stmt_bind_param($stmt,"s", $whent);
+  $stmt->bind_param("s", $wheat);
+  $stmt->bind_param("s", $whent);
   $stmt->execute();
   $result=$stmt->get_result();
   $stmt->close();
@@ -105,7 +105,7 @@ function profile_locations($user_id) {
   return Q("SELECT p.name, r.value as rating, 
       p.place_id, p.picture,
       CONCAT_WS(', ', p.loc_street, p.loc_city, p.loc_state) as addr
-    FROM users u 
+    FROM user u 
       INNER JOIN ratings r ON u.user_id=r.user_id
       INNER JOIN places p ON r.place_id=p.place_id
     WHERE u.user_id = ".intval($user_id)."
@@ -117,17 +117,16 @@ function profile_locations($user_id) {
 function profile_comments($user_id) {
   $qres = Q("
     SELECT r.place_id, r.comment, u.user_id, u.name, u.email, r.value AS rating
-    FROM ratings r 
-    INNER JOIN users u ON r.user_id=u.user_id
-    JOIN (
+    FROM ratings r INNER JOIN users u ON r.user_id=u.user_id
+    WHERE place_id IN (
       SELECT p.place_id
-      FROM users u 
-        INNER JOIN ratings r ON u.user_id = r.user_id
-        INNER JOIN places p ON r.place_id = p.place_id
+      FROM user u 
+        INNER JOIN ratings r ON u.user_id=r.user_id
+        INNER JOIN places p ON r.place_id=p.place_id
       WHERE u.user_id = ".intval($user_id)."
       ORDER BY r.creation_time DESC
       LIMIT 20 
-    ) AS S ON S.place_id = r.place_id
+    )
     ORDER BY r.creation_time DESC;");
 
   $res = array();
