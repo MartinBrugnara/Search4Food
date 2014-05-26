@@ -38,7 +38,7 @@
     <section class="content">
       <!-- USER PROFILE -->
       <div class="profile" >
-        <span class="rating" data-stars="<?= $u->rating ?>" id="name"><?= $u->name ?></span>
+        <span class="rating" data-stars="<?= $u->rating ?>" id="name"><?= $u->name ?>&nbsp;</span>
         <img src="<?= $u->picture ?>" id="profile_photo" alt="profile photo"> 
         <ul>
           <li><span><?= $GLOBALS['dict']->born->{$_SESSION['lang']}?></span><?= $u->birth_date ?></li>

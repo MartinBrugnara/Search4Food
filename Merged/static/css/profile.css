@@ -17,6 +17,8 @@ section.content {
   font-size: 18px;
 }
 
+.tag ul {list-style: none;}
+
 .title {
   font-size: 32px;
   font-weight: bold;
@@ -91,7 +93,7 @@ section.content {
   padding-left: 2%;
   width: 70%;
   border-left: 2px solid green;
-  margin-left: -2px;
+  margin-left: -1px;
 }
 
 section[name="purpose"] {
