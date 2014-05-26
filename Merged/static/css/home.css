@@ -166,3 +166,11 @@ h3.boh{
 .checkbox{
   font-family: Relawey;
 }
+
+p{
+  margin-bottom: 0px;
+
+}
+p.txt{
+  margin-left: 15px;
+}
