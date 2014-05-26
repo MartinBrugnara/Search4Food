@@ -28,10 +28,10 @@
           <span id="cite">-Woody Allen-</span>
         </h2>
         
-        <form action="home.php" method="post">
+        <form action="home.php" method="post" id="search_form">
           <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
           <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
-          <a href="#"><button type="submit" class="fi-magnifying-glass">&nbsp;</i></a>
+          <a href="" onclick="document.search_form.submit()"><i class="fi-magnifying-glass">&nbsp;</i></a>
         </form>
 
       </div>

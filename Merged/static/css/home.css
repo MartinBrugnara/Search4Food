@@ -47,7 +47,7 @@ footer { /* force footer to stay at the bottom of the page */
 	display: block-inline;
   text-align: center;
 
-  background-color: #64cc70;
+  background-color: rgb(145, 198, 114);
   border: 1px solid #333;
   border-right: 0;
   border-left: 0;
