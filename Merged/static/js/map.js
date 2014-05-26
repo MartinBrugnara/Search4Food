@@ -7,17 +7,21 @@
   var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
 
   // Trento coords
-  var latitude = 11.1261;
-  var longitude = 46.0605;
+  var lon = 11.1261;
+  var lat = 46.0605;
 
-  var position = new OpenLayers.LonLat(latitude, longitude).transform(fromProjection, toProjection);
-  var zoom = 12; 
+  var position = new OpenLayers.LonLat(lon, lat).transform(fromProjection, toProjection);
+  var zoom = 13; 
   
   window.map.addLayer(mapnik);
 
   // inti markers sys
-  window.markers = new OpenLayers.Layer.Markers("Markers");//create marker
-  window.map.addLayer(window.markers);//add marker to level
+  var markers = new OpenLayers.Layer.Markers("Markers");//create marker
+  markers.id = "X";
+  window.map.addLayer(markers);//add marker to level
+
+  // var m = new OpenLayers.Marker(position);
+  // markers.addMarker(m);
 
   window.map.setCenter(position, zoom);
 })();

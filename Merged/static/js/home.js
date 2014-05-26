@@ -1,20 +1,24 @@
 $(function(){
+  var markerL = window.map.getLayer('X');
+
+  // DARK MAGIC
+  var fP = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+  var tP = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+
   $(".location").each(function(i, e){
     // get location info
     var e = $(e);
     var name = e.find('a').text();
-    var link = e.fins('a').attr('href');
-    var lat = parseInt(e.find('input[name=lat]').val());
-    var lon = parseInt(e.find('input[name=long]').val());
+    var link = e.find('a').attr('href');
+    var lat = parseFloat(e.find('input[name=lat]').val());
+    var lon = parseFloat(e.find('input[name=long]').val());
+
+    // get loc
+    var loc = new OpenLayers.LonLat(lon, lat).transform(fP, tP);
 
     // create marker
-    var OSMloc = new OpenLayers.LonLat(lat, lat).transform(
-      new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-      window.map.getProjectionObject()); // to Spherical Mercator Projection
-    var m = new OpenLayers.Marker(OSMloc);
-    window.markers.addMarker(m);
-
-    //TODO: add marker label
+    var m = new OpenLayers.Marker(loc);
+    var res = markerL.addMarker(m);
 
     // add redirect to location
     // http://forum.openstreetmap.org/viewtopic.php?id=5537
