@@ -74,9 +74,9 @@
             <h4 class="tag">$GLOBALS['dict']->cousine->{$_SESSION['lang'])</h4>
             <ul>
               <li><input type="checkbox"><?= $GLOBALS['dict']->italian->{$_SESSION['lang']}?></li>
-              <li><input type="checkbox"><?= $GLOBALS['dict']->japanese->{$_SESSION['lang'])}?></li>
-              <li><input type="checkbox"><?= $GLOBALS['dict']->mexican->{$_SESSION['lang'])}?></li>
-              <li><input type="checkbox"><?= $GLOBALS['dict']->spanish->{$_SESSION['lang'])}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->japanese->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->mexican->{$_SESSION['lang']}?></li>
+              <li><input type="checkbox"><?= $GLOBALS['dict']->spanish->{$_SESSION['lang']}?></li>
             </ul>
           </section>
         </section> <!-- END main_preferences -->
