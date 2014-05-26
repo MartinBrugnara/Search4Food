@@ -3,10 +3,10 @@
       <img src="static/img/logo.png" id="logo" alt="logo">
 
       <?php if (!strpos($_SERVER['SCRIPT_NAME'], '/index.php')): ?>
-      <form action="home.php" method="post">
+      <form action="home.php" method="post" id="search_form">
         <input type="text" placeholder="<?=$GLOBALS['dict']->wtoeat->{$_SESSION['lang']}; ?>">
         <input type="text" placeholder="<?=$GLOBALS['dict']->wisp->{$_SESSION['lang']}; ?>">
-        <a href="javascript:submit()"><i class="fi-magnifying-glass">&nbsp;</i></a>
+        <a href="javascript:document.search_form.submit()"><i class="fi-magnifying-glass">&nbsp;</i></a>
       </form>
       <?php endif; ?>
 
