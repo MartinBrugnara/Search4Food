@@ -27,7 +27,7 @@ $comments = info_comments($_GET['place_id']);
   <body>
     <?php include "./inc/header.inc.php"; ?>
     <div class="central">
-      <span class="rating" data-stars="<?= $info[0]->rating ?>" id="name"><?= $info[0]->name ?></span>
+      <span class="rating" data-stars="<?= round( $info[0]->rating) ?>" id="name"><?= $info[0]->name ?></span>
       <div class="sx">
         <p id="address"><?= $info[0]->addr ?></p>
         <img src="<?= $info[0]->img_url ?>" id="location_img" alt="location_img" class="left">
@@ -51,7 +51,7 @@ $comments = info_comments($_GET['place_id']);
         <div class="comments">
           <?php foreach ($comments as $i => &$cm): ?>
           <div>
-            <span class="rating" data-stars="<?=$cm->rating?>"><?=$cm->name?></span> 
+            <span class="rating" data-stars="<?= round($cm->rating)?>"><?=$cm->name?></span> 
             <p><?=$cm->comment?></p>
           </div>
           <br>
