@@ -21,8 +21,9 @@ try {
     print("<!-- FACEBOOK error: $e -->");
     return;
 }
-require './libs/db.php';
-require './libs/core.php';
+
+include_once('./libs/db.php');
+include_once('./libs/core.php');
 
 // Create our Application instance (replace this with your appId and secret).
 $facebook = new Facebook(array(
