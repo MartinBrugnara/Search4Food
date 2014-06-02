@@ -58,7 +58,7 @@
           <!-- Comments -->
           <section class="clear comments">
             <?php foreach($comments[$loc->place_id] as $i => &$c): ?>
-              <span class="rating author" data-starts="<?= round($c->rating)?>">
+              <span class="rating author" data-stars="<?= round($c->rating)?>">
                 <a href="profile.php?user_id=<?= $c->user_id ?>">
                   <?= strlen($c->name) ? trim($c->name, ' ') : (strlen($c->email) ? $c->email : "No name") ?>
                 </a>
